@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix E | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="../appendices/D.html">← App. D</a></span>
+  <span class="current">Appendix E</span>
+  <span><a href="../appendices/F.html">App. F →</a></span>
+</div>
+<h1>Appendix E: Data‑Analysis Protocol for CMB Log‑Periodic Oscillation Search</h1>
+
+
+<h2>E.1 Overview</h2>
+
+<p>This appendix provides a step‑by‑step protocol for testing the STC’s prediction of <strong>log‑periodic oscillations</strong> in the cosmic microwave background (CMB) angular power spectrum. The prediction is:</p>
+
+<p>$$ \ell(\ell+1)C_\ell \propto \left[ 1 + B \cos\!\left( \frac{2\pi}{\ln q} \ln \ell + \varphi \right) \right], $$</p>
+
+<p>where $B \lesssim 0.01$, $q$ is the discrete scale factor (likely $q=2$), and $\varphi$ is a phase.</p>
+
+<p>The protocol uses publicly available CMB data from the <strong>Planck</strong>, <strong>ACT</strong>, and <strong>SPT</strong> collaborations. All steps can be implemented in Python with standard scientific libraries (NumPy, SciPy, astropy).</p>
+
+
+<h2>E.2 Step 1: Download and Prepare the Data</h2>
+
+<h3><strong>E.2.1 Data sources</strong></h3>
+
+<ul><li><strong>Planck 2018:</strong> <code>COM<em>PowerSpect</em>CMB‑full‑R3.01.txt</code> from the Planck Legacy Archive. Contains $C_\ell$ for $\ell = 2–2508$ with covariance matrix.</li><li><strong>ACT DR4:</strong> <code>ACT<em>dr4</em>cls.dat</code> from the ACT Data Release 4 website. Covers $\ell \approx 300–9000$.</li><li><strong>SPT‑3G 2018:</strong> <code>SPT3G_bandpowers.txt</code> from the SPT‑3G public data release. Covers $\ell \approx 300–8000$.</li></ul>
+
+<p><strong>Pre‑processing:</strong> Combine the datasets into a single array $(\ell<em>i, C</em>{\ell<em>i}, \sigma</em>{\ell<em>i})$, where $\sigma</em>{\ell_i}$ is the standard error. Use the <strong>unbinned</strong> (bandpower‑averaged) estimates to preserve high‑$\ell$ information.</p>
+
+<h3><strong>E.2.2 Masking</strong></h3>
+
+<ul><li>Mask $\ell &lt; 30$ (large cosmic variance) and $\ell &gt; 5000$ (dominant foreground contamination).</li><li>Remove known <strong>point‑source masks</strong> and <strong>Galactic cut</strong> regions as specified in the data releases.</li></ul>
+
+<p><strong>Result:</strong> A cleaned dataset $\{\ell<em>i, C</em>{\ell<em>i}\}</em>{i=1}^{N}$ with uncertainties $\sigma_i$.</p>
+
+
+<h2>E.3 Step 2: Remove the Smooth Component</h2>
+
+<p>The log‑periodic signal is a small modulation on top of the smooth $\Lambda$CDM power spectrum. Therefore we need to subtract the <strong>best‑fit theoretical spectrum</strong>.</p>
+
+<h3><strong>E.3.1 Theory spectrum</strong></h3>
+
+<p>Compute the theoretical $C_\ell^{\text{theory}}$ using <strong>CAMB</strong> or <strong>CLASS</strong> with the Planck 2018 best‑fit parameters:</p>
+
+<p>$$ \Omega<em>b h^2 = 0.02237,\quad \Omega</em>c h^2 = 0.1200,\quad H<em>0 = 67.36,\quad \tau = 0.0544,\quad A</em>s = 2.10\times10^{-9},\quad n_s = 0.9649. $$</p>
+
+<p>Run the Boltzmann code to obtain $C_\ell^{\text{theory}}$ for the same $\ell$ range as the data.</p>
+
+<h3><strong>E.3.2 Residuals</strong></h3>
+
+<p>Define the residuals</p>
+
+<p>$$ r<em>\ell = \frac{\ell(\ell+1)}{2\pi}\bigl(C</em>\ell^{\text{obs}} - C_\ell^{\text{theory}}\bigr). $$</p>
+
+<p>The prefactor $\ell(\ell+1)/(2\pi)$ converts to the conventional <strong>dimensionless power</strong>. The residuals $r_\ell$ should have mean zero and contain the log‑periodic signal plus noise.</p>
+
+<p><strong>Visual check:</strong> Plot $r_\ell$ vs $\ell$ (linear scale) to confirm no large‑scale systematic drift remains.</p>
+
+
+<h2>E.4 Step 3: Logarithmic Resampling</h2>
+
+<p>The signal is periodic in $\ln\ell$, not in $\ell$. Therefore we interpolate the residuals onto a uniform grid in $x = \ln\ell$.</p>
+
+<h3><strong>E.4.1 Grid definition</strong></h3>
+
+<p>Let $x<em>{\min} = \ln(30)$, $x</em>{\max} = \ln(5000)$. Choose a grid spacing $\Delta x$ smaller than the expected period $\ln q$. For $q=2$, $\ln 2 \approx 0.693$. A safe choice is $\Delta x = 0.01$ (about 70 points per period).</p>
+
+<p>Number of grid points: $N<em>x = \lfloor (x</em>{\max}-x_{\min})/\Delta x \rfloor + 1$.</p>
+
+<p>Grid points: $x<em>j = x</em>{\min} + j\Delta x,\; j=0,\dots,N_x-1$.</p>
+
+<h3><strong>E.4.2 Interpolation</strong></h3>
+
+<p>Use <strong>cubic spline interpolation</strong> (or linear if the data are dense enough) to obtain $r(x<em>j)$ from the original $r</em>{\ell_i}$. Propagate errors: if the original errors are Gaussian, use error propagation for the interpolation.</p>
+
+<p><strong>Output:</strong> Equally‑spaced samples $r<em>j = r(x</em>j)$ with uncertainties $\epsilon_j$.</p>
+
+
+<h2>E.5 Step 4: Fourier Analysis</h2>
+
+<h3><strong>E.5.1 Discrete Fourier Transform (DFT)</strong></h3>
+
+<p>Compute the DFT of the interpolated residuals:</p>
+
+<p>$$ \tilde{r}<em>k = \sum</em>{j=0}^{N<em>x-1} r</em>j \, e^{-2\pi i j k / N<em>x}, \qquad k = 0,\dots,N</em>x-1. $$</p>
+
+<p>The corresponding <strong>physical frequencies</strong> are</p>
+
+<p>$$ f<em>k = \frac{k}{N</em>x \Delta x} \quad \text{[cycles per unit $\ln\ell$]}. $$</p>
+
+<h3><strong>E.5.2 Power spectrum</strong></h3>
+
+<p>Compute the power spectrum</p>
+
+<p>$$ P<em>k = |\tilde{r}</em>k|^2. $$</p>
+
+<p>The predicted frequency of the log‑periodic signal is</p>
+
+<p>$$ f_{\text{pred}} = \frac{1}{\ln q}. $$</p>
+
+<p>For $q=2$, $f_{\text{pred}} \approx 1.4427$ cycles per unit $\ln\ell$.</p>
+
+<p><strong>Search window:</strong> Look for a peak in $P_k$ within $f \in [1.0, 2.0]$ (allowing for small deviations from $q=2$).</p>
+
+<h3><strong>E.5.3 Window‑function correction</strong></h3>
+
+<p>The finite $\ell$ range and masking introduce a <strong>window function</strong> that distorts the power spectrum. Estimate the window function by applying the same analysis to a <strong>pure noise</strong> simulation with the same mask and $\ell$ coverage. Divide the observed $P_k$ by the window‑function power to deconvolve.</p>
+
+
+<h2>E.6 Step 5: Significance Testing</h2>
+
+<h3><strong>E.6.1 Null hypothesis</strong></h3>
+
+<p>The null hypothesis $H_0$: the residuals contain only Gaussian noise (no log‑periodic signal).</p>
+
+<h3><strong>E.6.2 Bootstrap method</strong></h3>
+
+<ol><li>Generate $M=10\,000$ synthetic datasets by <strong>randomizing the phases</strong> of the original $r_\ell$ while preserving the power spectrum of the noise (using the <strong>surrogate data</strong> method).</li><li>For each synthetic dataset, apply steps 3–4 and record the <strong>maximum power</strong> in the frequency window $[1.0,2.0]$.</li><li>The <strong>p‑value</strong> is the fraction of synthetic datasets whose maximum power exceeds the observed maximum power.</li></ol>
+
+<p><strong>Alternative:</strong> Use a <strong>permutation test</strong> by randomly shuffling the residuals $r_\ell$ (destroying any periodic signal) and repeating the analysis.</p>
+
+<h3><strong>E.6.3 False‑discovery rate</strong></h3>
+
+<p>If analyzing multiple experiments (Planck, ACT, SPT) or multiple frequency bands (TT, EE, TE), apply the <strong>Benjamini‑Hochberg procedure</strong> to control the false‑discovery rate at 5%.</p>
+
+
+<h2>E.7 Step 6: Parameter Estimation</h2>
+
+<p>If a significant peak is found, fit the model</p>
+
+<p>$$ r(x) = A \cos(2\pi f x + \varphi) + \text{noise}, \qquad x = \ln\ell, $$</p>
+
+<p>using <strong>least‑squares</strong> or <strong>MCMC</strong> (emcee package). Parameters: amplitude $A$, frequency $f$, phase $\varphi$, plus possibly a linear tilt (allowing for residual smooth mismatch).</p>
+
+<h3><strong>E.7.1 Posterior distributions</strong></h3>
+
+<p>Run an MCMC with flat priors:</p>
+
+<ul><li>$A \in [0, 0.1]$ (amplitude relative to smooth spectrum).</li><li>$f \in [1.0, 2.0]$.</li><li>$\varphi \in [0, 2\pi]$.</li></ul>
+
+<p>Use the <strong>Planck likelihood code</strong> (plik) to account for the full covariance matrix of the $C_\ell$ data.</p>
+
+<h3><strong>E.7.2 Derived parameters</strong></h3>
+
+<p>From the posterior of $f$, compute</p>
+
+<p>$$ q = e^{1/f}, $$</p>
+
+<p>the discrete scale factor. Also compute the <strong>signal‑to‑noise ratio</strong> $\text{SNR} = A/\sigma_A$.</p>
+
+
+<h2>E.8 Step 7: Cross‑Check Across Experiments</h2>
+
+<p>Repeat the entire analysis independently for:</p>
+
+<ul><li><strong>Planck</strong> (low‑$\ell$ and high‑$\ell$).</li><li><strong>ACT</strong> (temperature and polarization).</li><li><strong>SPT</strong> (temperature).</li></ul>
+
+<p>The oscillation parameters $(f, A, \varphi)$ should be <strong>consistent</strong> across experiments if the signal is cosmological. Inconsistencies would indicate instrumental systematics.</p>
+
+<p><strong>Combine datasets:</strong> Perform a <strong>joint fit</strong> to all experiments, allowing for independent amplitudes (due to different calibration) but common frequency and phase.</p>
+
+
+<h2>E.9 Step 8: Interpretation and Error Budget</h2>
+
+<h3><strong>E.9.1 Systematic uncertainties</strong></h3>
+
+<ul><li><strong>Beating from acoustic peaks:</strong> The acoustic peaks themselves are quasi‑periodic in $\ell$ (period $\Delta\ell \approx 300$), which could mimic a log‑periodic signal. Distinguish by noting that acoustic peaks are <strong>periodic in $\ell$</strong>, not in $\ln\ell$.</li><li><strong>Foreground residuals:</strong> Dust, synchrotron, and point sources have smooth spectra; their residual contamination is unlikely to be log‑periodic.</li><li><strong>Beam and calibration errors:</strong> These are typically smooth functions of $\ell$; they would produce broad‑band power, not a narrow peak in the Fourier domain.</li></ul>
+
+<h3><strong>E.9.2 Theoretical implications</strong></h3>
+
+<p>If a log‑periodic signal is detected:</p>
+
+<ul><li>The <strong>scale factor</strong> $q$ determines the prime $p = q$ (if $q$ is prime) or relates to the branching ratio of the Bruhat‑Tits tree.</li><li>The <strong>amplitude</strong> $B = A / \langle \ell(\ell+1)C_\ell/(2\pi) \rangle$ gives the modulation depth, which constrains the depth of the tree probed by the CMB.</li><li>The <strong>phase</strong> $\varphi$ may encode the <strong>observer’s location</strong> within the tree.</li></ul>
+
+<p>If no signal is found, set an <strong>upper limit</strong> on $B$ (e.g., $B &lt; 0.005$ at 95% CL). This would constrain the discrete scale invariance to be very weak or the scale factor $q$ to be far from an integer.</p>
+
+<h2>E.10 Python Code Skeleton</h2>
+
+<pre><code>
+import numpy as np
+from scipy.interpolate import interp1d
+from scipy.fft import fft
+
+# Step 1: load data
+ell, C_obs, sigma = load_data('planck2018.dat')
+C_theory = get_camb_spectrum(ell)
+
+# Step 2: residuals
+res = ell*(ell+1)/(2*np.pi) * (C_obs - C_theory)
+
+# Step 3: logarithmic resampling
+x = np.log(ell)
+x_grid = np.arange(np.log(30), np.log(5000), 0.01)
+f_interp = interp1d(x, res, kind='cubic')
+res_grid = f_interp(x_grid)
+
+# Step 4: Fourier transform
+N = len(res_grid)
+dft = fft(res_grid)
+freq = np.fft.fftfreq(N, d=0.01)
+power = np.abs(dft)**2
+
+# Step 5: find peak near f_pred = 1.4427
+mask = (freq &gt; 1.0) &amp; (freq &lt; 2.0)
+idx_peak = np.argmax(power[mask])
+f_peak = freq[mask][idx_peak]
+q_est = np.exp(1/f_peak)
+
+# Step 6: bootstrap significance
+# ... (implementation omitted for brevity)
+
+# Step 7: parameter estimation with emcee
+# ... (see full code in repository)
+</code></pre>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="../appendices/D.html">← App. D</a></span>
+  <span class="current">Appendix E</span>
+  <span><a href="../appendices/F.html">App. F →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>

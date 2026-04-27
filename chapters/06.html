@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 6 | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="05.html">← Ch. 5</a></span>
+  <span class="current">Chapter 6</span>
+  <span><a href="07.html">Ch. 7 →</a></span>
+</div>
+<h1>Chapter 6: The Authentic Reduction Rules</h1>
+
+
+<h2>6.1 Calling (Idempotence): <code>## → #</code> and Its Interpretation as Condensation of Redundant States</h2>
+
+<p>The first reduction rule of the STC is <strong>calling</strong>, also known as <strong>idempotence</strong>. The rule is:</p>
+
+<p><strong>Calling:</strong> <code>## → #</code></p>
+
+<p>In words: two adjacent marks condense into a single mark.</p>
+
+<p><strong>Scope:</strong> The rule applies to any substring <code>##</code> anywhere in an expression. It does not matter what surrounds the two marks; if they appear side by side, they can be replaced by a single mark.</p>
+
+<p><strong>Examples:</strong></p>
+<ul><li><code>###</code> → <code>##</code> → <code>#</code> (multiple marks condense stepwise).</li><li><code>[##]</code> → <code>[#]</code> (calling inside an enclosure).</li><li><code># ##</code> → <code># #</code> → <code>#</code> (spaces are irrelevant).</li></ul>
+
+<p><strong>Interpretation:</strong> Calling embodies the principle that <strong>repetition of the same distinction is idle</strong>. Drawing a boundary twice in the same place is no different from drawing it once. In logical terms, calling corresponds to the <strong>idempotence of conjunction</strong>: $A \land A = A$. In algebraic terms, it is the <strong>absorption law</strong> of a semilattice. In physical terms, it is the <strong>fusion</strong> of two identical quanta into one.</p>
+
+<p>Calling is a <strong>length‑reducing</strong> rule: it shortens the expression by one mark. This guarantees that repeated application of calling will eventually terminate (there are only finitely many marks). Calling is also <strong>local</strong>: it does not require examining the global structure of the expression; it operates on a contiguous pair of marks.</p>
+
+<p>In the Bruhat‑Tits tree, calling corresponds to <strong>coalescing two leaves at the same vertex</strong>. If two marks occupy the same position in the hierarchy, they are redundant and can be merged. This merging reduces the complexity of the pattern without changing its topological type.</p>
+
+
+<h2>6.2 Crossing (Involution): <code>[[A]] → A</code> for Any Expression A</h2>
+
+<p>The second reduction rule is <strong>crossing</strong>, also known as <strong>involution</strong>. The rule is:</p>
+
+<p><strong>Crossing:</strong> <code>[[A]] → A</code> (for any expression <code>A</code>)</p>
+
+<p>In words: an enclosure that contains <strong>only</strong> another enclosure cancels the outer boundary, leaving the inner expression.</p>
+
+<p><strong>Scope:</strong> The rule applies whenever an expression matches the pattern <code>[[A]]</code>, where <code>A</code> is any (possibly empty) expression. The inner expression <code>A</code> can be arbitrarily complex—it may contain marks, enclosures, and juxtapositions. The only requirement is that the outer enclosure contains <strong>exactly one</strong> element, and that element is itself an enclosure.</p>
+
+<p><strong>Examples:</strong></p>
+<ul><li><code>[[]]</code> → blank (empty expression). Here <code>A</code> is empty.</li><li><code>[[#]]</code> → <code>#</code>. Here <code>A = #</code>.</li><li><code>[[[#]]]</code> → <code>[#]</code>. Here <code>A = [#]</code>.</li><li><code>[[# [#]]]</code> → <code># [#]</code>. Here <code>A = # [#]</code>.</li><li><code>[[[#] #]]</code> → <code>[#] #</code>. Here <code>A = [#] #</code>.</li></ul>
+
+<p><strong>Interpretation:</strong> Crossing embodies the principle that <strong>to cross a boundary again is to uncross it</strong>. If you draw a boundary around a boundary, you return to the original state. In logical terms, crossing corresponds to <strong>double negation elimination</strong>: $\neg \neg A = A$. In topological terms, it is the cancellation of a boundary that encloses only another boundary—like removing a shell to reveal the core.</p>
+
+<p>Crossing is also <strong>length‑reducing</strong>: it removes two brackets (the outer pair). Since brackets come in pairs, the total length of the expression decreases. Like calling, crossing is <strong>local</strong>: it operates on a specific pattern of brackets, independent of the surrounding context.</p>
+
+<p>In the Bruhat‑Tits tree, crossing corresponds to <strong>removing a redundant level of nesting</strong>. If a node in the tree has only one child, and that child is also a node (not a leaf), then the parent node can be eliminated, promoting the child to the parent’s position. This simplifies the tree without changing the hierarchical relationships among the leaves.</p>
+
+
+<h2>6.3 Consequences of Authenticity</h2>
+
+<p>The STC adopts the crossing rule in its <strong>authentic</strong> form, exactly as stated by Spencer‑Brown. This commitment has several important consequences.</p>
+
+<h3><strong>Consequence 1: <code>[[#]]</code> Is not Stable; it Reduces to <code>#</code>.</strong></h3>
+<p>Many early drafts of the STC sought to keep <code>[[#]]</code> as a stable reference point—a syntactic “point at infinity” for projective cross‑ratios. However, under the authentic crossing rule, <code>[[#]]</code> reduces to <code>#</code>. This forces us to use the mark <code>#</code> itself as the projective reference. This is not a drawback; it is a simplification. The mark is the most primitive object in the calculus, so it is natural for it to play the role of infinity.</p>
+
+<h3><strong>Consequence 2: <code>[[]]</code> Reduces to a Blank Space (the Empty expression).</strong></h3>
+<p>Applying crossing with <code>A</code> empty yields <code>[[]] → blank</code>. The empty expression is the void—the absence of any token. This result reinforces that the void is not a token; it is the result of complete cancellation.</p>
+
+<h3><strong>Consequence 3: No Need for a “void identity” rule.</strong></h3>
+<p>Some drafts introduced a rule like <code>[ ] → _</code> (void token) or <code>[ ] →</code> (deletion). These are unnecessary. The empty enclosure <code>[ ]</code> is already a valid expression; it does not need to be reduced further. It is irreducible because it does not match <code>##</code> or <code>[[A]]</code>. It represents the <strong>concept of an empty container</strong>, which is distinct from the void (blank). The void is the absence of any expression; <code>[ ]</code> is an expression (an empty enclosure).</p>
+
+<h3><strong>Consequence 4: The Higgs Degeneracy Remains unresolved.</strong></h3>
+<p>Because crossing is <code>[[A]] → A</code> for any <code>A</code>, the pattern <code>[[#] [#] [#]]</code> is irreducible: the outer enclosure contains three items, not a single enclosure. This pattern is shared by the Z boson and the Higgs boson. The STC does not alter the crossing rule to distinguish them; that would require a clear and compelling reason, which has not been established. The degeneracy is acknowledged as an open issue (see Chapter 13).</p>
+
+<h3><strong>Consequence 5: The Rules Are non‑overlapping.</strong></h3>
+<p>Calling matches <code>##</code>; crossing matches <code>[[A]]</code>. These patterns cannot overlap: <code>##</code> cannot appear inside <code>[[A]]</code> because <code>[[A]]</code> contains brackets, not marks. Therefore, there is no ambiguity about which rule to apply in any given situation. This non‑overlapping property is key to proving confluence.</p>
+
+
+<h2>6.4 Confluence and Uniqueness: Proof that the Rules Are Non‑Overlapping and Length‑Reducing</h2>
+
+<p>A rewrite system is <strong>confluent</strong> (has the Church‑Rosser property) if, whenever an expression can be reduced in two different ways, the results can be further reduced to a common normal form. Confluence guarantees that the final result is independent of the order of reduction—a crucial property for a physical theory, where observables should not depend on the sequence of measurements.</p>
+
+<p>The STC’s reduction rules are confluent. The proof rests on two observations:</p>
+
+<ol><li><strong>The rules are non‑overlapping.</strong> As noted above, calling and crossing apply to disjoint patterns. Therefore, they cannot interfere with each other. If two rules could apply to overlapping substrings, we would need to check <strong>critical pairs</strong> to ensure confluence. Here, there are no critical pairs.</li></ol>
+
+<ol><li><strong>Each rule is length‑reducing.</strong> Calling reduces the number of marks by one; crossing reduces the number of bracket pairs by one. Since an expression has a finite number of marks and brackets, any sequence of reductions must terminate. Termination plus local confluence (which follows from non‑overlapping) implies global confluence (Newman’s lemma).</li></ol>
+
+<p><strong>Termination proof:</strong> Define the <strong>weight</strong> of an expression as the total number of marks plus the number of bracket pairs. Calling reduces the weight by 1; crossing reduces the weight by 1. Since weight is a positive integer, reduction cannot continue indefinitely.</p>
+
+<p><strong>Uniqueness of normal forms:</strong> Because the system is confluent and terminating, every expression reduces to a unique normal form. This normal form is the <strong>canonical representative</strong> of the expression’s equivalence class. Two expressions are equivalent if they reduce to the same normal form.</p>
+
+<p><strong>Example reduction sequence:</strong> Consider the expression <code>[[#]]##</code>.</p>
+<ul><li>Apply crossing to <code>[[#]]</code>: <code>#</code>.</li><li>Now we have <code>##</code>.</li><li>Apply calling: <code>#</code>.</li></ul>
+<p>The normal form is <code>#</code>. Any other reduction order yields the same result.</p>
+
+<p><strong>Significance for physics:</strong> Confluence ensures that the STC is <strong>deterministic</strong>. Given an initial pattern (a particle configuration), the rules produce a unique outcome (a final state). This determinism is not at odds with quantum probability; rather, the probabilities arise from the coarse‑graining of the syntactic dynamics when projected onto an Archimedean measurement basis (see Chapter 1). At the syntactic level, the evolution is deterministic and reversible (each reduction can be reversed by an expansion, though the rules themselves are not invertible).</p>
+
+<p>Thus, the STC provides a <strong>syntactic foundation</strong> for unitary quantum evolution. The reduction rules are the dynamics, and confluence guarantees unitarity (in the sense of uniqueness of outcome). This is a radical departure from conventional quantum mechanics, where unitarity is imposed as a separate axiom.</p>
+
+<hr>
+
+
+<p>Chapter 6 has presented the two reduction rules of the STC: calling (<code>## → #</code>) and crossing (<code>[[A]] → A</code>). These rules are taken directly from Spencer‑Brown’s <em>Laws of Form</em> and are applied in their authentic form. The consequences of this authenticity include the reduction of <code>[[#]]</code> to <code>#</code> and the acceptance of the Z‑boson/Higgs degeneracy as an unresolved issue.</p>
+
+<p>The rules are non‑overlapping and length‑reducing, ensuring confluence and termination. Every expression reduces to a unique normal form, providing a deterministic dynamics at the syntactic level. This sets the stage for the next chapter, where we will examine normal forms in detail and prove the irreducibility of the particle patterns.</p>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="05.html">← Ch. 5</a></span>
+  <span class="current">Chapter 6</span>
+  <span><a href="07.html">Ch. 7 →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>
