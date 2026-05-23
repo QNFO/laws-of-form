@@ -6,6 +6,21 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 ## [Unreleased]
 
 ### Added
+- **0.2.md:** Comprehensive content audit of all 6 existing files (S2 deliverable)
+- Identified 8 gaps: 2 BLOCKING (no formal Mark definition, no Mark→CFSG bridge), 3 MAJOR (duplication, no falsifiability, no equations), 3 MINOR
+- Recommendation: Draft synthesis using 0.1.5.1.md outline as next task
+
+### Changed
+- S1 marked complete in SPRINT.md (project initialization)
+- S2 marked complete in SPRINT.md (content audit)
+- PROJECT STATE.md updated for S3 (prior work review)
+
+### Fixed
+- **Git recovery:** 0.1.5.1.md accidentally overwritten during audit — restored from commit 187da93 (original Consilient Synthesis Outline)
+
+## 2026-05-23 — Project Initialization
+
+### Added
 - Project initialization: renamed directory from "Primordial Mark" to "primordial-mark"
 - Git repository initialized on feature/initial-setup branch
 - Tier 1 documentation: README.md, PROJECT STATE.md, SPRINT.md, CHANGELOG.md, BACKLOG.md, LEARNINGS.md, DECISIONS.md

@@ -10,8 +10,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** S2 — Audit existing content (0.1.1–0.1.5.md)
-**Last completed:** S1 — Project initialization (2026-05-23)
+**Active task:** S3 — Review prior work for non-duplication
+**Last completed:** S2 — Content audit (2026-05-23)
 **Blocked?** No
 
 ## Next Agent Handoff

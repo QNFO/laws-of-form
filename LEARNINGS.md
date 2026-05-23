@@ -5,6 +5,14 @@
 > Lessons tagged "Cross-Project: YES" are candidates for promotion to
 > `G:\My Drive\projects\_shared\CROSS-PROJECT-LEARNINGS.md`.
 
+## L2: Never use `write` on a pre-existing content file without first reading it
+
+- **Category:** METHODOLOGY
+- **Issue:** During S2 (content audit), I wrote the audit to `0.1.5.1.md`, overwriting the original Consilient Synthesis Outline — a key file containing the publication roadmap. I had read the file minutes earlier and still overwrote it because I treated it as a generic output slot rather than recognizing it as pre-existing project content.
+- **Solution:** Recovered from git via `git checkout 187da93 -- 0.1.5.1.md`. Wrote audit to new versioned file `0.2.md` instead.
+- **Prevention:** Before ANY `write` to a file in the project directory: (a) check if the file already exists via `Test-Path`; (b) if it exists, READ it first and confirm whether overwrite is intentional; (c) for content audits, analysis, or any derivative work, ALWAYS create a new versioned file rather than overwriting source material. The source files are PERMANENT (§0.6.6).
+- **Cross-Project:** YES — Same pattern observed in other projects (accidental overwrite of source material). The rule "read before write" and "source files are PERMANENT" should be universal.
+
 ## L1: Prior work overlap risk — ultrametric-tree-universality is direct predecessor
 
 - **Category:** METHODOLOGY
