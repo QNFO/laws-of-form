@@ -10,8 +10,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** S3 — Review prior work for non-duplication
-**Last completed:** S2 — Content audit (2026-05-23)
+**Active task:** S4 — Define first substantive task
+**Last completed:** S3 — Prior work review (2026-05-23)
 **Blocked?** No
 
 ## Next Agent Handoff
@@ -51,13 +51,13 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 | `CHANGELOG.md` | CREATE | Committed (23943f5) |
 | `BACKLOG.md` | CREATE | Committed (23943f5) |
 | `LEARNINGS.md` | CREATE | Committed (23943f5) |
-| `DECISIONS.md` | CREATE | Committed (23943f5) |
+| `DECISIONS.md` | CREATE / EDIT | Committed (23943f5) / Pending |
 | `0.1.1–0.1.5.1.md` | IMPORT (pre-existing) | Committed (187da93) |
 
 ## Open Issues
 
-- 0.1.5.1.md: 5,021 bytes (not 0 as initially reported — content present)
-- S2: Content audit needed before defining next substantive task
+- S4: Define the first substantive task (publication draft) based on content audit and prior work review
+- G2 (BLOCKING): Mark→CFSG bridge remains undemonstrated — scope decision needed before drafting
 
 ## Active Risks
 

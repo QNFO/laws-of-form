@@ -13,7 +13,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 ### Changed
 - S1 marked complete in SPRINT.md (project initialization)
 - S2 marked complete in SPRINT.md (content audit)
-- PROJECT STATE.md updated for S3 (prior work review)
+- S3 marked complete in SPRINT.md (prior work review)
+- PROJECT STATE.md updated for S4 (define first substantive task)
+- DECISIONS.md: ADR-0003 revised (0.1.5.1.md is NOT empty), ADR-0004 added (full prior work review)
 
 ### Fixed
 - **Git recovery:** 0.1.5.1.md accidentally overwritten during audit — restored from commit 187da93 (original Consilient Synthesis Outline)
