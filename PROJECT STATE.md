@@ -10,8 +10,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** S1 — Project initialization and documentation setup
-**Last completed:** None (new project setup)
+**Active task:** S2 — Audit existing content (0.1.1–0.1.5.md)
+**Last completed:** S1 — Project initialization (2026-05-23)
 **Blocked?** No
 
 ## Next Agent Handoff
@@ -45,19 +45,19 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 | File | Action | Status |
 |:-----|:-------|:-------|
-| `README.md` | CREATE | Pending commit |
-| `PROJECT STATE.md` | CREATE | Pending commit |
-| `SPRINT.md` | CREATE | Pending commit |
-| `CHANGELOG.md` | CREATE | Pending commit |
-| `BACKLOG.md` | CREATE | Pending commit |
-| `LEARNINGS.md` | CREATE | Pending commit |
-| `DECISIONS.md` | CREATE | Pending commit |
+| `README.md` | CREATE | Committed (23943f5) |
+| `PROJECT STATE.md` | CREATE / EDIT | Committed (23943f5) / Pending |
+| `SPRINT.md` | CREATE / EDIT | Committed (23943f5) / Pending |
+| `CHANGELOG.md` | CREATE | Committed (23943f5) |
+| `BACKLOG.md` | CREATE | Committed (23943f5) |
+| `LEARNINGS.md` | CREATE | Committed (23943f5) |
+| `DECISIONS.md` | CREATE | Committed (23943f5) |
+| `0.1.1–0.1.5.1.md` | IMPORT (pre-existing) | Committed (187da93) |
 
 ## Open Issues
 
-- Existing content (0.1.1–0.1.5.md) needs to be committed to git
-- Empty file 0.1.5.1.md (0 bytes) — verify if intentional or stale
-- Determine next sprint task after documentation setup
+- 0.1.5.1.md: 5,021 bytes (not 0 as initially reported — content present)
+- S2: Content audit needed before defining next substantive task
 
 ## Active Risks
 
