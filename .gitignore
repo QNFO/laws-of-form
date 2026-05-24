@@ -18,3 +18,6 @@ Desktop.ini
 # Temp
 *.tmp
 *.temp
+
+*.pdf
+*.html
