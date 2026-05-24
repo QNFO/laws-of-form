@@ -10,8 +10,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** 2.1 — Draft §I (Ontological Foundation) — formal definition of the Mark
-**Last completed:** S4 — Define first substantive task; Sprint 1 closed (2026-05-23)
+**Active task:** 2.2 — Draft §III+§IV (Geometry + Arithmetic) — ultrametric tree + 10-adic hierarchy
+**Last completed:** 2.1 — Draft §I (Ontological Foundation); 0.3.md §I complete (2026-05-24)
 **Blocked?** No
 
 ## Next Agent Handoff

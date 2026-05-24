@@ -11,13 +11,12 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 - Recommendation: Draft synthesis using 0.1.5.1.md outline as next task
 
 ### Added
-- Sprint 2 defined in SPRINT.md: 4 tasks for drafting Consilient Synthesis publication (0.3.md)
-- BACKLOG.md updated: completed items marked, publication draft promoted to P0
+- **0.3.md:** Consilient Synthesis first draft begun. §I (Ontological Foundation) complete with formal Mark definition, distinction tree, ultrametric theorem
+- Sprint 2: Task 2.1 complete (1/4)
 
 ### Changed
-- S1-S4 all marked complete — **Sprint 1 CLOSED** (4/4 tasks, P1 → P2)
-- PROJECT STATE.md: Phase P1 → P2 (Execution), active task → 2.1
-- DECISIONS.md: ADR-0003 revised (0.1.5.1.md is NOT empty), ADR-0004 added (full prior work review)
+- SPRINT.md: 2.1 [x], 2.2 activated
+- PROJECT STATE.md: active task → 2.2
 
 ### Fixed
 - **Git recovery:** 0.1.5.1.md accidentally overwritten during audit — restored from commit 187da93 (original Consilient Synthesis Outline)
