@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-05-23
 **Active Branch:** feature/initial-setup
-**Current Phase:** P1 Planning
+**Current Phase:** P2 Execution
 
 ## What This Project Is
 
@@ -10,18 +10,17 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** S4 — Define first substantive task
-**Last completed:** S3 — Prior work review (2026-05-23)
+**Active task:** 2.1 — Draft §I (Ontological Foundation) — formal definition of the Mark
+**Last completed:** S4 — Define first substantive task; Sprint 1 closed (2026-05-23)
 **Blocked?** No
 
 ## Next Agent Handoff
 
-1. Read SPRINT.md → identify active task
-2. Read LEARNINGS.md → avoid past mistakes
-3. Review existing content files (0.1.1–0.1.5.md) for synthesis direction
-4. Review prior work: `ultrametric-tree-universality` (Archive 2026/05), `Syntactic Generation Primitive Distinctions` (Archive 2026/04)
-5. Execute task through Phase 0–5 pipeline
-6. Update documentation and commit
+1. Read SPRINT.md → identify active task (currently: Sprint 2 task 2.1)
+2. Read LEARNINGS.md → avoid past mistakes (L1: prior work overlap; L2: read-before-write)
+3. Draft §I of 0.3.md using 0.1.2.md as primary source material
+4. Execute task through Phase 0–5 pipeline (git pre-flight, task framing, iterative execution, audit)
+5. Update documentation and commit with task completion evidence
 
 ## Constraints
 
@@ -56,8 +55,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Open Issues
 
-- S4: Define the first substantive task (publication draft) based on content audit and prior work review
-- G2 (BLOCKING): Mark→CFSG bridge remains undemonstrated — scope decision needed before drafting
+- G2 (BLOCKING): Mark→CFSG bridge remains undemonstrated — addressed in §V with honest scoping
+- Sprint 2 active: Drafting Consilient Synthesis publication (0.3.md) from 0.1.5.1 outline
 
 ## Active Risks
 

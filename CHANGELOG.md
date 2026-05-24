@@ -10,11 +10,13 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 - Identified 8 gaps: 2 BLOCKING (no formal Mark definition, no Mark→CFSG bridge), 3 MAJOR (duplication, no falsifiability, no equations), 3 MINOR
 - Recommendation: Draft synthesis using 0.1.5.1.md outline as next task
 
+### Added
+- Sprint 2 defined in SPRINT.md: 4 tasks for drafting Consilient Synthesis publication (0.3.md)
+- BACKLOG.md updated: completed items marked, publication draft promoted to P0
+
 ### Changed
-- S1 marked complete in SPRINT.md (project initialization)
-- S2 marked complete in SPRINT.md (content audit)
-- S3 marked complete in SPRINT.md (prior work review)
-- PROJECT STATE.md updated for S4 (define first substantive task)
+- S1-S4 all marked complete — **Sprint 1 CLOSED** (4/4 tasks, P1 → P2)
+- PROJECT STATE.md: Phase P1 → P2 (Execution), active task → 2.1
 - DECISIONS.md: ADR-0003 revised (0.1.5.1.md is NOT empty), ADR-0004 added (full prior work review)
 
 ### Fixed
