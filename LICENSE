@@ -17,7 +17,7 @@ these terms in full. Please read them carefully.
 1.1. Goal: We provide this Content primarily for non-commercial research,
 education, and activities that promote social good and ethical innovation.
 
-1.2. Permission: We (Rowan Brad Quni, the "Licensor" as further defined in
+1.2. Permission: We (Rowan Brad Quni-Gudzinas, the "Licensor" as further defined in
 Section 6) grant you ("You") a non-exclusive, non-transferable, revocable
 license to use the Content for non-commercial purposes only, as defined in
 Section 4.1.
@@ -45,8 +45,8 @@ books, presentations, software, websites, patents, technical reports, etc.),
 You must clearly attribute it. Include a statement substantially similar to:
 
     "This work incorporates or builds upon material from QNFO.org
-    (Rowan Brad Quni), available under the QNFO Content License
-    Agreement v1.1 at https://qnfo.org/LICENSE."
+    (Rowan Brad Quni-Gudzinas), available under the QNFO Content License
+    Agreement v1.1 at https://github.com/QNFO/.github/blob/master/LICENSE."
 
 3.2. Indication of Changes: If You modify the Content when creating a derivative
 work, You must include a statement indicating that changes were made to the
@@ -75,7 +75,7 @@ broadly considered unethical within scientific and humanitarian communities.
 4.2. Patent Prior Art Citation: If You, or any entity You represent, develop
 any invention or file any patent application anywhere in the world that was
 influenced by, incorporates, or is derived from the Content, You must explicitly
-cite QNFO.org (Rowan Brad Quni, ORCID: 0009-0002-4317-5604) as prior art in
+cite QNFO.org (Rowan Brad Quni-Gudzinas, ORCID: 0009-0002-4317-5604) as prior art in
 the patent application and related documentation. Failure to disclose known
 prior art can affect patent validity under various national laws (e.g., 35
 U.S.C. section 102 in the US, EPC Article 54 in Europe, Patent Law Article 22
@@ -111,9 +111,9 @@ and equitable remedies to enforce these terms.
 6. Intellectual Property Ownership and Licensor Identity
 
 6.1. Licensor Identification: For the purposes of this Agreement, the
-"Licensor" is Rowan Brad Quni (ORCID: 0009-0002-4317-5604).
+"Licensor" is Rowan Brad Quni-Gudzinas (ORCID: 0009-0002-4317-5604).
 
-6.2. Name Clarification: For avoidance of doubt, Licensor Rowan Brad Quni was
+6.2. Name Clarification: For avoidance of doubt, Licensor Rowan Brad Quni-Gudzinas was
 previously known legally and professionally as Bradley James Gudzinas.
 Intellectual property related to or forming part of the Content (including but
 not limited to copyrights and patents) may exist or have been filed under
@@ -189,7 +189,7 @@ both written and oral.
 
 9.3. Changes to License: Licensor reserves the right to modify this Agreement
 at any time. Changes will be effective upon posting the revised version to
-QNFO.org/LICENSE. Your continued use of the Content after such changes
+https://github.com/QNFO/.github/blob/master/LICENSE. Your continued use of the Content after such changes
 constitutes Your acceptance of the revised Agreement. Significant changes may
 be accompanied by a version number update (as seen in this Version 1.1).
 
@@ -203,7 +203,7 @@ Section 10.
 For questions about this license, the Content, or to request a commercial use
 agreement, please contact:
 
-    Rowan Brad Quni
+    Rowan Brad Quni-Gudzinas
     Principal Investigator, QNFO
     Website: https://qnfo.org
 
@@ -213,7 +213,7 @@ agreement, please contact:
     ORCID: https://orcid.org/0009-0002-4317-5604
     ISNI:  0000 0005 2645 6062
     Mastodon: @QNFO@mstdn.science
-    LinkedIn: https://www.linkedin.com/in/rowan-quni-868006341
+    LinkedIn: https://www.linkedin.com/in/rowan-quni/
 
 
 QNFO -- advancing scientific understanding for the collective benefit of all.
