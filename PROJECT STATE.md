@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-05-23
 **Active Branch:** feature/initial-setup
-**Current Phase:** P2 Execution
+**Current Phase:** P3 Review
 
 ## What This Project Is
 
@@ -10,17 +10,16 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** 2.4 — Integrate remaining (§II, §VI) + complete first draft
-**Last completed:** 2.3 — Draft §V (Epistemology vs. Ontology); 0.3.md §V complete (2026-05-24)
+**Active task:** None — Sprint 2 complete. Ready for Review (Phase P3).
+**Last completed:** 2.4 — Integrate remaining + complete first draft; 0.3.md complete (2026-05-24)
 **Blocked?** No
 
 ## Next Agent Handoff
 
-1. Read SPRINT.md → identify active task (currently: Sprint 2 task 2.1)
-2. Read LEARNINGS.md → avoid past mistakes (L1: prior work overlap; L2: read-before-write)
-3. Draft §I of 0.3.md using 0.1.2.md as primary source material
-4. Execute task through Phase 0–5 pipeline (git pre-flight, task framing, iterative execution, audit)
-5. Update documentation and commit with task completion evidence
+1. Read SPRINT.md → Sprint 2 complete. Project in Phase P3 (Review).
+2. Read 0.3.md (complete first draft, 34,167 chars, 6 sections + conclusion + 12 references)
+3. Consider: reader testing (§11.5), publication workflow (YAML frontmatter, quotes, math scan, language gate)
+4. Define Sprint 3 tasks based on review findings
 
 ## Constraints
 

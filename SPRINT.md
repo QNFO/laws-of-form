@@ -36,7 +36,7 @@
 **Sprint Goal:** Produce a complete first draft of the Consilient Synthesis publication (0.3.md) using 0.1.5.1.md as the architectural outline, filling §I–§VI with content from 0.1.1–0.1.5.md and adding formal mathematical definitions.
 **Started:** 2026-05-23
 **Target End:** 2026-05-24
-**Status:** Active
+**Status:** Complete
 
 ## Active Tasks
 
@@ -44,8 +44,11 @@
 |:---|:-----|:-------------|:------------|:-------|:---------|
 | 2.1 | Draft §I (Ontological Foundation) — formal definition of the Mark | §I drafted in 0.3.md with mathematical notation for the Mark as self-embedding operator, drawing from 0.1.2.md. Formal operator definition in LaTeX. | 2h | [x] | Agent |
 | 2.2 | Draft §III+§IV (Geometry + Arithmetic) — ultrametric tree + 10-adic hierarchy | §III (ultrametric tree definition with LaTeX, isosceles condition) and §IV (p-adic/10-adic valuation, positional zero) drafted in 0.3.md, drawing from 0.1.1.md and 0.1.3.md. | 2h | [x] | Agent |
+|
+| 2.3 | Draft §V (Epistemology vs. Ontology) | 2026-05-24 | **Deliverable:** 0.3.md §V (~6,500 chars, 7 subsections). **Content:** CFSG factual primer, Cartography Trap, symmetry-requires-distinction, symmetries-as-exhaust, honest G2 scoping, taxonomy value defense. **Scan:** 0 bare Unicode math. **Commit:** fcaa7d8. |
+| 2.4 | Integrate remaining + complete first draft | 2026-05-24 | **Deliverable:** 0.3.md complete first draft (34,167 chars). **Added:** §II (Generative Engine/Zitterbewegung, 5 subsections), §VI (Ultimate Convergence, 3 subsections), Conclusion, 12-reference bibliography. **Scan:** 0 bare Unicode math. **Commit:** 1543e30. |
 | 2.3 | Draft §V (Epistemology vs. Ontology) — CFSG-as-taxonomy | §V drafted in 0.3.md with CFSG taxonomic framing, honest G2 scoping (Mark→CFSG bridge acknowledged as open question), drawing from 0.1.4.md. | 2h | [x] | Agent |
-| 2.4 | Integrate remaining + complete first draft | §II (Generative Engine / Zitterbewegung), §VI (Ultimate Convergence), conclusion, bibliography, and document frontmatter added to 0.3.md. Complete coherent draft. | 2h | [ ] | Agent |
+| 2.4 | Integrate remaining + complete first draft | §II (Generative Engine / Zitterbewegung), §VI (Ultimate Convergence), conclusion, bibliography, and document frontmatter added to 0.3.md. Complete coherent draft. | 2h | [x] | Agent |
 
 ## Completed (Retained for Audit)
 
@@ -62,8 +65,8 @@
 
 ## Sprint Health
 
-- Tasks completed: 3/4
-- DoD verified: 3/4
+- Tasks completed: 4/4
+- DoD verified: 4/4
 - Blocked items: 0
 - Retrospective filed: No
 
