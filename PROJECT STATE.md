@@ -10,8 +10,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** 2.3 — Draft §V (Epistemology vs. Ontology) — CFSG-as-taxonomy
-**Last completed:** 2.2 — Draft §III+§IV (Geometry + Arithmetic); 0.3.md §§III+IV complete (2026-05-24)
+**Active task:** 2.4 — Integrate remaining (§II, §VI) + complete first draft
+**Last completed:** 2.3 — Draft §V (Epistemology vs. Ontology); 0.3.md §V complete (2026-05-24)
 **Blocked?** No
 
 ## Next Agent Handoff

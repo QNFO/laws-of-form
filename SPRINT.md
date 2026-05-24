@@ -44,7 +44,7 @@
 |:---|:-----|:-------------|:------------|:-------|:---------|
 | 2.1 | Draft §I (Ontological Foundation) — formal definition of the Mark | §I drafted in 0.3.md with mathematical notation for the Mark as self-embedding operator, drawing from 0.1.2.md. Formal operator definition in LaTeX. | 2h | [x] | Agent |
 | 2.2 | Draft §III+§IV (Geometry + Arithmetic) — ultrametric tree + 10-adic hierarchy | §III (ultrametric tree definition with LaTeX, isosceles condition) and §IV (p-adic/10-adic valuation, positional zero) drafted in 0.3.md, drawing from 0.1.1.md and 0.1.3.md. | 2h | [x] | Agent |
-| 2.3 | Draft §V (Epistemology vs. Ontology) — CFSG-as-taxonomy | §V drafted in 0.3.md with CFSG taxonomic framing, honest G2 scoping (Mark→CFSG bridge acknowledged as open question), drawing from 0.1.4.md. | 2h | [ ] | Agent |
+| 2.3 | Draft §V (Epistemology vs. Ontology) — CFSG-as-taxonomy | §V drafted in 0.3.md with CFSG taxonomic framing, honest G2 scoping (Mark→CFSG bridge acknowledged as open question), drawing from 0.1.4.md. | 2h | [x] | Agent |
 | 2.4 | Integrate remaining + complete first draft | §II (Generative Engine / Zitterbewegung), §VI (Ultimate Convergence), conclusion, bibliography, and document frontmatter added to 0.3.md. Complete coherent draft. | 2h | [ ] | Agent |
 
 ## Completed (Retained for Audit)
@@ -62,8 +62,8 @@
 
 ## Sprint Health
 
-- Tasks completed: 2/4
-- DoD verified: 2/4
+- Tasks completed: 3/4
+- DoD verified: 3/4
 - Blocked items: 0
 - Retrospective filed: No
 
