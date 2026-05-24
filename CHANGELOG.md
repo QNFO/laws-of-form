@@ -10,6 +10,14 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 - Identified 8 gaps: 2 BLOCKING (no formal Mark definition, no Mark→CFSG bridge), 3 MAJOR (duplication, no falsifiability, no equations), 3 MINOR
 - Recommendation: Draft synthesis using 0.1.5.1.md outline as next task
 
+
+### Added
+- **Task 3.2 complete:** Publication Language Gate passed — 0.1.2.md/0.1.4.md refs removed, Sprint 2 refs removed, duplicate refs cleaned. 14/14 gate categories clean.
+- **Task 3.3 complete:** Blind reader testing Round 1 — REVIEWER subagent flagged 3 MAJOR issues: CFSG connection undemonstrated, genre reads as manifesto, insufficient mathematical rigor.
+
+### Changed
+- 0.3.md: Language Gate fixes applied (file refs, status line, reference dedup)
+- SPRINT.md: 3.2-3.3 [x], 3.4 activated
 ### Added
 - **Sprint 3 defined:** 6 tasks for P3 Review & Publication Preparation
 - **Task 3.1 complete:** All P3 polish fixes applied — YAML frontmatter at byte 0, 0 straight quotes (curly throughout), §II expanded with formal Compton derivation, Rybin reference resolved, spin glass lay definition, Further Reading section
