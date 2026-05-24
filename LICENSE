@@ -44,9 +44,9 @@ or publicly shared work (including but not limited to academic papers, articles,
 books, presentations, software, websites, patents, technical reports, etc.),
 You must clearly attribute it. Include a statement substantially similar to:
 
-    "This work incorporates or builds upon material from QNFO.org
+    "This work incorporates or builds upon material from QNFO
     (Rowan Brad Quni-Gudzinas), available under the QNFO Content License
-    Agreement v1.1 at https://github.com/QNFO/.github/blob/master/LICENSE."
+    Agreement v1.1 at https://github.com/QNFO/license."
 
 3.2. Indication of Changes: If You modify the Content when creating a derivative
 work, You must include a statement indicating that changes were made to the
@@ -189,7 +189,7 @@ both written and oral.
 
 9.3. Changes to License: Licensor reserves the right to modify this Agreement
 at any time. Changes will be effective upon posting the revised version to
-https://github.com/QNFO/.github/blob/master/LICENSE. Your continued use of the Content after such changes
+https://github.com/QNFO/license. Your continued use of the Content after such changes
 constitutes Your acceptance of the revised Agreement. Significant changes may
 be accompanied by a version number update (as seen in this Version 1.1).
 
@@ -204,7 +204,6 @@ For questions about this license, the Content, or to request a commercial use
 agreement, please contact:
 
     Rowan Brad Quni-Gudzinas
-    Principal Investigator, QNFO
     Website: https://qnfo.org
 
     Primary Email: rowan.quni@qnfo.org
