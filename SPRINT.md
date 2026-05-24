@@ -88,7 +88,7 @@
 | 3.1 | Apply P3 polish fixes | YAML frontmatter at byte 0 with title/authors/DOI/abstract. Curly typographic quotes throughout (0 straight). §II expanded with formal Compton derivation. Rybin reference resolved. Spin glass lay definition added. Uncited refs → Further Reading. | 2h | [x] | Agent |
 | 3.2 | Publication Language Gate scan | §11.7 scan returns ZERO hits: no sprint/task refs, no file management language, no developer notes, no tooling, no internal metadata, no straight quotes, no bare Unicode math, no generation artifacts. | 0.5h | [ ] | Agent |
 | 3.3 | Blind reader testing (Round 1) | §11.5 protocol: fresh REVIEWER subagent, zero context, 5 standard questions. All severity classified. | 1h | [x] | Agent |
-| 3.4 | Fix reader-test issues | All [BLOCKING] and [MAJOR] issues resolved. CHANGELOG.md updated with before/after. | 2h | [~] | Agent |
+| 3.4 | Fix reader-test issues | All [BLOCKING] and [MAJOR] issues resolved. CHANGELOG.md updated with before/after. | 2h | [x] | Agent |
 | 3.5 | Blind reader testing (Round 2) | §11.5 second round: fresh REVIEWER, zero context. Verify fixes. Zero [BLOCKING] remaining. | 1h | [ ] | Agent |
 | 3.6 | Final publication polish | YAML date fresh. DOI placeholder confirmed. All gates pass (math scan, quote scan, language scan). Ready for copy to releases. | 0.5h | [ ] | Agent |
 

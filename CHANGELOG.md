@@ -15,6 +15,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 - **Task 3.2 complete:** Publication Language Gate passed — 0.1.2.md/0.1.4.md refs removed, Sprint 2 refs removed, duplicate refs cleaned. 14/14 gate categories clean.
 - **Task 3.3 complete:** Blind reader testing Round 1 — REVIEWER subagent flagged 3 MAJOR issues: CFSG connection undemonstrated, genre reads as manifesto, insufficient mathematical rigor.
 
+- **Task 3.4 complete:** Round 1 reader fixes applied — R1 abstract re-scoped (shown->proposed), R2 manifesto language toned down in VI.3, R3 worked example added to IV.3
+
 ### Changed
 - 0.3.md: Language Gate fixes applied (file refs, status line, reference dedup)
 - SPRINT.md: 3.2-3.3 [x], 3.4 activated
