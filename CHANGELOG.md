@@ -11,8 +11,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 - Recommendation: Draft synthesis using 0.1.5.1.md outline as next task
 
 ### Added
-- **0.3.md:** Consilient Synthesis first draft **COMPLETE** (34,167 chars). All 6 sections drafted: §I (Ontological Foundation), §II (Generative Engine/Zitterbewegung), §III (Geometry of Emergence), §IV (Arithmetic of Hierarchy), §V (Epistemology vs. Ontology/CFSG), §VI (Ultimate Convergence) + Conclusion + 12 references
-- **Sprint 2 CLOSED** — 4/4 tasks complete. Phase P2 → P3 (Review).
+- **Sprint 3 defined:** 6 tasks for P3 Review & Publication Preparation
+- **Task 3.1 complete:** All P3 polish fixes applied — YAML frontmatter at byte 0, 0 straight quotes (curly throughout), §II expanded with formal Compton derivation, Rybin reference resolved, spin glass lay definition, Further Reading section
 
 ### Changed
 - All tasks 2.1–2.4 [x]

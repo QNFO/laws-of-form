@@ -10,8 +10,8 @@ This project explores the "Primordial Mark" — Spencer-Brown's act of distincti
 
 ## Current Status
 
-**Active task:** None — Sprint 2 complete. Ready for Review (Phase P3).
-**Last completed:** 2.4 — Integrate remaining + complete first draft; 0.3.md complete (2026-05-24)
+**Active task:** 3.2 — Publication Language Gate scan (§11.7)
+**Last completed:** 3.1 — P3 polish fixes; 0.3.md publication-ready (2026-05-24)
 **Blocked?** No
 
 ## Next Agent Handoff
