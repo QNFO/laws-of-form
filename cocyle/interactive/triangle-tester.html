@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triangle Inequality Tester | Cocyle</title>
+<meta name="description" content="Upload or generate distance matrices. Test the strong triangle inequality — the signature of ultrametricity.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <span class="site-title"><a href="../index.html">← The Branch and the Shadow</a></span>
+  <span style="font-family:var(--sans);font-size:0.7rem;color:var(--muted);">Triangle Inequality Tester</span>
+</div>
+
+<h1>△ Triangle Inequality Tester</h1>
+<p>The <strong>strong triangle inequality</strong> — d(a,b) ≤ max(d(a,c), d(b,c)) — is the defining signature of ultrametricity. Test it on your own data or generated datasets.</p>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('upload')">Upload Data</button>
+  <button class="tab-btn" onclick="switchTab('generate')">Generate Data</button>
+</div>
+
+<!-- Upload Tab -->
+<div id="tab-upload" class="tab-content active">
+  <div class="controls">
+    <input type="file" id="file-upload" accept=".csv,.tsv,.txt" onchange="handleUpload(event)">
+    <button class="btn" onclick="document.getElementById('file-upload').click()">📁 Choose File</button>
+  </div>
+  <p style="font-size:0.8rem;color:var(--muted);">Upload a CSV/TSV distance matrix. First row = labels (optional). Square matrix expected.</p>
+  <div id="upload-results"></div>
+</div>
+
+<!-- Generate Tab -->
+<div id="tab-generate" class="tab-content">
+  <div class="controls">
+    <select id="gen-type" style="padding:0.5rem;border:1px solid var(--border);font-family:var(--sans);">
+      <option value="ultrametric">Ultrametric (tree-based)</option>
+      <option value="euclidean">Euclidean (2D random)</option>
+      <option value="mixed">Mixed (ultra + noise)</option>
+    </select>
+    <input type="number" id="gen-n" value="30" min="5" max="200" style="max-width:80px;" placeholder="N">
+    <button class="btn" onclick="generateAndTest()">▶ Generate & Test</button>
+  </div>
+  <div id="gen-results"></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function analyzeMatrix(matrix, labels) {
+  const n = matrix.length;
+  let total = 0, satisfied = 0;
+  const baseRatios = [];
+  const violations = [];
+  
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      for (let k = j + 1; k < n; k++) {
+        total++;
+        const d12 = matrix[i][j], d13 = matrix[i][k], d23 = matrix[j][k];
+        const sides = [d12, d13, d23].sort((a,b) => a - b);
+        const baseRatio = sides[0] / (sides[2] || 1);
+        baseRatios.push(baseRatio);
+        
+        if (d12 <= Math.max(d13, d23) && d13 <= Math.max(d12, d23) && d23 <= Math.max(d12, d13)) {
+          satisfied++;
+        } else {
+          violations.push({ i, j, k, d12, d13, d23 });
+        }
+      }
+    }
+  }
+  
+  const meanBR = baseRatios.reduce((a,b) => a + b, 0) / baseRatios.length;
+  const consistency = satisfied / total;
+  
+  return { total, satisfied, consistency, meanBaseRatio: meanBR, baseRatios, violations };
+}
+
+function displayResults(r, labels, source) {
+  const isUltrametric = r.consistency > 0.95 && r.meanBaseRatio < 0.2;
+  const n = labels ? labels.length : Math.round(Math.sqrt(r.total * 2));
+  
+  let html = '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0;">';
+  html += `<div class="metric"><div class="val">${(r.consistency*100).toFixed(1)}%</div><div class="lbl">Consistency</div></div>`;
+  html += `<div class="metric"><div class="val">${r.meanBaseRatio.toFixed(3)}</div><div class="lbl">Mean Base Ratio</div></div>`;
+  html += `<div class="metric"><div class="val">${r.total}</div><div class="lbl">Triangles</div></div>`;
+  html += `<div class="metric"><div class="val">${n}×${n}</div><div class="lbl">Matrix Size</div></div>`;
+  html += '</div>';
+  
+  // Base ratio histogram (text-based bars)
+  html += '<h3>Base Ratio Distribution</h3><div style="font-family:var(--mono);font-size:0.75rem;line-height:1.3;">';
+  const bins = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0];
+  const hist = new Array(bins.length - 1).fill(0);
+  for (const br of r.baseRatios) {
+    for (let b = 0; b < bins.length - 1; b++) {
+      if (br >= bins[b] && br < bins[b+1]) { hist[b]++; break; }
+    }
+  }
+  const maxH = Math.max(...hist, 1);
+  for (let b = 0; b < hist.length; b++) {
+    const bar = '█'.repeat(Math.round(hist[b] / maxH * 50));
+    html += `${bins[b].toFixed(1)}-${bins[b+1].toFixed(1)} ${bar} ${hist[b]}<br>`;
+  }
+  html += '</div>';
+  
+  // Verdict
+  html += '<div class="result-box ' + (isUltrametric ? 'success' : 'warn') + '">';
+  if (isUltrametric) {
+    html += `✓ <strong>Ultrametric signature detected.</strong> Mean base ratio (${r.meanBaseRatio.toFixed(3)}) is in the ultrametric range (< 0.2). Euclidean baseline: ~0.059. Isosceles: ${r.consistency > 0.95 ? 'yes' : 'marginal'}.`;
+  } else if (r.consistency > 0.95) {
+    html += `⚠ <strong>Triangles satisfy ultrametric inequality</strong> but base ratio (${r.meanBaseRatio.toFixed(3)}) is higher than expected for a pure ultrametric tree. Possibly mixed or deeper tree.`;
+  } else {
+    html += `✗ <strong>Not ultrametric.</strong> ${(r.consistency*100).toFixed(1)}% consistency; ${r.violations.length} violations. Mean base ratio: ${r.meanBaseRatio.toFixed(3)}.`;
+  }
+  html += `</div>`;
+  
+  // Violations
+  if (r.violations.length > 0 && r.violations.length <= 10) {
+    html += '<h3>Violations</h3><table><tr><th>i</th><th>j</th><th>k</th><th>d(i,j)</th><th>d(i,k)</th><th>d(j,k)</th></tr>';
+    for (const v of r.violations.slice(0, 10)) {
+      const li = labels ? labels[v.i] : v.i;
+      const lj = labels ? labels[v.j] : v.j;
+      const lk = labels ? labels[v.k] : v.k;
+      html += `<tr><td>${li}</td><td>${lj}</td><td>${lk}</td><td>${v.d12}</td><td>${v.d13}</td><td>${v.d23}</td></tr>`;
+    }
+    html += '</table>';
+  } else if (r.violations.length > 10) {
+    html += `<p style="color:var(--muted);">${r.violations.length} violations (showing first 0).</p>`;
+  }
+  
+  if (source) html += `<p style="font-size:0.75rem;color:var(--muted);">Source: ${source}</p>`;
+  return html;
+}
+
+// Upload handler
+function handleUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    const text = ev.target.result;
+    const sep = text.includes('\t') ? '\t' : ',';
+    const lines = text.trim().split('\n').map(l => l.trim()).filter(l => l);
+    let labels = null;
+    let startRow = 0;
+    
+    // Check if first row has labels
+    const firstCells = lines[0].split(sep).map(c => c.trim());
+    if (isNaN(parseFloat(firstCells[0]))) {
+      labels = firstCells.slice(1);
+      startRow = 1;
+    }
+    
+    const matrix = [];
+    for (let i = startRow; i < lines.length; i++) {
+      const cells = lines[i].split(sep).map(c => c.trim());
+      const row = cells.slice(startRow ? 1 : 0).map(parseFloat).filter(v => !isNaN(v));
+      if (row.length > 0) matrix.push(row);
+    }
+    
+    if (matrix.length < 3) {
+      document.getElementById('upload-results').innerHTML = '<p style="color:var(--accent);">Matrix too small. Need at least 3 items.</p>';
+      return;
+    }
+    
+    const r = analyzeMatrix(matrix, labels);
+    document.getElementById('upload-results').innerHTML = displayResults(r, labels, file.name);
+  };
+  reader.readAsText(file);
+}
+
+// Generate handler
+function generateAndTest() {
+  const type = document.getElementById('gen-type').value;
+  const n = parseInt(document.getElementById('gen-n').value) || 30;
+  
+  let matrix, labels;
+  
+  if (type === 'ultrametric') {
+    // Build a random tree and compute ultrametric distances
+    const treeDepth = Math.ceil(Math.log2(n)) + 2;
+    const paths = [];
+    for (let i = 0; i < n; i++) {
+      let p = '', temp = i;
+      for (let d = 0; d < treeDepth; d++) { p = (temp % 2) + p; temp = Math.floor(temp / 2); }
+      paths.push(p);
+    }
+    matrix = Array(n).fill(null).map(() => Array(n).fill(0));
+    for (let i = 0; i < n; i++) {
+      for (let j = i + 1; j < n; j++) {
+        let lca = 0;
+        while (lca < treeDepth && paths[i][lca] === paths[j][lca]) lca++;
+        matrix[i][j] = matrix[j][i] = treeDepth - lca;
+      }
+    }
+    labels = Array.from({length: n}, (_, i) => `L${i+1}`);
+  } else if (type === 'euclidean') {
+    const pts = Array.from({length: n}, () => [Math.random()*10, Math.random()*10]);
+    matrix = Array(n).fill(null).map(() => Array(n).fill(0));
+    for (let i = 0; i < n; i++)
+      for (let j = i + 1; j < n; j++)
+        matrix[i][j] = matrix[j][i] = Math.round(Math.sqrt((pts[i][0]-pts[j][0])**2 + (pts[i][1]-pts[j][1])**2));
+    labels = Array.from({length: n}, (_, i) => `P${i+1}`);
+  } else {
+    // Mixed: ultrametric base + noise
+    const treeDepth = Math.ceil(Math.log2(n)) + 2;
+    const paths = [];
+    for (let i = 0; i < n; i++) {
+      let p = '', temp = i;
+      for (let d = 0; d < treeDepth; d++) { p = (temp % 2) + p; temp = Math.floor(temp / 2); }
+      paths.push(p);
+    }
+    matrix = Array(n).fill(null).map(() => Array(n).fill(0));
+    for (let i = 0; i < n; i++) {
+      for (let j = i + 1; j < n; j++) {
+        let lca = 0;
+        while (lca < treeDepth && paths[i][lca] === paths[j][lca]) lca++;
+        const dist = treeDepth - lca + (Math.random() - 0.5) * 2;
+        matrix[i][j] = matrix[j][i] = Math.max(0, Math.round(dist));
+      }
+    }
+    labels = Array.from({length: n}, (_, i) => `M${i+1}`);
+  }
+  
+  const r = analyzeMatrix(matrix, labels);
+  document.getElementById('gen-results').innerHTML = displayResults(r, labels, `Generated: ${type} (n=${n})`);
+}
+</script>
+
+<div class="site-footer">
+  <p><strong>The Branch and the Shadow</strong> — <a href="../index.html">Home</a> · <a href="monna-demo.html">Monna Lens</a> · <a href="cocycle-visualizer.html">Cocycle Visualizer</a></p>
+</div>
+</div>
+</body>
+</html>
