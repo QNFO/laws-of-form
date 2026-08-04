@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 20 | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="19.html">← Ch. 19</a></span>
+  <span class="current">Chapter 20</span>
+  <span><a href="21.html">Ch. 21 →</a></span>
+</div>
+<h1>Chapter 20: The Distributive Law and Non‑Locality</h1>
+
+
+<h2>20.1 The Syntactic Proof of Local Physics: <code>[ [ A L ] [ B L ] ] → [ [ A ] [ B ] ] L</code></h2>
+
+<p>One of the most powerful results in the Syntactic Token Calculus is the <strong>distributive law</strong>. It states that if two local systems $A$ and $B$ share a common macro‑ledger $L$, then the ledger factors out of their interaction, leaving a purely local term. Formally:</p>
+
+<p>$$ [\,[\,A\;L\,]\;[\,B\;L\,]\,] \rightarrow [\,[\,A\;B\,]\,]\;L. $$</p>
+
+<p>Here, juxtaposition inside an enclosure means that $A$ and $L$ are placed side by side within the same enclosure, and similarly for $B$ and $L$. The outer brackets enclose the two inner enclosures. The reduction arrow indicates that the left‑hand side can be rewritten as the right‑hand side using the STC’s reduction rules (Calling and Crossing).</p>
+
+<p><strong>Proof sketch:</strong>   Expand the left‑hand side: <code>[ [ A L ] [ B L ] ]</code>. Apply the <strong>crossing rule</strong> in reverse: introduce an extra enclosure to factor out $L$. More concretely, treat <code>[ A L ]</code> as an enclosure containing two items. We want to “pull out” $L$ from both inner enclosures. This can be done by noting that the structure <code>[ [ A L ] [ B L ] ]</code> is equivalent to <code>[ [ A ] [ B ] ] L</code> under the assumption that $L$ is <strong>identical</strong> in both slots. The proof proceeds by constructing an intermediate expression that makes the factoring explicit, then reducing.</p>
+
+<p>A more intuitive proof: Think of $L$ as a <strong>common background</strong> that both $A$ and $B$ see. When $A$ and $B$ interact, they interact through this common background. The interaction between $A$ and $B$ can be separated from the background because the background is the same for both. Syntactically, this separation is achieved by moving $L$ outside the double enclosure.</p>
+
+<p>The distributive law is the syntactic expression of <strong>locality</strong>. It shows that the influence of the distant universe (the ledger $L$) cancels out when considering local interactions. Only the <strong>relative configuration</strong> of $A$ and $B$ matters. This is why we can do physics in a lab without worrying about the state of galaxies far away: those galaxies are part of $L$, and they factor out.</p>
+
+<p>The law also explains <strong>gauge invariance</strong>. In gauge theories, physical observables are invariant under local gauge transformations. In the STC, a gauge transformation corresponds to adding or removing marks inside the ledger $L$. Because $L$ factors out, such transformations do not affect local observables.</p>
+
+
+<h2>20.2 Entanglement De‑mystified: Entangled Particles Are Syntactically Adjacent, Sharing a Deep and Recent Enclosure in Their Macro‑Ledger</h2>
+
+<p>Quantum entanglement is often described as “spooky action at a distance”: two particles remain correlated even when separated by large distances, and measuring one seems to instantly affect the other. This non‑locality appears to violate relativistic causality, though it does not allow faster‑than‑light communication.</p>
+
+<p>In the STC, entanglement is not spooky at all; it is a <strong>syntactic adjacency</strong>. Two entangled particles share a <strong>deep and recent enclosure</strong> in their macro‑ledger. That is, their patterns are both inside the same outer boundary at some level of nesting. Because they share this boundary, their fates are linked; a measurement on one particle reveals information about the shared boundary, which constrains the other particle.</p>
+
+<p>Consider two electrons in the singlet state $(|\uparrow\downarrow\rangle - |\downarrow\uparrow\rangle)/\sqrt{2}$. In the STC, this state corresponds to the pattern:</p>
+
+<p>$$ [\,[\,\text{electron}<em>1\; \text{electron}</em>2\,]\; L_{\text{ent}}\,], $$</p>
+
+<p>where $L_{\text{ent}}$ is a <strong>specific ledger</strong> that encodes the antisymmetry. The two electron patterns are inside the same enclosure, and that enclosure is part of a larger ledger that includes the rest of the universe. The entanglement is encoded in the <strong>structure</strong> of that enclosure and the surrounding ledger.</p>
+
+<p>When the electrons are separated spatially, we might think they are far apart. But in the Bruhat‑Tits tree, <strong>spatial separation</strong> corresponds to being on different branches of the tree. However, if they share a deep common enclosure, they remain <strong>syntactically adjacent</strong>—they are connected by a short path through the tree that goes up to the shared enclosure and back down. This path is the syntactic representation of their <strong>quantum connection</strong>.</p>
+
+<p>Measurement of one electron <strong>collapses the shared enclosure</strong>. In syntactic terms, measurement reduces the pattern by removing some of the nesting. This reduction affects both electrons because they are inside the same enclosure. There is no “action at a distance”; there is only a <strong>local syntactic reduction</strong> that updates the ledger for both particles simultaneously.</p>
+
+<p>The appearance of non‑locality arises because we <strong>project</strong> the tree onto continuous spacetime. In the projection, the shared enclosure may map to two spatially separated points, giving the illusion that an influence traveled faster than light. But in the tree, the connection is <strong>immediate</strong>—it is a single edge or a short path. The Monna map (which projects p‑adic to real) spreads this immediate connection over a spatial distance, creating the illusion of spookiness.</p>
+
+<p>Thus, entanglement is <strong>not non‑local</strong> in the underlying syntactic reality; it is local in the tree. The non‑locality we observe is an artifact of the Archimedean projection. This resolves the tension between quantum mechanics and relativity: both are approximate descriptions of a deeper, syntactic reality where locality is defined by tree adjacency, not by spatial distance.</p>
+
+<p><strong>Example:</strong> The EPR‑Bohm experiment. Two entangled electrons are sent to detectors A and B far apart. In the tree, both electrons are leaves under a common ancestor node. When detector A measures the electron, it reduces the pattern by removing the branch corresponding to the other possible outcome. This reduction is local at the ancestor node, which is <strong>close</strong> to both leaves in tree distance. The effect propagates to leaf B <strong>instantaneously</strong> in tree time (which is not the same as spacetime time). When we map to spacetime, the instantaneous tree propagation appears as instantaneous correlation across space, but no signal travels through spacetime.</p>
+
+<hr>
+
+<p>Chapter 20 has presented the distributive law as a syntactic proof of locality and demystified entanglement as syntactic adjacency. The shared macro‑ledger factors out of local interactions, ensuring that distant parts of the universe do not interfere. Entanglement arises from shared enclosures in the tree and appears non‑local only when projected onto continuous spacetime.</p>
+
+<p>With locality and entanglement understood, we turn to the final piece of the geometric universe: gravity. The next chapter sketches how gravity might emerge from the tree’s tendency to optimize ledger sharing—a principle of minimal syntactic complexity.</p>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="19.html">← Ch. 19</a></span>
+  <span class="current">Chapter 20</span>
+  <span><a href="21.html">Ch. 21 →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>

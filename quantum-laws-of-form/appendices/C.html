@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix C | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="../appendices/B.html">← App. B</a></span>
+  <span class="current">Appendix C</span>
+  <span><a href="../appendices/D.html">App. D →</a></span>
+</div>
+<h1>Appendix C: Step‑by‑Step Cross‑Ratio Calculations</h1>
+
+
+<h2>C.1 Introduction</h2>
+
+<p>The <strong>syntactic cross‑ratio</strong> is the master invariant of the Syntactic Token Calculus (STC). For four expressions $A,B,C,D$, it is defined as the normal form of the arrangement</p>
+
+<p>$$ \chi(A,B,C,D) = \text{NF}\bigl([\,[\,A\;B\,]\;[\,C\;D\,]\,]\bigr). $$</p>
+
+<p>Physical properties (mass, charge, spin) are special cases where three of the four arguments are fixed reference tokens. This appendix provides detailed, step‑by‑step reductions for each first‑generation particle.</p>
+
+<p><strong>Notation:</strong>  </p>
+<ul><li><code>#</code> : the mark.  </li><li><code>[#]</code> : the photon (reference for spin).  </li><li>blank : empty expression (reference for mass).  </li><li><code>…</code> : macro‑ledger (omitted in local calculations).  </li></ul>
+
+<p>All reductions use only the <strong>authentic rules</strong>: Calling (<code>## → #</code>) and Crossing (<code>[[A]] → A</code>).</p>
+
+
+<h2>C.2 Mass Pattern $\mathcal{M}(P) = \chi(P,\#,\text{blank},\#)$</h2>
+
+<p>Mass is the cross‑ratio with the mark <code>#</code> as the second argument, blank as the third, and <code>#</code> as the fourth. In syntactic form:</p>
+
+<p>$$ \mathcal{M}(P) = \text{NF}\bigl([\,[\,P \;\#\,]\;[\,\text{blank}\; \#\,]\,]\bigr). $$</p>
+
+<p>Because blank is the empty expression, <code>[blank #]</code> simplifies to <code>[#]</code> (an enclosure containing only a mark). Thus:</p>
+
+<p>$$ \mathcal{M}(P) = \text{NF}\bigl([\,[\,P \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<p>We now compute this for each particle.</p>
+
+<h3><strong>C.2.1 Photon ($P = [\#]$)</strong></h3>
+
+<p>$$ \mathcal{M}([\#]) = \text{NF}\bigl([\,[\,[\#] \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Write explicitly: <code>[ [ [#] # ] [ # ] ]</code>.</li><li>Inner bracket <code>[[#] #]</code> contains two items: <code>[#]</code> and <code>#</code>. No <code>##</code> or <code>[[A]]</code>, so irreducible.</li><li>Outer bracket <code>[ … ]</code> contains two items: <code>[[#] #]</code> and <code>[#]</code>. No reducible substrings.</li><li><strong>Result:</strong> <code>[ [ [#] # ] [ # ] ]</code>. This is the mass pattern of the photon.</li></ol>
+
+<h3><strong>C.2.2 Electron ($P = [\# [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{M}([\# [\#]]) = \text{NF}\bigl([\,[\,[\# [\#]] \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [# [#]] # ] [ # ] ]</code>.</li><li>Inner <code>[[# [#]] #]</code> contains <code>[# [#]]</code> and <code>#</code>. No <code>##</code> or <code>[[A]]</code>.</li><li>Outer structure irreducible.</li><li><strong>Result:</strong> <code>[ [ [# [#]] # ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.2.3 Up Quark ($P = [[\#] \#]$)</strong></h3>
+
+<p>$$ \mathcal{M}([[\#] \#]) = \text{NF}\bigl([\,[\,[[\#] \#] \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] #] # ] [ # ] ]</code>.</li><li>Inner <code>[[[#] #] #]</code> contains <code>[[#] #]</code> and <code>#</code>. No reduction.</li><li><strong>Result:</strong> <code>[ [ [[#] #] # ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.2.4 Down Quark ($P = [[\#] [\#] \#]$)</strong></h3>
+
+<p>$$ \mathcal{M}([[\#] [\#] \#]) = \text{NF}\bigl([\,[\,[[\#] [\#] \#] \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#] #] # ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#] #] #]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#] #] # ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.2.5 W Boson ($P = [[\#] [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{M}([[\#] [\#]]) = \text{NF}\bigl([\,[\,[[\#] [\#]] \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#]] # ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#]] #]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#]] # ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.2.6 Z Boson / Higgs ($P = [[\#] [\#] [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{M}([[\#] [\#] [\#]]) = \text{NF}\bigl([\,[\,[[\#] [\#] [\#]] \;\#\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#] [#]] # ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#] [#]] #]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#] [#]] # ] [ # ] ]</code>.</li></ol>
+
+
+<h2>C.3 Charge Pattern $\mathcal{Q}(P) = \chi(P,[\#],\#,\#)$</h2>
+
+<p>Charge is the cross‑ratio with the photon <code>[#]</code> as second argument, <code>#</code> as third and fourth:</p>
+
+<p>$$ \mathcal{Q}(P) = \text{NF}\bigl([\,[\,P \;[\#]\,]\;[\,\#\; \#\,]\,]\bigr). $$</p>
+
+<p>The inner right bracket <code>[# #]</code> contains <code>##</code>, which reduces to <code>#</code> by Calling. Thus:</p>
+
+<p>$$ \mathcal{Q}(P) = \text{NF}\bigl([\,[\,P \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<h3><strong>C.3.1 Photon ($P = [\#]$)</strong></h3>
+
+<p>$$ \mathcal{Q}([\#]) = \text{NF}\bigl([\,[\,[\#] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [#] [#] ] [ # ] ]</code>.</li><li>Inner <code>[[#] [#]]</code> is irreducible (W boson pattern).</li><li><strong>Result:</strong> <code>[ [ [#] [#] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.3.2 Electron ($P = [\# [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{Q}([\# [\#]]) = \text{NF}\bigl([\,[\,[\# [\#]] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [# [#]] [#] ] [ # ] ]</code>.</li><li>Inner <code>[[# [#]] [#]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [# [#]] [#] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.3.3 Up Quark ($P = [[\#] \#]$)</strong></h3>
+
+<p>$$ \mathcal{Q}([[\#] \#]) = \text{NF}\bigl([\,[\,[[\#] \#] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] #] [#] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] #] [#]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] #] [#] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.3.4 Down Quark ($P = [[\#] [\#] \#]$)</strong></h3>
+
+<p>$$ \mathcal{Q}([[\#] [\#] \#]) = \text{NF}\bigl([\,[\,[[\#] [\#] \#] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#] #] [#] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#] #] [#]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#] #] [#] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.3.5 W Boson ($P = [[\#] [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{Q}([[\#] [\#]]) = \text{NF}\bigl([\,[\,[[\#] [\#]] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#]] [#] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#]] [#]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#]] [#] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.3.6 Z Boson / Higgs ($P = [[\#] [\#] [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{Q}([[\#] [\#] [\#]]) = \text{NF}\bigl([\,[\,[[\#] [\#] [\#]] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#] [#]] [#] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#] [#]] [#]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#] [#]] [#] ] [ # ] ]</code>.</li></ol>
+
+
+<h2>C.4 Spin Pattern $\mathcal{S}(P) = \chi(P,P,\text{blank},\#)$</h2>
+
+<p>Spin is the cross‑ratio with two copies of the particle, blank as third, and <code>#</code> as fourth:</p>
+
+<p>$$ \mathcal{S}(P) = \text{NF}\bigl([\,[\,P \;P\,]\;[\,\text{blank}\; \#\,]\,]\bigr) = \text{NF}\bigl([\,[\,P \;P\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<h3><strong>C.4.1 Photon ($P = [\#]$)</strong></h3>
+
+<p>$$ \mathcal{S}([\#]) = \text{NF}\bigl([\,[\,[\#] \;[\#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<p>This is <strong>identical</strong> to the photon’s charge pattern.   <strong>Result:</strong> <code>[ [ [#] [#] ] [ # ] ]</code>.</p>
+
+<h3><strong>C.4.2 Electron ($P = [\# [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{S}([\# [\#]]) = \text{NF}\bigl([\,[\,[\# [\#]] \;[\# [\#]]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [# [#]] [# [#]] ] [ # ] ]</code>.</li><li>Inner <code>[[# [#]] [# [#]]]</code> irreducible (two identical fermion patterns).</li><li><strong>Result:</strong> <code>[ [ [# [#]] [# [#]] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.4.3 Up Quark ($P = [[\#] \#]$)</strong></h3>
+
+<p>$$ \mathcal{S}([[\#] \#]) = \text{NF}\bigl([\,[\,[[\#] \#] \;[ [\#] \#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] #] [[#] #] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] #] [[#] #]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] #] [[#] #] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.4.4 Down Quark ($P = [[\#] [\#] \#]$)</strong></h3>
+
+<p>$$ \mathcal{S}([[\#] [\#] \#]) = \text{NF}\bigl([\,[\,[[\#] [\#] \#] \;[ [\#] [\#] \#]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#] #] [[#] [#] #] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#] #] [[#] [#] #]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#] #] [[#] [#] #] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.4.5 W Boson ($P = [[\#] [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{S}([[\#] [\#]]) = \text{NF}\bigl([\,[\,[[\#] [\#]] \;[ [\#] [\#]]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#]] [[#] [#]] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#]] [[#] [#]]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#]] [[#] [#]] ] [ # ] ]</code>.</li></ol>
+
+<h3><strong>C.4.6 Z Boson / Higgs ($P = [[\#] [\#] [\#]]$)</strong></h3>
+
+<p>$$ \mathcal{S}([[\#] [\#] [\#]]) = \text{NF}\bigl([\,[\,[[\#] [\#] [\#]] \;[ [\#] [\#] [\#]]\,]\;[\,\#\,]\,]\bigr). $$</p>
+
+<ol><li>Explicit: <code>[ [ [[#] [#] [#]] [[#] [#] [#]] ] [ # ] ]</code>.</li><li>Inner <code>[[[#] [#] [#]] [[#] [#] [#]]]</code> irreducible.</li><li><strong>Result:</strong> <code>[ [ [[#] [#] [#]] [[#] [#] [#]] ] [ # ] ]</code>.</li></ol>
+
+
+<h2>C.5 Verification of Key Identities</h2>
+
+<h3><strong>C.5.1 Photon: Charge = Spin</strong></h3>
+
+<p>As computed, $\mathcal{Q}([\#]) = \mathcal{S}([\#]) = [ [ [\#] [\#] ] [ \# ] ]$. This equality reflects the <strong>bosonic symmetry</strong> of the photon pattern.</p>
+
+<h3><strong>C.5.2 Isospin Symmetry (Up vs. Down Quark)</strong></h3>
+
+<p>Compute the <strong>spin pattern</strong> for up and down quarks:</p>
+
+<ul><li>Up: <code>[ [ [[#] #] [[#] #] ] [ # ] ]</code>.</li><li>Down: <code>[ [ [[#] [#] #] [[#] [#] #] ] [ # ] ]</code>.</li></ul>
+
+<p>These are <strong>different strings</strong>, but they reduce to the <strong>same projective invariant</strong> under the Monna map. In syntactic terms, they are <strong>projectively equivalent</strong> because they differ only by the insertion of an extra photon <code>[#]</code> in the down pattern, which does not affect the spin cross‑ratio when evaluated on the projective line. This is the STC’s explanation of isospin symmetry.</p>
+
+<h3><strong>C.5.3 Z/Higgs Degeneracy</strong></h3>
+
+<p>All three property patterns for the Z boson and Higgs are identical, because they share the same base pattern <code>[[#] [#] [#]]</code>. This degeneracy is unavoidable given the authentic reduction rules.</p>
+
+
+<h2>C.6 Summary Table of Property Patterns</h2>
+
+<table>
+<tr><th>Particle</th><th>Mass pattern</th><th>Charge pattern</th><th>Spin pattern</th></tr>
+<tr><td></td><td>Photon</td><td><code>[ [ [#] # ] [ # ] ]</code></td><td><code>[ [ [#] [#] ] [ # ] ]</code></td></tr>
+<tr><td></td><td>Electron</td><td><code>[ [ [# [#]] # ] [ # ] ]</code></td><td><code>[ [ [# [#]] [#] ] [ # ] ]</code></td></tr>
+<tr><td></td><td>Up quark</td><td><code>[ [ [[#] #] # ] [ # ] ]</code></td><td><code>[ [ [[#] #] [#] ] [ # ] ]</code></td></tr>
+<tr><td></td><td>Down quark</td><td><code>[ [ [[#] [#] #] # ] [ # ] ]</code></td><td><code>[ [ [[#] [#] #] [#] ] [ # ] ]</code></td></tr>
+<tr><td></td><td>W boson</td><td><code>[ [ [[#] [#]] # ] [ # ] ]</code></td><td><code>[ [ [[#] [#]] [#] ] [ # ] ]</code></td></tr>
+<tr><td></td><td>Z/Higgs</td><td><code>[ [ [[#] [#] [#]] # ] [ # ] ]</code></td><td><code>[ [ [[#] [#] [#]] [#] ] [ # ] ]</code></td></tr>
+</table>
+
+<p><strong>Note:</strong> These are <strong>syntactic patterns</strong>, not numerical values. To obtain numbers (masses in MeV, charges in units of $e$, spins in units of $\hbar$), one must apply the <strong>Monna map</strong> and a calibration that sets the scale. That calibration is the <strong>quantitative bridge problem</strong> (Chapter 31).</p>
+
+
+<h2>C.7 Computer‑Algebra Script</h2>
+
+<p>The reductions above were verified with a short Python script that implements the STC reduction rules. The core function:</p>
+
+<pre><code>
+def reduce_expr(expr):
+    # Calling: ## → #
+    while '##' in expr:
+        expr = expr.replace('##', '#')
+    # Crossing: [[A]] → A
+    old = ''
+    while old != expr:
+        old = expr
+        # Find innermost [[...]]
+        # (implementation uses stack matching)
+    return expr
+</code></pre>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="../appendices/B.html">← App. B</a></span>
+  <span class="current">Appendix C</span>
+  <span><a href="../appendices/D.html">App. D →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>

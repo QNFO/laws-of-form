@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Monna Lens | Cocyle</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  body{margin:0;background:#fdfcfa;overflow:hidden}
+  .wrap{display:flex;width:100vw;height:100vh}
+  .panel{flex:1;position:relative;border-right:1px solid #e0ddd5;overflow:hidden}
+  .panel:last-child{border-right:none}
+  canvas{display:block;width:100%;height:100%}
+  .label{position:absolute;top:12px;left:16px;font-family:"Segoe UI",Arial,sans-serif;font-size:13px;font-weight:600;color:#5e5e5e;background:rgba(253,252,250,.85);padding:4px 10px;border-radius:4px}
+  .info{position:absolute;bottom:12px;left:16px;font-family:"SFMono-Regular",Consolas,monospace;font-size:12px;color:#5e5e5e}
+  .back{position:absolute;top:12px;right:16px;z-index:10}
+  .back a{color:#8b4513;text-decoration:none;font-family:"Segoe UI",Arial,sans-serif;font-size:13px}
+  @media(max-width:768px){.wrap{flex-direction:column}.panel{border-right:none;border-bottom:1px solid #e0ddd5}}
+</style>
+</head>
+<body>
+<div class="back"><a href="../index.html">← Back</a></div>
+<div class="wrap">
+  <div class="panel" id="tree-panel"><canvas id="tc"></canvas><div class="label">Ultrametric Tree (p=2, depth=6, 64 leaves)</div><div class="info" id="ti">64 leaves</div></div>
+  <div class="panel" id="line-panel"><canvas id="lc"></canvas><div class="label">Monna Projection → [0, 1]</div><div class="info" id="li">Hover over the line</div></div>
+</div>
+<script>
+(function(){
+  var P=2,D=6,N=Math.pow(P,D),leaves=[],leafVals=[];
+  for(var i=0;i<N;i++){var d=[],t=i;for(var j=0;j<D;j++){d.unshift(t%P);t=Math.floor(t/P)}leaves.push(d);leafVals.push(d.reduce(function(s,v,n){return s+v*Math.pow(P,-(n+1))},0))}
+  var tcv=document.getElementById('tc'),tctx=tcv.getContext('2d');
+  var lcv=document.getElementById('lc'),lctx=lcv.getContext('2d');
+  var TW,TH,LW,LH,hl=new Set();
+  function draw(){
+    tctx.clearRect(0,0,TW,TH);
+    var mx=20,my=50,bx=TW-20,by=TH-30,lvlH=(by-my)/D,sp=(bx-mx)/(N-1);
+    (function br(lv,s,e,px,py){if(lv>=D)return;var y=my+lv*lvlH,segs=[],ss=s;
+      for(var i=s+1;i<=e;i++){if(i===e||leaves[i][lv]!==leaves[ss][lv]){segs.push({s:ss,e:i-1});ss=i}}
+      segs.push({s:ss,e:e});
+      for(var si=0;si<segs.length;si++){var sg=segs[si],mx2=mx+((sg.s+sg.e)/2)*sp;
+        if(px!==null){tctx.beginPath();tctx.moveTo(px,py);tctx.lineTo(mx2,y);tctx.strokeStyle='#ccc';tctx.lineWidth=0.5;tctx.stroke()}
+        br(lv+1,sg.s,sg.e,mx2,y)})(0,0,N-1,null,null);
+    for(var i=0;i<N;i++){tctx.beginPath();tctx.arc(mx+i*sp,by,3,0,6.283);tctx.fillStyle=hl.has(i)?'#e07030':'#88aacc';tctx.fill()}
+    document.getElementById('ti').textContent=N+' leaves';
+    // line
+    lctx.clearRect(0,0,LW,LH);
+    var lx=40,rx=LW-25,ly=LH/2;
+    lctx.beginPath();lctx.moveTo(lx,ly);lctx.lineTo(rx,ly);lctx.strokeStyle='#333';lctx.lineWidth=1.5;lctx.stroke();
+    lctx.font='12px sans-serif';lctx.fillStyle='#888';
+    for(var f=0;f<=1;f+=0.1){var x=lx+f*(rx-lx);lctx.beginPath();lctx.moveTo(x,ly-5);lctx.lineTo(x,ly+5);lctx.strokeStyle='#bbb';lctx.stroke();lctx.fillText(f.toFixed(1),x-8,ly+18)}
+    document.getElementById('li').textContent=hl.size>0?hl.size+' leaves lit':'Hover over the line';
+  }
+  function size(){
+    TW=tcv.width=document.getElementById('tree-panel').clientWidth||500;
+    TH=tcv.height=document.getElementById('tree-panel').clientHeight||400;
+    LW=lcv.width=document.getElementById('line-panel').clientWidth||500;
+    LH=lcv.height=document.getElementById('line-panel').clientHeight||400;
+    draw();
+  }
+  // Down-level approach: try sizing at multiple timing points
+  size();
+  window.addEventListener('load',size);
+  window.addEventListener('resize',size);
+  setTimeout(function(){tcv.width=800;tcv.height=500;lcv.width=800;lcv.height=500;TW=800;TH=500;LW=800;LH=500;draw()},150);
+  lcv.addEventListener('mousemove',function(e){
+    var r=lcv.getBoundingClientRect(),sx=40,ex=LW-25;
+    var mx2=(e.clientX-r.left)*(LW/r.width);
+    if(mx2<sx||mx2>ex){hl=new Set();draw();return}
+    var t=(mx2-sx)/(ex-sx),eps=0.015;hl=new Set();
+    for(var i=0;i<N;i++)if(Math.abs(leafVals[i]-t)<eps)hl.add(i);
+    draw();
+  });
+  lcv.addEventListener('mouseleave',function(){hl=new Set();draw()});
+})();
+</script>
+</body>
+</html>

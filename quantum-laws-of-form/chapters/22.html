@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 22 | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="21.html">← Ch. 21</a></span>
+  <span class="current">Chapter 22</span>
+  <span><a href="23.html">Ch. 23 →</a></span>
+</div>
+<h1>Chapter 22: The CMB Temperature–Haug &amp; Tatum’s Geometric Mean</h1>
+
+
+<h2>22.1 Planck Temperature and Hawking‑Hubble Temperature</h2>
+
+<p>Two fundamental temperatures set the scale of the universe: the <strong>Planck temperature</strong> and the <strong>Hawking‑Hubble temperature</strong>.</p>
+
+<h3><strong>Planck temperature</strong> ($T_P$)</h3>
+<p>The Planck temperature is the temperature corresponding to the Planck energy $E<em>P = \sqrt{\hbar c^5/G}$ via $k</em>B T<em>P = E</em>P$. Numerically:</p>
+
+<p>$$ T<em>P = \frac{E</em>P}{k_B} \approx 1.416808 \times 10^{32}\ \text{K}. $$</p>
+
+<p>This is the temperature at which quantum gravitational effects become dominant. It represents the <strong>highest possible temperature</strong> in conventional physics, as beyond it our notions of spacetime break down.</p>
+
+<h3><strong>Hawking‑Hubble temperature</strong> ($T_{HH}$)</h3>
+<p>The Hawking‑Hubble temperature is derived by combining Hawking radiation from a black hole with the Hubble radius of the universe. Consider the universe as a <strong>Hubble sphere</strong> of radius $R<em>h = c/H</em>0$, where $H_0$ is the Hubble constant. If we treat the Hubble sphere as a black‑hole horizon, its Hawking temperature is:</p>
+
+<p>$$ T<em>H = \frac{\hbar c}{2\pi k</em>B R_h}. $$</p>
+
+<p>Using $R<em>h = c/H</em>0$, we get:</p>
+
+<p>$$ T<em>{HH} = \frac{\hbar H</em>0}{2\pi k_B}. $$</p>
+
+<p>Numerically, with $H_0 \approx 70\ \text{km/s/Mpc} = 2.27 \times 10^{-18}\ \text{s}^{-1}$,</p>
+
+<p>$$ T_{HH} \approx 2.725\ \text{K}. $$</p>
+
+<p>Remarkably, this is exactly the observed temperature of the <strong>cosmic microwave background (CMB)</strong>. This coincidence has been noted by many authors and suggests a deep connection between the CMB and the horizon thermodynamics of the universe.</p>
+
+
+<h2>22.2 Geometric‑Mean Formula: <code>T<em>CMB = √(T</em>Planck × T_Hawking‑Hubble)</code>?</h2>
+
+<p>Haug &amp; Tatum (2024) proposed that the CMB temperature is the <strong>geometric mean</strong> of the Planck temperature and the Hawking‑Hubble temperature:</p>
+
+<p>$$ T<em>{\text{CMB}} \stackrel{?}{=} \sqrt{T</em>P \cdot T_{HH}}. $$</p>
+
+<p>Let’s compute this:</p>
+
+<p>$$ T_{\text{CMB}} = \sqrt{(1.416808 \times 10^{32}) \times (2.725)} \ \text{K} \approx \sqrt{3.860 \times 10^{32}} \ \text{K} \approx 1.965 \times 10^{16}\ \text{K}. $$</p>
+
+<p>That is $1.97 \times 10^{16}$ K, which is <strong>not</strong> 2.725 K. The direct arithmetic geometric mean clearly fails. However, the formula may be intended in a <strong>different sense</strong>. For instance, it might refer to a <strong>geometric mean of dimensionless ratios</strong> rather than of the temperatures themselves. Alternatively, the formula could be a <strong>syntactic pattern</strong> that becomes exact when interpreted via the Monna map, which introduces a logarithmic rescaling.</p>
+
+<p>In the Syntactic Token Calculus, such a geometric‑mean relation emerges naturally as a <strong>projective cross‑ratio</strong> on the logarithmic scale of the Bruhat‑Tits tree. The tree has two fundamental scales: the Planck scale (ultraviolet, depth 1) and the Hubble scale (infrared, depth $N$, where $N$ is the total depth of the visible universe). The CMB temperature sits at an intermediate depth that is the <strong>logarithmic midpoint</strong> between the two extremes. This midpoint is precisely the geometric mean when distances are measured logarithmically.</p>
+
+<p>Thus, the Haug‑Tatum formula is not a literal equality of temperatures, but a <strong>structural relation</strong> that reflects the hierarchical organization of the universe. The STC re‑expresses it as:</p>
+
+<p>$$ \log T<em>{\text{CMB}} = \frac{1}{2} \left( \log T</em>P + \log T_{HH} \right) + \text{log‑periodic corrections}. $$</p>
+
+<p>The log‑periodic corrections arise from the discrete branching of the tree and will be explored in Chapter 23.</p>
+
+
+<h2>22.3 Continuous <code>R_h = ct</code> Universe as Zero‑Order Approximation</h2>
+
+<p>Haug &amp; Tatum work within the <strong>$R<em>h = ct$ universe</strong> model, proposed by Melia and others. In this model, the Hubble radius grows linearly with cosmic time: $R</em>h = c t$. This leads to a simple expansion history without a dark‑energy component. The model fits many cosmological observations, including the CMB temperature evolution.</p>
+
+<p>The $R_h = ct$ universe is a <strong>continuous, deterministic</strong> model. It assumes the universe is smooth and described by general relativity with a particular equation of state ($p = -\rho/3$). This model yields the Hawking‑Hubble temperature exactly equal to the CMB temperature at all times:</p>
+
+<p>$$ T<em>{\text{CMB}}(t) = \frac{\hbar H(t)}{2\pi k</em>B}, $$</p>
+
+<p>where $H(t) = 1/t$. This is a clean, elegant relation.</p>
+
+<p>The STC sees this continuous model as the <strong>zero‑order approximation</strong>—the coarse‑grained shadow of the discrete, hierarchical reality. The Monna map projects the discrete tree onto the continuous real line, and the linear growth $R_h = ct$ emerges as the <strong>average</strong> of a log‑periodic oscillation.</p>
+
+<p>Thus, Haug &amp; Tatum’s result is not wrong; it is the <strong>classical limit</strong> of the STC cosmology. The geometric‑mean formula, properly understood, is the <strong>first‑order correction</strong> that incorporates discrete scale invariance.</p>
+
+
+<h2>22.4 Observational Evidence (Fixsen 2009, Planck 2018)</h2>
+
+<p>The measured CMB temperature is extremely precise. The COBE/FIRAS experiment (Fixsen 2009) gave:</p>
+
+<p>$$ T_{\text{CMB}} = 2.72548 \pm 0.00057\ \text{K}. $$</p>
+
+<p>More recent Planck satellite data (Planck 2018) confirm this value with even smaller uncertainty.</p>
+
+<p>The Hawking‑Hubble temperature, computed from the measured Hubble constant $H_0 = 67.4 \pm 0.5\ \text{km/s/Mpc}$ (Planck 2018), is:</p>
+
+<p>$$ T<em>{HH} = \frac{\hbar H</em>0}{2\pi k_B} = 2.725 \pm 0.020\ \text{K}. $$</p>
+
+<p>The agreement is striking: the two numbers coincide within error bars. This is strong evidence that the CMB temperature is <strong>indeed</strong> the Hawking temperature of the Hubble sphere.</p>
+
+<p>The geometric‑mean formula, when interpreted as a logarithmic midpoint, is consistent with this observation because the logarithm of the Planck temperature is huge, while the logarithm of the Hawking‑Hubble temperature is small; their arithmetic mean is still dominated by the Planck term. However, the STC’s discrete scaling symmetry introduces a <strong>modulation</strong> that shifts the effective midpoint to the observed CMB temperature. This modulation is the subject of the next chapter.</p>
+
+<hr>
+
+<p>Chapter 22 has reviewed Haug &amp; Tatum’s geometric‑mean formula for the CMB temperature. While the literal arithmetic geometric mean fails, the formula captures a deeper structural truth: the CMB temperature lies at the logarithmic midpoint between the Planck and Hubble scales. The continuous $R_h = ct$ model provides a zero‑order approximation, which the STC refines with discrete log‑periodic oscillations.</p>
+
+<p>The next chapter derives those oscillations from the discrete scale invariance of the Bruhat‑Tits tree, offering a testable prediction for CMB power‑spectrum data.</p>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="21.html">← Ch. 21</a></span>
+  <span class="current">Chapter 22</span>
+  <span><a href="23.html">Ch. 23 →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix B | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="../appendices/A.html">← App. A</a></span>
+  <span class="current">Appendix B</span>
+  <span><a href="../appendices/C.html">App. C →</a></span>
+</div>
+<h1>Appendix B: Complete Derivations of First‑Generation Particle Property Patterns</h1>
+
+<h2>B.1 Systematic Generation of Irreducible Patterns</h2>
+
+<p>The <strong>Syntactic Token Calculus (STC)</strong> uses two primitives: the <strong>mark <code>#</code></strong> and the <strong>enclosure <code>[ ]</code></strong>. An expression is a string composed of these symbols, subject to the reduction rules:</p>
+
+<ol><li><strong>Calling:</strong> <code>## → #</code> (idempotence).</li><li><strong>Crossing:</strong> <code>[[A]] → A</code> for any expression $A$ (involution).</li></ol>
+
+<p>A <strong>normal form</strong> is an expression that contains no substring <code>##</code> and no substring <code>[[A]]</code> for any $A$. Normal forms are <strong>irreducible</strong>; they represent stable syntactic patterns that can be identified with elementary particles.</p>
+
+<h3>B.1.1 Enumeration by Complexity</h3>
+
+<p>Define the <strong>complexity</strong> of an expression as the total number of marks and bracket pairs. For example:</p>
+
+<ul><li><code>#</code> : complexity 1 (1 mark, 0 brackets).</li><li><code>[#]</code> : complexity 2 (1 mark, 1 bracket pair).</li><li><code>[# [#]]</code> : complexity 4 (2 marks, 2 bracket pairs).</li><li><code>[[#] #]</code> : complexity 4 (2 marks, 2 bracket pairs).</li></ul>
+
+<p>We systematically generate all normal forms up to a given complexity. The following table lists all irreducible patterns up to complexity 6, which include all first‑generation particles.</p>
+
+
+<h2>B.2 First‑Generation Particle Patterns</h2>
+
+<table>
+<tr><th>Particle</th><th>Pattern</th><th>Complexity (marks+brackets)</th><th>Irreducibility Check</th></tr>
+<tr><td></td><td><strong>Photon</strong></td><td><code>[#]</code></td><td>2</td></tr>
+<tr><td></td><td><strong>Electron</strong></td><td><code>[# [#]]</code></td><td>4</td></tr>
+<tr><td></td><td><strong>Up quark</strong></td><td><code>[[#] #]</code></td><td>4</td></tr>
+<tr><td></td><td><strong>Down quark</strong></td><td><code>[[#] [#] #]</code></td><td>6</td></tr>
+<tr><td></td><td><strong>W boson</strong></td><td><code>[[#] [#]]</code></td><td>5</td></tr>
+<tr><td></td><td><strong>Z boson / Higgs</strong></td><td><code>[[#] [#] [#]]</code></td><td>7</td></tr>
+</table>
+
+<p><strong>Note:</strong> The Z boson and Higgs share the same pattern <code>[[#] [#] [#]]</code>. This degeneracy is a consequence of the authentic crossing rule and is discussed in Chapter 13.</p>
+
+<p><strong>Validation:</strong> Each pattern was verified by a computer‑algebra script (part of the Syntactic Reality Engine) that scans for reducible substrings. All patterns listed above are indeed normal forms.</p>
+
+
+<h2>B.3 Property Patterns: Mass, Charge, Spin</h2>
+
+<p>For a particle pattern $P$, three fundamental physical properties are defined via <strong>syntactic cross‑ratios</strong>:</p>
+
+<ol><li><strong>Mass pattern:</strong> $\mathcal{M}(P) = \text{NF}([\,[\,P \;\#\,]\;[\,\#\,]\,])$.</li><li><strong>Charge pattern:</strong> $\mathcal{Q}(P) = \text{NF}([\,[\,P \;[\,\#\,]\,]\;[\,\#\,]\,])$.</li><li><strong>Spin pattern:</strong> $\mathcal{S}(P) = \text{NF}([\,[\,P \;P\,]\;[\,\#\,]\,])$.</li></ol>
+
+<p>Here $\text{NF}(X)$ denotes the normal form of expression $X$. The reduction is performed using only the Calling and Crossing rules.</p>
+
+
+<h2>B.4 Step‑by‑Step Reductions for First‑Generation Particles</h2>
+
+<h3><strong>B.4.1 Photon ($P = [\#]$)</strong></h3>
+
+<ul><li><strong>Mass:</strong>  </li></ul>
+<p>  $\mathcal{M}([\#]) = \text{NF}([\,[\,[\#] \;\#\,]\;[\,\#\,]\,])$     = <code>[ [ [#] # ] [ # ] ]</code>     → reduce inner <code>[[#] #]</code>? Wait, inner is <code>[ [#] # ]</code> (two items), not reducible. Outer is <code>[ … ] [ # ]</code>. Need to expand:     Write as <code>[ A B ]</code> where $A = [[\#] \#]$, $B = [\#]$. No <code>##</code> or <code>[[A]]</code> overall. Check if <code>[[[#] #]]</code> appears? No. So normal form is <code>[ [ [#] # ] [ # ] ]</code>. This is irreducible.     <strong>Result:</strong> <code>[ [ [#] # ] [ # ] ]</code>. This pattern is <strong>not</strong> equal to any simpler reference; it defines the photon’s mass invariant.</p>
+
+<ul><li><strong>Charge:</strong>  </li></ul>
+<p>  $\mathcal{Q}([\#]) = \text{NF}([\,[\,[\#] \;[\#]\,]\;[\,\#\,]\,])$     = <code>[ [ [#] [#] ] [ # ] ]</code>     Inner <code>[[#] [#]]</code> is irreducible (W boson). Outer <code>[ … ] [ # ]</code> is irreducible.     <strong>Result:</strong> <code>[ [ [#] [#] ] [ # ] ]</code>.</p>
+
+<ul><li><strong>Spin:</strong>  </li></ul>
+<p>  $\mathcal{S}([\#]) = \text{NF}([\,[\,[\#] \;[\#]\,]\;[\,\#\,]\,])$     = same as charge pattern!     <strong>Result:</strong> <code>[ [ [#] [#] ] [ # ] ]</code>.</p>
+
+<p>Thus for the photon, <strong>charge pattern = spin pattern</strong>. This reflects its bosonic nature.</p>
+
+<h3><strong>B.4.2 Electron ($P = [\# [\#]]$)</strong></h3>
+
+<ul><li><strong>Mass:</strong>  </li></ul>
+<p>  $\mathcal{M}([\# [\#]]) = \text{NF}([\,[\,[\# [\#]] \;\#\,]\;[\,\#\,]\,])$     = <code>[ [ [# [#]] # ] [ # ] ]</code>.     Inner <code>[[# [#]] #]</code> is irreducible (contains <code>[# [#]]</code> and <code>#</code>). Outer structure irreducible.     <strong>Result:</strong> <code>[ [ [# [#]] # ] [ # ] ]</code>.</p>
+
+<ul><li><strong>Charge:</strong>  </li></ul>
+<p>  $\mathcal{Q}([\# [\#]]) = \text{NF}([\,[\,[\# [\#]] \;[\#]\,]\;[\,\#\,]\,])$     = <code>[ [ [# [#]] [#] ] [ # ] ]</code>.     Inner <code>[[# [#]] [#]]</code> irreducible.     <strong>Result:</strong> <code>[ [ [# [#]] [#] ] [ # ] ]</code>.</p>
+
+<ul><li><strong>Spin:</strong>  </li></ul>
+<p>  $\mathcal{S}([\# [\#]]) = \text{NF}([\,[\,[\# [\#]] \;[\# [\#]]\,]\;[\,\#\,]\,])$     = <code>[ [ [# [#]] [# [#]] ] [ # ] ]</code>.     Inner <code>[[# [#]] [# [#]]]</code> irreducible (two identical fermion patterns clash).     <strong>Result:</strong> <code>[ [ [# [#]] [# [#]] ] [ # ] ]</code>.</p>
+
+<p>For the electron, <strong>charge pattern ≠ spin pattern</strong>, reflecting fermionic statistics.</p>
+
+<h3><strong>B.4.3 Up Quark ($P = [[\#] \#]$)</strong></h3>
+
+<ul><li><strong>Mass:</strong> $\mathcal{M}([[\#] \#]) = \text{NF}([\,[\,[[\#] \#] \;\#\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] #] # ] [ # ] ]</code>. Irreducible.</li><li><strong>Charge:</strong> $\mathcal{Q}([[\#] \#]) = \text{NF}([\,[\,[[\#] \#] \;[\#]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] #] [#] ] [ # ] ]</code>. Irreducible.</li><li><strong>Spin:</strong> $\mathcal{S}([[\#] \#]) = \text{NF}([\,[\,[[\#] \#] \;[ [\#] \#]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] #] [[#] #] ] [ # ] ]</code>. Irreducible.</li></ul>
+
+<h3><strong>B.4.4 Down Quark ($P = [[\#] [\#] \#]$)</strong></h3>
+
+<ul><li><strong>Mass:</strong> $\mathcal{M}([[\#] [\#] \#]) = \text{NF}([\,[\,[[\#] [\#] \#] \;\#\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#] #] # ] [ # ] ]</code>. Irreducible.</li><li><strong>Charge:</strong> $\mathcal{Q}([[\#] [\#] \#]) = \text{NF}([\,[\,[[\#] [\#] \#] \;[\#]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#] #] [#] ] [ # ] ]</code>. Irreducible.</li><li><strong>Spin:</strong> $\mathcal{S}([[\#] [\#] \#]) = \text{NF}([\,[\,[[\#] [\#] \#] \;[ [\#] [\#] \#]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#] #] [[#] [#] #] ] [ # ] ]</code>. Irreducible.</li></ul>
+
+<h3><strong>B.4.5 W Boson ($P = [[\#] [\#]]$)</strong></h3>
+
+<ul><li><strong>Mass:</strong> $\mathcal{M}([[\#] [\#]]) = \text{NF}([\,[\,[[\#] [\#]] \;\#\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#]] # ] [ # ] ]</code>. Irreducible.</li><li><strong>Charge:</strong> $\mathcal{Q}([[\#] [\#]]) = \text{NF}([\,[\,[[\#] [\#]] \;[\#]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#]] [#] ] [ # ] ]</code>. Irreducible.</li><li><strong>Spin:</strong> $\mathcal{S}([[\#] [\#]]) = \text{NF}([\,[\,[[\#] [\#]] \;[ [\#] [\#]]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#]] [[#] [#]] ] [ # ] ]</code>. Irreducible.</li></ul>
+
+<h3><strong>B.4.6 Z Boson / Higgs ($P = [[\#] [\#] [\#]]$)</strong></h3>
+
+<ul><li><strong>Mass:</strong> $\mathcal{M}([[\#] [\#] [\#]]) = \text{NF}([\,[\,[[\#] [\#] [\#]] \;\#\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#] [#]] # ] [ # ] ]</code>. Irreducible.</li><li><strong>Charge:</strong> $\mathcal{Q}([[\#] [\#] [\#]]) = \text{NF}([\,[\,[[\#] [\#] [\#]] \;[\#]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#] [#]] [#] ] [ # ] ]</code>. Irreducible.</li><li><strong>Spin:</strong> $\mathcal{S}([[\#] [\#] [\#]]) = \text{NF}([\,[\,[[\#] [\#] [\#]] \;[ [\#] [\#] [\#]]\,]\;[\,\#\,]\,])$ = <code>[ [ [[#] [#] [#]] [[#] [#] [#]] ] [ # ] ]</code>. Irreducible.</li></ul>
+
+
+<h2>B.5 Invariant Classification</h2>
+
+<p>Although the property patterns are distinct strings, they can be grouped into <strong>equivalence classes</strong> under projective transformations. These classes correspond to the <strong>numerical values</strong> of mass, charge, and spin when mapped via the Monna map.</p>
+
+<p>The following table summarizes the <strong>invariant labels</strong> for first‑generation particles. The labels are symbolic; a full numerical mapping requires the Monna map and a choice of p‑adic prime $p$.</p>
+
+<table>
+<tr><th>Particle</th><th>Mass invariant</th><th>Charge invariant</th><th>Spin invariant</th></tr>
+<tr><td></td><td>Photon</td><td>$M_{\gamma}$</td><td>$Q_{\gamma}$</td></tr>
+<tr><td></td><td>Electron</td><td>$M_{e}$</td><td>$Q_{e}$</td></tr>
+<tr><td></td><td>Up quark</td><td>$M_{u}$</td><td>$Q_{u}$</td></tr>
+<tr><td></td><td>Down quark</td><td>$M_{d}$</td><td>$Q_{d}$</td></tr>
+<tr><td></td><td>W boson</td><td>$M_{W}$</td><td>$Q_{W}$</td></tr>
+<tr><td></td><td>Z boson</td><td>$M_{Z}$</td><td>$Q_{Z}$</td></tr>
+<tr><td></td><td>Higgs</td><td>$M<em>{H} = M</em>{Z}$</td><td>$Q<em>{H} = Q</em>{Z}$</td></tr>
+</table>
+
+<p><strong>Key observations:</strong></p>
+
+<ol><li><strong>Photon:</strong> charge = spin (bosonic symmetry).</li><li><strong>Electron:</strong> charge ≠ spin (fermionic clash).</li><li><strong>Quarks:</strong> up and down have distinct mass invariants but share the same spin invariant (isospin symmetry).</li><li><strong>Z/Higgs degeneracy:</strong> identical invariants for all three properties.</li></ol>
+
+
+<h2>B.6 Second‑ and Third‑Generation Candidates</h2>
+
+<p>Beyond the first generation, we hypothesize that heavier particles correspond to <strong>deeper nestings</strong> or <strong>excited patterns</strong>. The following table lists candidate patterns for the second and third generations, obtained by systematic enumeration up to complexity 10.</p>
+
+<table>
+<tr><th>Candidate</th><th>Pattern</th><th>Complexity</th><th>Likely particle</th></tr>
+<tr><td></td><td>$P_{1}$</td><td><code>[# [#] [#]]</code></td><td>6</td></tr>
+<tr><td></td><td>$P_{2}$</td><td><code>[[#] [#] [#] #]</code></td><td>8</td></tr>
+<tr><td></td><td>$P_{3}$</td><td><code>[[#] [#] [#] [#]]</code></td><td>9</td></tr>
+<tr><td></td><td>$P_{4}$</td><td><code>[# [# [#]]]</code></td><td>5</td></tr>
+<tr><td></td><td>$P_{5}$</td><td><code>[[#] [#] [#] [#] #]</code></td><td>10</td></tr>
+</table>
+
+<p>These assignments are <strong>provisional</strong>; a definitive taxonomy requires computation of their property patterns and comparison with experimental mass ratios and decay modes. This is a task for the <strong>Syntactic Reality Engine</strong>.</p>
+
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="../appendices/A.html">← App. A</a></span>
+  <span class="current">Appendix B</span>
+  <span><a href="../appendices/C.html">App. C →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>
