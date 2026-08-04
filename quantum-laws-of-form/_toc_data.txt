@@ -1,0 +1,41 @@
+chapter|1|Chapter 1: The Fragility Illusion–Why Quantum Information Isn’t Fragile
+chapter|2|Chapter 2: The Limits of the Continuum–Archimedean Physics and Its Discontents
+chapter|3|Chapter 3: Laws of Form as a Foundational Calculus–Spencer‑Brown’s Distinction
+chapter|4|Chapter 4: From Logic to Geometry–Topological Quantum Field Theory and Anyons
+chapter|5|Chapter 5: The Primitives of Existence
+chapter|6|Chapter 6: The Authentic Reduction Rules
+chapter|7|Chapter 7: Normal Forms and Irreducibility
+chapter|8|Chapter 8: The Master Invariant: The Syntactic Cross‑Ratio
+chapter|9|Chapter 9: Projective Geometry and Adelic Unification
+chapter|10|Chapter 10: Particle Taxonomy as Stable Normal Forms
+chapter|11|Chapter 11: Deriving Physical Properties–Mass, Charge, Spin
+chapter|12|Chapter 12: The Strong Force: Color Charge and Chirality
+chapter|13|Chapter 13: The Electroweak Bosons and the Higgs Degeneracy
+chapter|14|Chapter 14: Beyond the First Generation–Muon, Tau, Neutrinos
+chapter|15|Chapter 15: Fermions vs. Bosons–Geometric Symmetry
+chapter|16|Chapter 16: The Bruhat‑Tits Tree as Universal State Space
+chapter|17|Chapter 17: Passive Geometric Fault Tolerance
+chapter|18|Chapter 18: Non‑Archimedean Quantum Logic Gates
+chapter|19|Chapter 19: Timeless Ontology and the Macro‑Ledger
+chapter|20|Chapter 20: The Distributive Law and Non‑Locality
+chapter|21|Chapter 21: Gravity as Ledger Optimization
+chapter|22|Chapter 22: The CMB Temperature–Haug & Tatum’s Geometric Mean
+chapter|23|Chapter 23: Log‑Periodic Oscillations–Discrete Scale Invariance
+chapter|24|Chapter 24: Monna‑Map Projection: From Discrete Tree to Continuous Shadow
+chapter|25|Chapter 25: Black‑Hole Interiors as Quantum Foam
+chapter|26|Chapter 26: W‑Boson Mass Tension–Syntactic Resonance
+chapter|27|Chapter 27: Composite Higgs Model–Excited Resonances
+chapter|28|Chapter 28: Ultrametric Clustering in Neural Data
+chapter|29|Chapter 29: Testable Predictions–CMB, Colliders, Quantum Circuits
+chapter|30|Chapter 30: Implementation–The Syntactic Reality Engine
+chapter|31|Chapter 31: Critical Audit and Open Frontiers
+chapter|32|Chapter 32: Time and Dynamics–The Static‑Tree Ontology
+chapter|33|Chapter 33: Conclusion–A Geometric Future for Physics
+appendix|A|Appendix A: Mathematical Primer on p‑adic Numbers and the Bruhat‑Tits Tree
+appendix|B|Appendix B: Complete Derivations of First‑Generation Particle Property Patterns
+appendix|C|Appendix C: Step‑by‑Step Cross‑Ratio Calculations
+appendix|D|Appendix D: Mathematical Proofs
+appendix|E|Appendix E: Data‑Analysis Protocol for CMB Log‑Periodic Oscillation Search
+appendix|F|Appendix F: Source Code Snippets for the Syntactic Reality Engine Prototype
+appendix|G|Appendix G: Glossary of Terms
+appendix|H|Appendix H: Bibliography

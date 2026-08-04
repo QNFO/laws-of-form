@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 7 | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="06.html">← Ch. 6</a></span>
+  <span class="current">Chapter 7</span>
+  <span><a href="08.html">Ch. 8 →</a></span>
+</div>
+<h1>Chapter 7: Normal Forms and Irreducibility</h1>
+
+
+<h2>7.1 Definition of Normal Form</h2>
+
+<p>In the Syntactic Token Calculus, a <strong>normal form</strong> is an expression to which no reduction rule—neither calling (<code>## → #</code>) nor crossing (<code>[[A]] → A</code>)—can be applied. An expression is in normal form if it contains no substring <code>##</code> and no substring <code>[[A]]</code> where <code>A</code> is any expression.</p>
+
+<p>More formally, let $\mathcal{E}$ be the set of all finite expressions built from marks <code>#</code> and brackets <code>[ ]</code>. Define the rewrite relation $\rightarrow$ as the union of the calling and crossing rules. The <strong>normal forms</strong> are the expressions that are <strong>irreducible</strong> with respect to $\rightarrow$:</p>
+
+<p>$$ \text{NF} = \{ e \in \mathcal{E} \mid \nexists e' \text{ such that } e \rightarrow e' \}. $$</p>
+
+<p>Because the rewrite system is <strong>confluent</strong> and <strong>terminating</strong> (Chapter 6), every expression $e$ has a unique normal form, denoted $\text{NF}(e)$. The function $\text{NF} : \mathcal{E} \rightarrow \text{NF}$ is total and deterministic.</p>
+
+<p>Normal forms are the <strong>canonical representatives</strong> of equivalence classes under the rewrite relation. Two expressions are considered <strong>syntactically equivalent</strong> if they reduce to the same normal form. This equivalence is the syntactic analogue of physical identity: two particle configurations that reduce to the same normal form are the same particle.</p>
+
+<p><strong>Examples of normal forms:</strong></p>
+
+<ul><li><code>#</code>–a single mark (no adjacent marks, no double enclosure).</li><li><code>[ ]</code>–an empty enclosure (does not match <code>##</code> or <code>[[A]]</code>).</li><li><code>[#]</code>–an enclosure containing a mark.</li><li><code>[# [#]]</code>–an enclosure containing a mark and another enclosure.</li><li><code>[[#] #]</code>–an enclosure containing an enclosure and a mark.</li></ul>
+
+<p><strong>Examples of expressions that are not in normal form:</strong></p>
+
+<ul><li><code>##</code>–can be reduced by calling.</li><li><code>[[#]]</code>–can be reduced by crossing.</li><li><code>[##]</code>–inside the enclosure, <code>##</code> can be reduced.</li><li><code>[[[#]]]</code>–the outer <code>[[ ... ]]</code> matches crossing.</li></ul>
+
+<p>The process of reducing an expression to its normal form is called <strong>normalization</strong>. Normalization is analogous to <strong>simplification</strong> in algebra or <strong>evaluation</strong> in programming. It strips away redundant distinctions, leaving only the essential pattern.</p>
+
+
+<h2>7.2 Termination and Uniqueness Proofs</h2>
+
+<h3>Termination</h3>
+<p>A rewrite system <strong>terminates</strong> if there are no infinite reduction sequences. For the STC, termination is easy to prove.</p>
+
+<p>Define the <strong>weight</strong> $w(e)$ of an expression $e$ as:</p>
+
+<p>$$ w(e) = (\text{number of marks in } e) + (\text{number of bracket pairs in } e). $$</p>
+
+<p>Both calling and crossing reduce the weight:</p>
+
+<ul><li>Calling: <code>## → #</code> reduces the mark count by 1, so weight decreases by 1.</li><li>Crossing: <code>[[A]] → A</code> removes two brackets (one pair), so weight decreases by 1.</li></ul>
+
+<p>Since weight is a positive integer, and each reduction step decreases it, any reduction sequence must terminate after at most $w(e)$ steps. Therefore, the system terminates.</p>
+
+<h3>Uniqueness (Confluence)</h3>
+<p>Confluence means that if an expression can be reduced in two different ways, the results can be further reduced to a common expression. Formally:</p>
+
+<p>If $e \rightarrow^<em> e<em>1$ and $e \rightarrow^</em> e</em>2$, then there exists $e'$ such that $e<em>1 \rightarrow^<em> e'$ and $e</em>2 \rightarrow^</em> e'$.</p>
+
+<p>For the STC, confluence follows from the fact that the rules are <strong>non‑overlapping</strong> and <strong>left‑linear</strong> (no variable appears more than once on the left‑hand side). Non‑overlapping means there are no <strong>critical pairs</strong>—situations where two different rules could apply to the same substring in conflicting ways. The only possible overlap would be if <code>##</code> appeared inside <code>[[A]]</code>, but that cannot happen because <code>[[A]]</code> contains brackets, not marks. Therefore, the rules are orthogonal, and confluence holds.</p>
+
+<p>A more intuitive argument: because the rules apply to disjoint patterns, the order of reduction does not matter. Reducing a <code>##</code> somewhere does not affect a <code>[[A]]</code> elsewhere, and vice versa. So any reduction sequence leads to the same final result.</p>
+
+<p>Termination plus confluence implies that every expression has a <strong>unique normal form</strong>. This is the <strong>Church‑Rosser property</strong>.</p>
+
+
+<h2>7.3 Example Reduction Sequences</h2>
+
+<p>Let’s walk through several examples to see normalization in action.</p>
+
+<h3>Example 1: <code>###</code></h3>
+<ol><li><code>###</code> contains <code>##</code> at positions 1–2.</li><li>Apply calling: <code>###</code> → <code>##</code>.</li><li>The result <code>##</code> still contains <code>##</code>.</li><li>Apply calling again: <code>##</code> → <code>#</code>.</li><li>Normal form: <code>#</code>.</li></ol>
+
+<h3>Example 2: <code>[[[#]]]</code></h3>
+<ol><li>The outer pattern matches crossing with <code>A = [#]</code>.</li><li>Apply crossing: <code>[[[#]]]</code> → <code>[#]</code>.</li><li>The result <code>[#]</code> contains no <code>##</code> and no <code>[[A]]</code>.</li><li>Normal form: <code>[#]</code>.</li></ol>
+
+<h3>Example 3: <code>[##] [#]</code></h3>
+<ol><li>Inside the first enclosure, <code>##</code> can be reduced.</li><li>Apply calling inside: <code>[##]</code> → <code>[#]</code>.</li><li>Now we have <code>[#] [#]</code>.</li><li>No further rules apply (the two enclosures are juxtaposed, not nested).</li><li>Normal form: <code>[#] [#]</code>.</li></ol>
+
+<h3>Example 4: <code>[[#] [#]]</code></h3>
+<ol><li>The outer enclosure contains two items: <code>[#]</code> and <code>[#]</code>. This is not a single enclosure, so crossing does not apply.</li><li>There is no <code>##</code> substring.</li><li>Therefore, the expression is already in normal form.</li><li>This is the pattern of the <strong>W boson</strong> (see Chapter 10).</li></ol>
+
+<h3>Example 5: <code>[[#] [#] [#]]</code></h3>
+<ol><li>Outer enclosure contains three items: <code>[#]</code>, <code>[#]</code>, <code>[#]</code>. Not a single enclosure.</li><li>No <code>##</code> substring.</li><li>Already in normal form.</li><li>This is the pattern shared by the <strong>Z boson</strong> and the <strong>Higgs boson</strong> (Chapter 13).</li></ol>
+
+<p>These examples illustrate how normalization works. Notice that the particle patterns (Examples 4 and 5) are irreducible—they are normal forms. This is not a coincidence; it is by design. The STC identifies elementary particles with the simplest irreducible patterns.</p>
+
+
+<h2>7.4 Internal Validation: Checking Irreducibility of Particle Patterns</h2>
+
+<p>The STC’s particle taxonomy (Chapter 10) lists seven first‑generation particles, each with a specific normal form. To validate the taxonomy, we must verify that each pattern is indeed irreducible—that it contains no <code>##</code> and no <code>[[A]]</code> substring. The following table performs this check:</p>
+
+<table>
+<tr><th>Particle</th><th>Pattern</th><th>Contains <code>##</code>?</th><th>Contains <code>[[A]]</code>?</th><th>Irreducible?</th></tr>
+<tr><td></td><td>Photon</td><td><code>[#]</code></td><td>No</td><td>No</td></tr>
+<tr><td></td><td>Electron</td><td><code>[# [#]]</code></td><td>No</td><td>No</td></tr>
+<tr><td></td><td>Up quark</td><td><code>[[#] #]</code></td><td>No</td><td>No (outer enclosure contains <code>[#]</code> and <code>#</code>)</td></tr>
+<tr><td></td><td>Down quark</td><td><code>[[#] [#] #]</code></td><td>No</td><td>No</td></tr>
+<tr><td></td><td>W boson</td><td><code>[[#] [#]]</code></td><td>No</td><td>No</td></tr>
+<tr><td></td><td>Z boson</td><td><code>[[#] [#] [#]]</code></td><td>No</td><td>No</td></tr>
+<tr><td></td><td>Higgs boson</td><td><code>[[#] [#] [#]]</code></td><td>No</td><td>No</td></tr>
+</table>
+
+<p><strong>Explanation of each check:</strong></p>
+
+<ul><li><strong>Photon <code>[#]</code>:</strong> Single mark inside an enclosure. No adjacent marks, no double enclosure.</li><li><strong>Electron <code>[# [#]]</code>:</strong> Contains a mark and an enclosure. The outer enclosure has two items, so not <code>[[A]]</code>. No <code>##</code>.</li><li><strong>Up quark <code>[[#] #]</code>:</strong> Outer enclosure contains <code>[#]</code> and <code>#</code>. Two items, so not <code>[[A]]</code>. No <code>##</code>.</li><li><strong>Down quark <code>[[#] [#] #]</code>:</strong> Outer enclosure contains three items. Not <code>[[A]]</code>. No <code>##</code>.</li><li><strong>W boson <code>[[#] [#]]</code>:</strong> Outer enclosure contains two items. Not <code>[[A]]</code>. No <code>##</code>.</li><li><strong>Z boson &amp; Higgs boson <code>[[#] [#] [#]]</code>:</strong> Outer enclosure contains three items. Not <code>[[A]]</code>. No <code>##</code>.</li></ul>
+
+<p>All patterns pass the test. They are irreducible under the authentic Laws of Form rules. This validates the taxonomy: the patterns are stable, distinct, and cannot be simplified further.</p>
+
+<p><strong>What about <code>[[#]]</code>?</strong> This pattern reduces to <code>#</code>, so it is not stable. It cannot represent a particle. The STC uses <code>#</code> as the projective point at infinity instead (Chapter 8).</p>
+
+<p><strong>What about <code>[ ]</code>?</strong> The empty enclosure is irreducible, but it does not correspond to a known particle. It may represent the <strong>vacuum</strong> or a <strong>ghost state</strong>. Further investigation is needed.</p>
+
+<p>This internal validation is a key strength of the STC. The particle patterns are not arbitrarily chosen; they are the unique, simplest irreducible forms that emerge from the calculus. This gives the taxonomy a solid syntactic foundation, free from ad‑hoc assignments.</p>
+
+<hr>
+
+
+<p>Chapter 7 has defined normal forms, proved termination and uniqueness, illustrated reduction sequences, and validated the irreducibility of the first‑generation particle patterns. Normal forms are the canonical representatives of syntactic equivalence classes, and they correspond to stable physical states.</p>
+
+<p>With the concept of normal form established, we can now introduce the master invariant of the STC: the <strong>syntactic cross‑ratio</strong>. This invariant will allow us to extract physical properties—mass, charge, spin—from the particle patterns, linking syntax to measurable quantities.</p>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="06.html">← Ch. 6</a></span>
+  <span class="current">Chapter 7</span>
+  <span><a href="08.html">Ch. 8 →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>

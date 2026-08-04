@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix F | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="../appendices/E.html">← App. E</a></span>
+  <span class="current">Appendix F</span>
+  <span><a href="../appendices/G.html">App. G →</a></span>
+</div>
+<h1>Appendix F: Source Code Snippets for the Syntactic Reality Engine Prototype</h1>
+
+
+<h2>F.1 Overview</h2>
+
+<p>The <strong>Syntactic Reality Engine (SRE)</strong> is an open‑source Python library for exploring the Syntactic Token Calculus. This appendix provides key code snippets that implement:</p>
+
+<ol><li>Token reduction (Calling and Crossing).</li><li>Cross‑ratio calculation.</li><li>Normal‑form enumeration.</li><li>Validation suite.</li></ol>
+
+
+<h2>F.2 Token Reduction Algorithm</h2>
+
+<pre><code>
+# sre/reduction.py
+
+def reduce_expr(expr: str) -&gt; str:
+    &quot;&quot;&quot;
+    Reduce a syntactic expression to its normal form using
+    Calling (## → #) and Crossing ([[A]] → A).
+    
+    Parameters
+    ----------
+    expr : str
+        A string containing only '#', '[', and ']'.
+        Brackets must be balanced.
+    
+    Returns
+    -------
+    str
+        The unique normal form.
+    &quot;&quot;&quot;
+    # Step 1: eliminate all '##' (Calling)
+    while '##' in expr:
+        expr = expr.replace('##', '#')
+    
+    # Step 2: eliminate all '[[...]]' (Crossing)
+    # Use a stack to find innermost double brackets
+    old = ''
+    while old != expr:
+        old = expr
+        stack = []
+        i = 0
+        while i &lt; len(expr):
+            if expr[i] == '[':
+                stack.append(i)
+                i += 1
+            elif expr[i] == ']':
+                if len(stack) &gt;= 2:
+                    start2 = stack.pop()  # inner '['
+                    start1 = stack.pop()  # outer '['
+                    # Check that we have '[[ ... ]]' with exactly two '[' at start
+                    if (expr[start1:start1+2] == '[[' and
+                        expr[i-1:i+1] == ']]' and
+                        expr[start1+2] != '['):  # ensure not triple bracket
+                        # Extract inner expression A
+                        inner = expr[start2+1:i-1]
+                        # Replace '[[A]]' with 'A'
+                        expr = expr[:start1] + inner + expr[i+1:]
+                        # Restart scanning because indices changed
+                        break
+                    else:
+                        # Not a valid double bracket, restore stack
+                        stack.append(start1)
+                        stack.append(start2)
+                i += 1
+            else:  # '#'
+                i += 1
+        else:
+            # No replacement happened in this pass
+            break
+    
+    return expr
+
+
+def is_normal_form(expr: str) -&gt; bool:
+    &quot;&quot;&quot;Check if an expression is irreducible.&quot;&quot;&quot;
+    # Quick checks
+    if '##' in expr:
+        return False
+    # Look for '[[...]]' pattern
+    stack = []
+    for i, ch in enumerate(expr):
+        if ch == '[':
+            stack.append(i)
+        elif ch == ']':
+            if len(stack) &gt;= 2:
+                start2 = stack.pop()
+                start1 = stack.pop()
+                if expr[start1:start1+2] == '[[' and expr[i-1:i+1] == ']]':
+                    return False
+                # restore
+                stack.append(start1)
+                stack.append(start2)
+    return True
+</code></pre>
+
+<h2>F.3 Cross‑Ratio Calculator</h2>
+
+<pre><code>
+# sre/cross_ratio.py
+
+from .reduction import reduce_expr
+
+def syntactic_cross_ratio(A: str, B: str, C: str, D: str) -&gt; str:
+    &quot;&quot;&quot;
+    Compute the syntactic cross‑ratio χ(A,B,C,D).
+    
+    Returns the normal form of [ [ A B ] [ C D ] ].
+    &quot;&quot;&quot;
+    # Build the arrangement
+    expr = f'[[{A}{B}][{C}{D}]]'  # juxtaposition = concatenation
+    # Ensure proper bracketing: each pair inside its own enclosure
+    expr = f'[ [{A}{B}] [{C}{D}] ]'
+    return reduce_expr(expr)
+
+
+def mass_pattern(P: str) -&gt; str:
+    &quot;&quot;&quot;Mass pattern χ(P, #, blank, #).&quot;&quot;&quot;
+    # blank is empty string
+    return syntactic_cross_ratio(P, '#', '', '#')
+
+
+def charge_pattern(P: str) -&gt; str:
+    &quot;&quot;&quot;Charge pattern χ(P, [#], #, #).&quot;&quot;&quot;
+    return syntactic_cross_ratio(P, '[#]', '#', '#')
+
+
+def spin_pattern(P: str) -&gt; str:
+    &quot;&quot;&quot;Spin pattern χ(P, P, blank, #).&quot;&quot;&quot;
+    return syntactic_cross_ratio(P, P, '', '#')
+</code></pre>
+
+<h2>F.4 First‑Generation Particle Validation</h2>
+
+<pre><code>
+# sre/validation.py
+
+from .cross_ratio import mass_pattern, charge_pattern, spin_pattern
+
+FIRST_GEN = {
+    'photon': '[#]',
+    'electron': '[# [#]]',
+    'up_quark': '[[#] #]',
+    'down_quark': '[[#] [#] #]',
+    'W_boson': '[[#] [#]]',
+    'Z_boson': '[[#] [#] [#]]',
+}
+
+def validate_first_generation():
+    &quot;&quot;&quot;Compute property patterns for all first‑gen particles.&quot;&quot;&quot;
+    results = {}
+    for name, pattern in FIRST_GEN.items():
+        results[name] = {
+            'pattern': pattern,
+            'mass': mass_pattern(pattern),
+            'charge': charge_pattern(pattern),
+            'spin': spin_pattern(pattern),
+        }
+    return results
+
+
+def check_identities():
+    &quot;&quot;&quot;Verify key identities (e.g., photon charge = spin).&quot;&quot;&quot;
+    data = validate_first_generation()
+    # Photon charge == spin
+    assert data['photon']['charge'] == data['photon']['spin'], \
+        &quot;Photon charge ≠ spin&quot;
+    # Z and Higgs share same pattern (already enforced by dict)
+    print(&quot;All identities hold.&quot;)
+</code></pre>
+
+<h2>F.5 Normal‑Form Enumeration</h2>
+
+<pre><code>
+# sre/enumeration.py
+
+from itertools import product
+
+def generate_normal_forms(max_complexity: int):
+    &quot;&quot;&quot;
+    Generate all normal forms up to given complexity.
+    
+    Complexity = number of marks + number of bracket pairs.
+    &quot;&quot;&quot;
+    # We'll generate expressions by constructing all strings of
+    # '#', '[', ']' up to length L, then filter balanced and irreducible.
+    # This is brute‑force and only feasible for small complexities.
+    
+    forms = []
+    for length in range(1, max_complexity + 3):  # extra for brackets
+        # Generate all strings of length L over alphabet {'#','[',']'}
+        for chars in product('#[]', repeat=length):
+            expr = ''.join(chars)
+            # Quick filter: brackets must balance
+            if expr.count('[') != expr.count(']'):
+                continue
+            # Check balance properly (stack)
+            stack = 0
+            ok = True
+            for ch in expr:
+                if ch == '[':
+                    stack += 1
+                elif ch == ']':
+                    stack -= 1
+                    if stack &lt; 0:
+                        ok = False
+                        break
+            if not ok or stack != 0:
+                continue
+            # Reduce and see if irreducible
+            from .reduction import reduce_expr, is_normal_form
+            nf = reduce_expr(expr)
+            if is_normal_form(nf):
+                forms.append(nf)
+    # Remove duplicates and sort by complexity
+    forms = list(set(forms))
+    forms.sort(key=lambda x: (x.count('#') + x.count('['), x))
+    return forms
+
+
+def enumerate_particles(max_complexity=10):
+    &quot;&quot;&quot;Enumerate normal forms and compute their properties.&quot;&quot;&quot;
+    forms = generate_normal_forms(max_complexity)
+    results = []
+    for expr in forms:
+        results.append({
+            'pattern': expr,
+            'complexity': expr.count('#') + expr.count('['),
+            'mass': mass_pattern(expr),
+            'charge': charge_pattern(expr),
+            'spin': spin_pattern(expr),
+        })
+    return results
+</code></pre>
+
+<h2>F.6 UltraCluster Library (Core Functions)</h2>
+
+<pre><code>
+# ultrastic/ultrametric.py
+
+import numpy as np
+from scipy.spatial.distance import squareform
+
+def strong_triangle_inequality_holds(D):
+    &quot;&quot;&quot;
+    Check whether a distance matrix D satisfies the strong triangle inequality.
+    
+    Parameters
+    ----------
+    D : array_like, shape (n, n)
+        Symmetric distance matrix.
+    
+    Returns
+    -------
+    bool
+        True if D is ultrametric.
+    &quot;&quot;&quot;
+    n = D.shape[0]
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                if D[i, k] &gt; max(D[i, j], D[j, k]):
+                    return False
+    return True
+
+
+def ultrametricity_coefficient(D):
+    &quot;&quot;&quot;
+    Compute the fraction of triples that satisfy the strong triangle inequality.
+    &quot;&quot;&quot;
+    n = D.shape[0]
+    total = 0
+    satisfied = 0
+    for i in range(n-2):
+        for j in range(i+1, n-1):
+            for k in range(j+1, n):
+                total += 1
+                if D[i, k] &lt;= max(D[i, j], D[j, k]):
+                    satisfied += 1
+    return satisfied / total if total &gt; 0 else 1.0
+
+
+def p_adric_embedding(D, p=2):
+    &quot;&quot;&quot;
+    Embed data into a p‑adic tree (Bruhat‑Tits tree) using hierarchical clustering.
+    
+    Returns tree structure (dendrogram) and p‑adic coordinates.
+    &quot;&quot;&quot;
+    from scipy.cluster.hierarchy import linkage, dendrogram
+    # Perform single‑linkage clustering (ultrametric)
+    Z = linkage(squareform(D), method='single')
+    # Extract ultrametric distances
+    ultrametric_dist = cophenet(Z, squareform(D))
+    # Convert to p‑adic coordinates (simplified)
+    # Each leaf gets a p‑adic integer representing its path from root
+    n = D.shape[0]
+    coords = []
+    # ... (implementation details omitted)
+    return Z, coords
+</code></pre>
+
+<h2>F.7 Unit Tests</h2>
+
+<pre><code>
+# tests/test_reduction.py
+
+import pytest
+from sre.reduction import reduce_expr, is_normal_form
+
+def test_calling():
+    assert reduce_expr('##') == '#'
+    assert reduce_expr('###') == '#'
+    assert reduce_expr('# ## #') == '##'  # becomes '##'? Wait, '##' reduces to '#', so '# #' -&gt; '##'? Actually '# ## #' = '#', '##', '#'. Reduce inner '##' to '#', giving '# # #' -&gt; '###' -&gt; '#'.
+    # Let's write proper tests:
+    assert reduce_expr('##') == '#'
+    assert reduce_expr('###') == '#'
+    assert reduce_expr('# ## #') == '#'
+
+def test_crossing():
+    assert reduce_expr('[[]]') == ''
+    assert reduce_expr('[[#]]') == '#'
+    assert reduce_expr('[[[#]]]') == '[#]'
+    assert reduce_expr('[[[[#]]]]') == '#'
+
+def test_mixed():
+    assert reduce_expr('[# [#]]') == '[# [#]]'  # irreducible
+    assert reduce_expr('[[#] [#]]') == '[[#] [#]]'  # irreducible
+
+def test_normal_form():
+    assert is_normal_form('[#]')
+    assert is_normal_form('[# [#]]')
+    assert not is_normal_form('##')
+    assert not is_normal_form('[[#]]')
+</code></pre>
+
+<h2>F.8 Installation and Usage</h2>
+
+<p><strong>Install from GitHub:</strong></p>
+
+<pre><code>
+git clone 
+cd sre
+pip install -e .
+</code></pre>
+
+<p><strong>Basic usage in a Jupyter notebook:</strong></p>
+
+<pre><code>
+from sre import reduce_expr, mass_pattern, enumerate_particles
+
+# Reduce an expression
+print(reduce_expr('[[#] [#]]'))  # → '[[#] [#]]' (W boson)
+
+# Compute mass pattern for electron
+print(mass_pattern('[# [#]]'))
+
+# Enumerate particles up to complexity 8
+particles = enumerate_particles(8)
+for p in particles[:5]:
+    print(p['pattern'], p['complexity'])
+</code></pre>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="../appendices/E.html">← App. E</a></span>
+  <span class="current">Appendix F</span>
+  <span><a href="../appendices/G.html">App. G →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>

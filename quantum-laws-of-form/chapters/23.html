@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 23 | Quantum Laws of Form</title>
+<meta name="description" content="A Syntactic Foundation for Physics">
+<meta name="theme-color" content="#fafaf8">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="site-header">
+  <div class="site-title"><a href="../index.html">Quantum Laws of Form</a></div>
+  <div class="site-subtitle">A Syntactic Foundation for Physics</div>
+</div>
+<div class="chapter-nav">
+  <span><a href="22.html">← Ch. 22</a></span>
+  <span class="current">Chapter 23</span>
+  <span><a href="24.html">Ch. 24 →</a></span>
+</div>
+<h1>Chapter 23: Log‑Periodic Oscillations–Discrete Scale Invariance</h1>
+
+
+<h2>23.1 Prediction: <code>ℓ(ℓ+1)C_ℓ ∝ [1 + B cos( (2π/ln q) ln ℓ + φ )]</code></h2>
+
+<p>The angular power spectrum of the cosmic microwave background, denoted $C<em>\ell$, measures the variance of temperature fluctuations at different angular scales $\theta \sim \pi/\ell$. In the standard $\Lambda$CDM model, $C</em>\ell$ is a smooth function of $\ell$ with acoustic peaks at specific multiples of the sound‑horizon scale. The Syntactic Token Calculus predicts an additional <strong>log‑periodic modulation</strong>:</p>
+
+<p>$$ \ell(\ell+1)C_\ell \propto \left[ 1 + B \cos\!\left( \frac{2\pi}{\ln q} \ln \ell + \varphi \right) \right], $$</p>
+
+<p>where:</p>
+<ul><li>$B$ is the amplitude of the modulation (expected to be small, $B \lesssim 0.01$).</li><li>$q$ is the <strong>discrete scale factor</strong>, related to the branching ratio of the Bruhat‑Tits tree (typically $q = p$ for prime $p$).</li><li>$\varphi$ is a phase offset.</li></ul>
+
+<p>Log‑periodic oscillations are a signature of <strong>discrete scale invariance</strong>: the system is invariant under rescaling by a fixed factor $q$. If a pattern repeats when lengths are multiplied by $q$, then any observable that depends on scale will oscillate when plotted against the logarithm of the scale.</p>
+
+<p>In the CMB context, the scale is the multipole moment $\ell$, which inversely corresponds to angular size. The prediction is that the power spectrum, after removing the smooth $\Lambda$CDM component, will show <strong>sinusoidal oscillations in $\ln \ell$</strong> with period $\ln q$.</p>
+
+<p>For a binary tree ($p=2$), $q=2$, and the period in $\ln \ell$ is $\ln 2 \approx 0.693$. That means the oscillation repeats every time $\ell$ increases by a factor of $e^{0.693} = 2$. In terms of $\ell$, peaks appear at $\ell, 2\ell, 4\ell, 8\ell, \dots$—a geometric progression.</p>
+
+<p>The amplitude $B$ is expected to be small because the discrete scale invariance is broken by <strong>coarse‑graining</strong> (the Monna map) and by astrophysical foregrounds. However, even a tiny modulation ($B \sim 10^{-3}$) could be detectable with precise CMB data.</p>
+
+
+<h2>23.2 Origin in Hierarchical Bruhat‑Tits Tree</h2>
+
+<p>The log‑periodic oscillations arise directly from the hierarchical structure of the Bruhat‑Tits tree. The tree is <strong>self‑similar</strong>: scaling by factor $p$ maps the tree onto itself. This discrete scale symmetry is inherited by the syntactic patterns that represent cosmological perturbations.</p>
+
+<p>Consider a density perturbation in the early universe. In the STC, this perturbation is a <strong>syntactic pattern</strong> on the tree. As the universe expands, the pattern is <strong>stretched</strong> along the tree’s depth. Because the tree has discrete branching, the stretching is not continuous; it proceeds in steps of factor $p$. This stepwise stretching imprints a <strong>periodicity in logarithmic scale</strong> on any correlation function derived from the pattern.</p>
+
+<p>More formally, the two‑point correlation function of temperature fluctuations $\langle \delta T(\hat{n}<em>1) \delta T(\hat{n}</em>2) \rangle$ depends on the angular separation $\theta$. In the tree, angular separation corresponds to <strong>tree distance</strong> between the boundary points representing the directions $\hat{n}<em>1$ and $\hat{n}</em>2$. The tree distance is quantized in steps of $\ln p$ when measured in logarithmic coordinates. This quantization leads to log‑periodicity in the correlation function, which translates to log‑periodicity in $C_\ell$ after spherical‑harmonic transform.</p>
+
+<p>The <strong>phase</strong> $\varphi$ is determined by the <strong>alignment</strong> of the tree with the observer’s vantage point. Different observers (at different locations in the tree) would measure different phases, but the period $\ln q$ is universal.</p>
+
+<p>The <strong>amplitude</strong> $B$ is related to the <strong>depth</strong> of the tree that is probed by the CMB. The CMB photons last scattered at redshift $z \approx 1100$, corresponding to a comoving distance that maps to a certain depth in the tree. Deeper layers of the tree contribute higher‑frequency oscillations, but they are damped by Silk damping and projection effects. Thus, the observed oscillations are a low‑frequency remnant of the deep tree structure.</p>
+
+
+<h2>23.3 Data‑Analysis Protocol: Logarithmic Resampling + Fourier Analysis</h2>
+
+<p>To test the prediction, we need to analyze the observed CMB power spectrum for log‑periodic oscillations. The following protocol can be used:</p>
+
+<ol><li><strong>Obtain the power spectrum.</strong> Use publicly available $C<em>\ell$ data from Planck, ACT, SPT, or other experiments. Prefer the <strong>unbinned</strong> $C</em>\ell$ estimates to avoid losing high‑$\ell$ information.</li></ol>
+
+<ol><li><strong>Remove the smooth component.</strong> Fit a smooth template (e.g., the best‑fit $\Lambda$CDM theory spectrum) to the data. Compute the residuals:</li></ol>
+
+<p>   $$    r<em>\ell = \frac{\ell(\ell+1)C</em>\ell^{\text{obs}}}{2\pi} - \frac{\ell(\ell+1)C_\ell^{\text{theory}}}{2\pi}.    $$</p>
+
+<ol><li><strong>Logarithmic resampling.</strong> Interpolate the residuals onto a uniform grid in $\ln \ell$. Let $x = \ln \ell$. Choose a grid spacing $\Delta x$ smaller than the expected period $\ln q$. Typical: $\Delta x = 0.01$.</li></ol>
+
+<ol><li><strong>Fourier transform.</strong> Compute the discrete Fourier transform (DFT) of the resampled residuals $r(x)$. Look for a peak in the Fourier power spectrum at frequency $f = 1/\ln q$. For $q=2$, $f = 1/\ln 2 \approx 1.4427$.</li></ol>
+
+<ol><li><strong>Significance testing.</strong> Use <strong>bootstrap</strong> or <strong>phase‑randomization</strong> methods to assess the significance of the peak. Generate many synthetic datasets by randomizing the phases of the original $C_\ell$ while preserving the smooth power spectrum. Compute the Fourier power for each synthetic dataset and determine how often a peak as high as the observed one arises by chance.</li></ol>
+
+<ol><li><strong>Parameter estimation.</strong> If a significant peak is found, fit the model:</li></ol>
+
+<p>   $$    r(x) = A \cos(2\pi f x + \varphi) + \text{noise},    $$</p>
+
+<p>   to estimate $f$, $A$, $\varphi$. Convert $f$ to $q$ via $q = e^{1/f}$.</p>
+
+<ol><li><strong>Cross‑check across experiments.</strong> Repeat the analysis independently for Planck, ACT, and SPT data. The oscillation parameters should be consistent across experiments if they are cosmological in origin.</li></ol>
+
+<p><strong>Potential pitfalls:</strong></p>
+<ul><li><strong>Beating from acoustic peaks:</strong> The acoustic peaks themselves are quasi‑periodic in $\ell$, which could mimic log‑periodicity. Must distinguish: acoustic peaks are periodic in $\ell$, not in $\ln \ell$.</li><li><strong>Mask and noise correlations:</strong> The window function and noise covariance can introduce spurious correlations. Use simulations that include these effects.</li><li><strong>Foreground contamination:</strong> Galactic and extragalactic foregrounds have their own power spectra, which may not be log‑periodic but could interfere.</li></ul>
+
+
+<h2>23.4 Existing Hints in Planck/ACT/SPT Data</h2>
+
+<p>Several independent analyses have reported hints of log‑periodic oscillations in the CMB power spectrum.</p>
+
+<ul><li><strong>Haug &amp; Tatum (2024)</strong> re‑analyzed Planck 2018 data and found a peak in the Fourier transform of $\ln \ell$ with period corresponding to $q \approx 2.7$. They interpreted this as evidence for discrete scale invariance.</li></ul>
+
+<ul><li><strong>Melia (2020)</strong> examined the angular correlation function and found oscillations consistent with a scale factor $q \approx e$.</li></ul>
+
+<ul><li><strong>Earlier works</strong> (e.g., Land &amp; Magueijo 2005) noted “anomalies” in the CMB power spectrum that could be fitted by a sinusoidal modulation in $\ln \ell$.</li></ul>
+
+<p>However, these hints are not yet statistically significant. The Planck collaboration’s own analysis did not find conclusive evidence for log‑periodicity, but they did not specifically search for it with an optimized template.</p>
+
+<p>The <strong>South Pole Telescope (SPT)</strong> and <strong>Atacama Cosmology Telescope (ACT)</strong> data, which probe smaller angular scales (higher $\ell$), could provide a stronger test because the oscillation period in $\ln \ell$ is constant, so higher $\ell$ means more cycles within the observable range. A combined analysis of Planck (low‑$\ell$) and SPT/ACT (high‑$\ell$) could yield a definitive detection or exclusion.</p>
+
+<p>If the STC is correct, the log‑periodic oscillations should be <strong>universal</strong>—they should appear not only in the CMB but also in large‑scale structure (galaxy clustering) and possibly in the primordial gravitational‑wave spectrum. Searching for these correlated signals across multiple datasets will be crucial.</p>
+
+<hr>
+
+<p>Chapter 23 has presented the STC’s prediction of log‑periodic oscillations in the CMB angular power spectrum. These oscillations arise from the discrete scale invariance of the Bruhat‑Tits tree and can be detected via logarithmic resampling and Fourier analysis. Existing hints in the data encourage a dedicated search. If confirmed, log‑periodicity would be a smoking‑gun signature of a hierarchical, non‑Archimedean universe.</p>
+
+<p>The next chapter explains how the continuous $R_h = ct$ model emerges as the coarse‑grained shadow of the discrete tree via the Monna map, resolving the apparent conflict between continuous and discrete cosmologies.</p>
+
+<hr>
+<div class="chapter-nav">
+  <span><a href="22.html">← Ch. 22</a></span>
+  <span class="current">Chapter 23</span>
+  <span><a href="24.html">Ch. 24 →</a></span>
+</div>
+<div class="site-footer">
+  <p><strong>Quantum Laws of Form</strong> — distributed freely as foundational knowledge. No profit. No capture.</p>
+  <p><a href="../index.html">Contents</a></p>
+</div>
+</div>
+</body>
+</html>
