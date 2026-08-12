@@ -1,0 +1,54 @@
+{
+ "query": "void false Boolean logic foundations",
+ "count": 8,
+ "results": [
+  {
+   "title": "A Unifying Field in Logics: Neutrosophic Logic. Neutrosophy, Neutrosophic Set, Neutrosophic Probability",
+   "doi": "",
+   "year": 2008,
+   "cited": 722
+  },
+  {
+   "title": "Parameter Learning of Logic Programs for Symbolic-Statistical Modeling",
+   "doi": "https://doi.org/10.1613/jair.912",
+   "year": 2001,
+   "cited": 241
+  },
+  {
+   "title": "A Logic for the Java Modeling Language JML",
+   "doi": "https://doi.org/10.1007/3-540-45314-8_21",
+   "year": 2001,
+   "cited": 93
+  },
+  {
+   "title": "Disjunctive datalog",
+   "doi": "https://doi.org/10.1145/261124.261126",
+   "year": 1997,
+   "cited": 488
+  },
+  {
+   "title": "Automated verification of shape, size and bag properties via user-defined predicates in separation logic",
+   "doi": "https://doi.org/10.1016/j.scico.2010.07.004",
+   "year": 2010,
+   "cited": 133
+  },
+  {
+   "title": "Behavioral and Spatial Observations in a Logic for the π-Calculus",
+   "doi": "https://doi.org/10.1007/978-3-540-24727-2_7",
+   "year": 2004,
+   "cited": 57
+  },
+  {
+   "title": "A spatial logic for concurrency—II",
+   "doi": "https://doi.org/10.1016/j.tcs.2003.10.041",
+   "year": 2004,
+   "cited": 55
+  },
+  {
+   "title": "On a Temporal Logic for Object-Based Systems",
+   "doi": "https://doi.org/10.1007/978-0-387-35520-7_16",
+   "year": 2000,
+   "cited": 52
+  }
+ ]
+}

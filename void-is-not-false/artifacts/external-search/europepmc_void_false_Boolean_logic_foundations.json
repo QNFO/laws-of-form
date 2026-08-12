@@ -1,0 +1,46 @@
+{
+ "query": "void false Boolean logic foundations",
+ "count": 8,
+ "results": [
+  {
+   "title": "Emerging Frontiers in Robotic Upper-Limb Prostheses: Mechanisms, Materials, Tactile Sensors and Machine Learning-Based E",
+   "doi": "10.3390/s25133892",
+   "pmcid": "PMC12251605"
+  },
+  {
+   "title": "Modularization in Belief-Desire-Intention agent programming and artifact-based environments.",
+   "doi": "10.7717/peerj-cs.1162",
+   "pmcid": "PMC9748826"
+  },
+  {
+   "title": "A Generalized Formal Semantic Framework for Smart Contracts",
+   "doi": "",
+   "pmcid": "PMC7418134"
+  },
+  {
+   "title": "RustHorn: CHC-Based Verification for Rust Programs",
+   "doi": "",
+   "pmcid": "PMC7702263"
+  },
+  {
+   "title": "Paracosm: A Test Framework for Autonomous Driving Simulations",
+   "doi": "",
+   "pmcid": "PMC7978867"
+  },
+  {
+   "title": "Geometric Detection Algorithms for Cavities on Protein Surfaces in Molecular Graphics: A Survey.",
+   "doi": "10.1111/cgf.13158",
+   "pmcid": "PMC5839519"
+  },
+  {
+   "title": "Run-time Complexity Bounds Using Squeezers",
+   "doi": "",
+   "pmcid": "PMC7984564"
+  },
+  {
+   "title": "Interpol review of digital evidence for 2019-2022.",
+   "doi": "10.1016/j.fsisyn.2022.100313",
+   "pmcid": "PMC10311174"
+  }
+ ]
+}

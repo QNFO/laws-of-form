@@ -1,0 +1,54 @@
+{
+ "query": "laws of form unmarked state logic",
+ "count": 8,
+ "results": [
+  {
+   "title": "Meaning, form, and use in context : linguistic applications",
+   "doi": "",
+   "year": 1984,
+   "cited": 764
+  },
+  {
+   "title": "Language, Race, and White Public Space",
+   "doi": "https://doi.org/10.1525/aa.1998.100.3.680",
+   "year": 1998,
+   "cited": 962
+  },
+  {
+   "title": "Reasoning in description logics using resolution and deductive databases",
+   "doi": "https://doi.org/10.5445/ir/1000003797",
+   "year": 2006,
+   "cited": 190
+  },
+  {
+   "title": "Probability logic.",
+   "doi": "https://doi.org/10.1305/ndjfl/1093870625",
+   "year": 1984,
+   "cited": 90
+  },
+  {
+   "title": "Problems of Form",
+   "doi": "https://doi.org/10.1515/9781503617698",
+   "year": 1999,
+   "cited": 35
+  },
+  {
+   "title": "Voices from the WELL: The Logic of the Virtual Commons",
+   "doi": "",
+   "year": 1992,
+   "cited": 94
+  },
+  {
+   "title": "On database systems development through logic",
+   "doi": "https://doi.org/10.1145/319682.319700",
+   "year": 1982,
+   "cited": 73
+  },
+  {
+   "title": "The Possessive Logic of Patriarchal White Sovereignty: The High Court and the Yorta Yorta Decision",
+   "doi": "",
+   "year": 2004,
+   "cited": 74
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "query": "Spencer-Brown calculus indications Boolean algebra",
+ "count": 8,
+ "results": [
+  {
+   "title": "Boundary Algebra: A Simple Notation for Boolean Algebra and the Truth Functors",
+   "doi": "",
+   "year": 2007,
+   "cited": 1
+  },
+  {
+   "title": "Logical and Algebraic Structure of “Calculus of Indication”: The Significance and Circumstance",
+   "doi": "https://doi.org/10.1007/978-981-16-9937-5_6",
+   "year": 2022,
+   "cited": 0
+  },
+  {
+   "title": "Approximate reasoning, logics for self-reference, and the use of nonclassical logics in systems modeling",
+   "doi": "https://doi.org/10.15760/etd.591",
+   "year": 2000,
+   "cited": 4
+  },
+  {
+   "title": "Mathematical Frameworks for Consciousness",
+   "doi": "",
+   "year": 2016,
+   "cited": 2
+  },
+  {
+   "title": "Proceedings of the First International Conference on Neutrosophy, Neutrosophic Logic, Neutrosophic Set, Neutrosophic Probability and Statistics",
+   "doi": "https://doi.org/10.48550/arxiv.math/0306384",
+   "year": 2003,
+   "cited": 61
+  },
+  {
+   "title": "A formal theory of the calculus of indication",
+   "doi": "",
+   "year": 2006,
+   "cited": 0
+  },
+  {
+   "title": "A formal theory of the calculus of indication",
+   "doi": "",
+   "year": 2006,
+   "cited": 0
+  },
+  {
+   "title": "Hyperbolicity and stable polynomials in combinatorics and probability",
+   "doi": "https://doi.org/10.4310/cdm.2011.v2011.n1.a2",
+   "year": 2011,
+   "cited": 30
+  }
+ ]
+}

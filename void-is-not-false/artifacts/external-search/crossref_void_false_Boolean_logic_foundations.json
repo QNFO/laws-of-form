@@ -1,0 +1,46 @@
+{
+ "query": "void false Boolean logic foundations",
+ "count": 8,
+ "results": [
+  {
+   "title": "Boolean Algebraic Logic",
+   "doi": "10.1007/978-1-4612-0125-0_1",
+   "year": 2002
+  },
+  {
+   "title": "Boolean Switching Algebra",
+   "doi": "10.1142/9789812817044_0003",
+   "year": 1998
+  },
+  {
+   "title": "A game theoretic property of Boolean algebras",
+   "doi": "10.1016/s0049-237x(08)71996-7",
+   "year": 1978
+  },
+  {
+   "title": "Boolean Algebras",
+   "doi": "10.1142/9789811243851_0005",
+   "year": 2022
+  },
+  {
+   "title": "Chapter VI Boolean Algebras and Topological Boolean Algebras",
+   "doi": "10.1016/s0049-237x(09)70080-1",
+   "year": 1974
+  },
+  {
+   "title": "Studies in the axiomatic foundations of Boolean algebra. III.",
+   "doi": "10.1305/ndjfl/1093956832",
+   "year": 1961
+  },
+  {
+   "title": "Foundations of Boolean Valued Algebraic Geometry",
+   "doi": "10.1002/malq.19910372604",
+   "year": 1991
+  },
+  {
+   "title": "Studies in the axiomatic foundations of Boolean algebra. II.",
+   "doi": "10.1305/ndjfl/1093956550",
+   "year": 1960
+  }
+ ]
+}

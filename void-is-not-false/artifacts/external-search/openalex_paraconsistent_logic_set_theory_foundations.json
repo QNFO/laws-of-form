@@ -1,0 +1,54 @@
+{
+ "query": "paraconsistent logic set theory foundations",
+ "count": 8,
+ "results": [
+  {
+   "title": "A Unifying Field in Logics: Neutrosophic Logic. Neutrosophy, Neutrosophic Set, Neutrosophic Probability",
+   "doi": "",
+   "year": 2008,
+   "cited": 722
+  },
+  {
+   "title": "Inconsistent Mathematics",
+   "doi": "https://doi.org/10.1007/978-94-015-8453-1",
+   "year": 1995,
+   "cited": 206
+  },
+  {
+   "title": "The Paraconsistent Logic of Quantum Superpositions",
+   "doi": "https://doi.org/10.1007/s10701-013-9721-9",
+   "year": 2013,
+   "cited": 56
+  },
+  {
+   "title": "Models for a paraconsistent set theory",
+   "doi": "https://doi.org/10.1016/j.jal.2004.07.010",
+   "year": 2005,
+   "cited": 49
+  },
+  {
+   "title": "Paraconsistent set theory by predicating on consistency",
+   "doi": "https://doi.org/10.1093/logcom/ext020",
+   "year": 2013,
+   "cited": 21
+  },
+  {
+   "title": "Bilattices and the semantics of logic programming",
+   "doi": "https://doi.org/10.1016/0743-1066(91)90014-g",
+   "year": 1991,
+   "cited": 410
+  },
+  {
+   "title": "Distance-based paraconsistent logics",
+   "doi": "https://doi.org/10.1016/j.ijar.2007.07.002",
+   "year": 2007,
+   "cited": 34
+  },
+  {
+   "title": "A paraconsistent logic programming approach for querying inconsistent databases",
+   "doi": "https://doi.org/10.1016/j.ijar.2006.09.009",
+   "year": 2006,
+   "cited": 42
+  }
+ ]
+}
