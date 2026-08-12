@@ -31,7 +31,7 @@ This is the **void spinoff** of the parent treatise: a standalone critique of Bo
 |:------|:----|:------------|:-----|
 | P0 Init | QNFO.SLB.002.P0 | PROJECT-PLAN.md, branch `slb/paper/void-is-not-false`, core claim locked | P1-P11 checklist HARD |
 | P1 Due Diligence | QNFO.SLB.002.P1 | KG + D1 + Vectorize + external cross-ref | artifacts/external-search/ |
-| P2 Literature | QNFO.SLB.002.P2 | 8-source search, dedup, classify, KIF-18 symmetry template | Mandatory Symmetry Template |
+| P2 Literature | QNFO.SLB.002.P2 | 5-source external search (OpenAlex/Crossref/arXiv/Zenodo/EuropePMC) + QNFO Vectorize/KG cross-ref, dedup, classify, KIF-18 symmetry template | Mandatory Symmetry Template |
 | P3 Citations | QNFO.SLB.002.P3 | verified BibTeX (P3.AUTHOR-GATE) | citation-audit.md |
 | P4 Deep Research | QNFO.SLB.002.P4 | formal distinction-logic reconstruction, imaginary truth value, red-team, calibration | bayesian-evidential-weight.md |
 | P5 Publication | QNFO.SLB.002.P5 | `<slug>.md` + PDF (CDP pipeline) + Zenodo DOI | BP-1..BP-10 gates |
