@@ -1,0 +1,54 @@
+{
+ "query": "idempotence arithmetic foundations",
+ "count": 8,
+ "results": [
+  {
+   "title": "Formal foundations of serverless computing",
+   "doi": "https://doi.org/10.1145/3360575",
+   "year": 2019,
+   "cited": 99
+  },
+  {
+   "title": "Lower bounds for orthogonal range searching: part II. The arithmetic model",
+   "doi": "https://doi.org/10.1145/79147.79149",
+   "year": 1990,
+   "cited": 101
+  },
+  {
+   "title": "Arithmetic Formulated Relevantly",
+   "doi": "https://doi.org/10.26686/ajl.v18i5.6905",
+   "year": 2021,
+   "cited": 46
+  },
+  {
+   "title": "Can programming be liberated from the von Neumann style?",
+   "doi": "https://doi.org/10.1145/359576.359579",
+   "year": 1978,
+   "cited": 2599
+  },
+  {
+   "title": "Substitutions of Σ10-sentences: explorations between intuitionistic propositional logic and intuitionistic arithmetic",
+   "doi": "https://doi.org/10.1016/s0168-0072(01)00081-1",
+   "year": 2002,
+   "cited": 32
+  },
+  {
+   "title": "Combination of Evidence in Dempster-Shafer Theory",
+   "doi": "https://doi.org/10.2172/800792",
+   "year": 2002,
+   "cited": 1074
+  },
+  {
+   "title": "Provenance semirings",
+   "doi": "https://doi.org/10.1145/1265530.1265535",
+   "year": 2007,
+   "cited": 807
+  },
+  {
+   "title": "Decidable fragments of first-order logic and of first-order linear arithmetic with uninterpreted predicates",
+   "doi": "https://doi.org/10.22028/d291-28428",
+   "year": 2019,
+   "cited": 12
+  }
+ ]
+}

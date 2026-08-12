@@ -1,0 +1,46 @@
+{
+ "query": "idempotence arithmetic foundations",
+ "count": 8,
+ "results": [
+  {
+   "title": "Generalized idempotence in cardinal arithmetic",
+   "doi": "10.4064/fm-58-3-241-258",
+   "year": 1966
+  },
+  {
+   "title": "Idempotence in Cardinal Arithmetic",
+   "doi": "10.1080/00029890.1970.11992609",
+   "year": 1970
+  },
+  {
+   "title": "Basic algebra and arithmetic",
+   "doi": "10.1093/hesc/9780198797548.003.0001",
+   "year": 2020
+  },
+  {
+   "title": "idempotence, n.",
+   "doi": "10.1093/oed/5579375879",
+   "year": 2023
+  },
+  {
+   "title": "Structural Idempotence",
+   "doi": "10.2139/ssrn.6445522",
+   "year": 2026
+  },
+  {
+   "title": "Foundations of Arithmetic",
+   "doi": "10.1007/978-0-8176-4603-5_4",
+   "year": 2007
+  },
+  {
+   "title": "Foundations of finite precision arithmetic",
+   "doi": "10.1109/arith.1972.6153887",
+   "year": 1972
+  },
+  {
+   "title": "Hierarchies of subsystems of weak arithmetic",
+   "doi": "10.1017/cbo9780511910616.006",
+   "year": 2011
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "query": "idempotence arithmetic foundations",
+ "count": 3,
+ "results": [
+  {
+   "title": "Adapting Logic to Physics: The Quantum-Like Eigenlogic Program.",
+   "doi": "10.3390/e22020139",
+   "pmcid": "PMC7516549"
+  },
+  {
+   "title": "The Role of the Mizar Mathematical Library for Interactive Proof Development in Mizar.",
+   "doi": "10.1007/s10817-017-9440-6",
+   "pmcid": "PMC6044251"
+  },
+  {
+   "title": "Teaching Ordinal Patterns to a Computer: Efficient Encoding Algorithms Based on the Lehmer Code",
+   "doi": "",
+   "pmcid": "PMC7514243"
+  }
+ ]
+}

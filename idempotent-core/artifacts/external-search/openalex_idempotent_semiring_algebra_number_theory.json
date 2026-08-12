@@ -1,0 +1,54 @@
+{
+ "query": "idempotent semiring algebra number theory",
+ "count": 8,
+ "results": [
+  {
+   "title": "Provenance semirings",
+   "doi": "https://doi.org/10.1145/1265530.1265535",
+   "year": 2007,
+   "cited": 807
+  },
+  {
+   "title": "Semiring-based constraint satisfaction and optimization",
+   "doi": "https://doi.org/10.1145/256303.256306",
+   "year": 1997,
+   "cited": 630
+  },
+  {
+   "title": "Enumerative tropical algebraic geometry in ℝ²",
+   "doi": "https://doi.org/10.1090/s0894-0347-05-00477-7",
+   "year": 2005,
+   "cited": 617
+  },
+  {
+   "title": "Densities of idempotent measures and large deviations",
+   "doi": "https://doi.org/10.1090/s0002-9947-99-02153-4",
+   "year": 1999,
+   "cited": 106
+  },
+  {
+   "title": "Maslov dequantization, idempotent and tropical mathematics: A brief introduction",
+   "doi": "https://doi.org/10.1007/s10958-007-0450-5",
+   "year": 2006,
+   "cited": 199
+  },
+  {
+   "title": "Bisimulations for weighted automata over an additively idempotent semiring",
+   "doi": "https://doi.org/10.1016/j.tcs.2014.02.032",
+   "year": 2014,
+   "cited": 44
+  },
+  {
+   "title": "Semiring induced valuation algebras: Exact and approximate local computation algorithms",
+   "doi": "https://doi.org/10.1016/j.artint.2008.03.003",
+   "year": 2008,
+   "cited": 51
+  },
+  {
+   "title": "Interval systems over idempotent semiring",
+   "doi": "https://doi.org/10.1016/j.laa.2009.03.039",
+   "year": 2009,
+   "cited": 31
+  }
+ ]
+}

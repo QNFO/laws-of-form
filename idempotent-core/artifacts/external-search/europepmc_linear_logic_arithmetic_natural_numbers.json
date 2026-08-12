@@ -1,0 +1,46 @@
+{
+ "query": "linear logic arithmetic natural numbers",
+ "count": 8,
+ "results": [
+  {
+   "title": "The Human Mind in Dialogue With its Replica AI - a Historical Perspective.",
+   "doi": "10.1007/s12124-026-09999-8",
+   "pmcid": "PMC13157423"
+  },
+  {
+   "title": "Prototype-Based Classifiers and Vector Quantization on a Quantum Computer-Implementing Integer Arithmetic Oracles for Ne",
+   "doi": "10.3390/e28020229",
+   "pmcid": "PMC12939936"
+  },
+  {
+   "title": "Coiling Arithmetic: On the Differential Geometry of Helical Representations in LLMs",
+   "doi": "10.20944/preprints202507.0722.v1",
+   "pmcid": ""
+  },
+  {
+   "title": "All-optical logic processing unit using Kerr nonlinearity of MXene.",
+   "doi": "10.1038/s41467-026-70834-0",
+   "pmcid": "PMC13144690"
+  },
+  {
+   "title": "Medium-scale integrated circuits based on p-type 2D semiconducting MoTe&lt;sub&gt;2&lt;/sub&gt;.",
+   "doi": "10.1038/s41467-026-70992-1",
+   "pmcid": "PMC13172523"
+  },
+  {
+   "title": "When Numbers Whisper Their Names - Number Word Processing in Multi-Digit Number Magnitude Comparison in French Speakers.",
+   "doi": "10.1162/opmi.a.350",
+   "pmcid": "PMC13183350"
+  },
+  {
+   "title": "Recursion beyond language: Lexical and arithmetic interference in visual hierarchical embedding.",
+   "doi": "10.1007/s00426-026-02252-2",
+   "pmcid": "PMC12975858"
+  },
+  {
+   "title": "Enhancing computational thinking through coding education in primary school students: an experimental study on the impac",
+   "doi": "10.3389/fpsyg.2026.1734482",
+   "pmcid": "PMC12990067"
+  }
+ ]
+}

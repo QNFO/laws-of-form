@@ -1,0 +1,46 @@
+{
+ "query": "idempotent semiring algebra number theory",
+ "count": 8,
+ "results": [
+  {
+   "title": "Idempotent Elements of the Endomorphism Semiring of a Finite Chain",
+   "doi": "10.1155/2013/120231",
+   "year": 2013
+  },
+  {
+   "title": "Interval systems over idempotent semiring",
+   "doi": "10.1016/j.laa.2009.03.039",
+   "year": 2009
+  },
+  {
+   "title": "Basics of linear algebra over the extended tropical semiring",
+   "doi": "10.1090/conm/495/09697",
+   "year": 2009
+  },
+  {
+   "title": "Solving multi-metric network problems: An interplay between idempotent semiring rules",
+   "doi": "10.1016/j.laa.2011.02.055",
+   "year": 2011
+  },
+  {
+   "title": "COMPLEMENTATION OF A GAMMA SEMIRING",
+   "doi": "10.17654/nt050020101",
+   "year": 2021
+  },
+  {
+   "title": "ON SOME PROPERTIES OF A Γ-SEMIRING",
+   "doi": "10.17654/nt052020163",
+   "year": 2021
+  },
+  {
+   "title": "ON SMALL SUBTRACTIVE AND PROJECTIVE SEMIMODULES OVER ZERO-SUM SEMIRING",
+   "doi": "10.17654/0972555523014",
+   "year": 2023
+  },
+  {
+   "title": "GRÖBNER-SHIRSHOV BASIS FOR MONOMIALS SEMIRING OVER D-A RINGS",
+   "doi": "10.17654/0972555523011",
+   "year": 2023
+  }
+ ]
+}

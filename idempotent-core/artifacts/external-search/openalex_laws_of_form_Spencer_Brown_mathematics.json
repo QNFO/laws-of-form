@@ -1,0 +1,54 @@
+{
+ "query": "laws of form Spencer-Brown mathematics",
+ "count": 8,
+ "results": [
+  {
+   "title": "Physics-informed machine learning",
+   "doi": "https://doi.org/10.1038/s42254-021-00314-5",
+   "year": 2021,
+   "cited": 7269
+  },
+  {
+   "title": "Power Laws in Economics: An Introduction",
+   "doi": "https://doi.org/10.1257/jep.30.1.185",
+   "year": 2016,
+   "cited": 428
+  },
+  {
+   "title": "Fluorescence spectroscopy and multi-way techniques. PARAFAC",
+   "doi": "https://doi.org/10.1039/c3ay41160e",
+   "year": 2013,
+   "cited": 2051
+  },
+  {
+   "title": "Form dynamics",
+   "doi": "https://doi.org/10.1016/0140-1750(80)90008-1",
+   "year": 1980,
+   "cited": 45
+  },
+  {
+   "title": "Proceedings of the International Congress of Mathematicians",
+   "doi": "https://doi.org/10.1007/978-3-0348-9078-6",
+   "year": 1995,
+   "cited": 2059
+  },
+  {
+   "title": "A Framework for Understanding Whiteness in Mathematics Education",
+   "doi": "https://doi.org/10.21423/jume-v9i2a294",
+   "year": 2016,
+   "cited": 213
+  },
+  {
+   "title": "Gender in Science, Technology, Engineering, and Mathematics: Issues, Causes, Solutions",
+   "doi": "https://doi.org/10.1523/jneurosci.0475-18.2019",
+   "year": 2019,
+   "cited": 274
+  },
+  {
+   "title": "Ambivalence in the Relationship of Adult Children to Aging Parents and In‐Laws",
+   "doi": "https://doi.org/10.1111/j.1741-3737.2003.01055.x",
+   "year": 2003,
+   "cited": 242
+  }
+ ]
+}
