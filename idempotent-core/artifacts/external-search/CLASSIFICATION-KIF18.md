@@ -5,7 +5,7 @@
 **Sources (5):** OpenAlex, Crossref, arXiv, Zenodo records, Europe PMC
 **Evidence:** `artifacts/external-search/` — 20 JSON files (4 queries × 5 sources)
 
-**Three-count audit:** 20 queries sent · 20 source responses received · 11 sources cited below. Cited ≤ received — no fabrication.
+**Three-count audit:** 20 queries sent · 20 source responses received · 12 sources cited below. Cited ≤ received — no fabrication.
 
 ---
 
