@@ -3,7 +3,7 @@ title: "The Void Is Not False: Recovering the Unmarked State in Logic from the C
 author: "Rowan Brad Quni-Gudzinas"
 date: "2026-08-13"
 license: "QNFO Unified License Agreement (QNFO-ULA)"
-doi: "10.5281/zenodo.21916107"
+doi: "10.5281/zenodo.21916970"
 status: "published"
 ---
 
