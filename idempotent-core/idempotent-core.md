@@ -3,7 +3,7 @@ title: "The Idempotent Core: Quantity as Broken Distinction and the Hidden Assum
 author: "Rowan Brad Quni-Gudzinas"
 date: "2026-08-13"
 license: "QNFO Unified License Agreement (QNFO-ULA)"
-doi: "10.5281/zenodo.21915967"
+doi: "10.5281/zenodo.21916939"
 status: "published"
 ---
 
