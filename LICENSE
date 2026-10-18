@@ -1,17 +1,21 @@
-QNFO Unified License Agreement v2.0
+QNFO Unified License Agreement v2.1
 
-Effective: May 29, 2026 · SPDX: LicenseRef-QNFO-ULA-2.0 · QNFO Hub
+Effective: on posting at https://qnfo.org/legal/license (v2.0: May 29, 2026) · SPDX: LicenseRef-QNFO-ULA-2.1 · QNFO Hub
 
-QNFO Unified License Agreement (QNFO-ULA) — Version 2.0
+QNFO Unified License Agreement (QNFO-ULA) — Version 2.1
 
-Effective Date: May 29, 2026  
-Supersedes: QNFO Content License Agreement v1.1, AI System License Agreement (ASLA), all CC license variants previously applied, and all project-specific licenses across the QNFO and QWAV portfolios.  
+Effective Date: the date this version is posted at https://qnfo.org/legal/license (Section 10.3). Version 2.0 took effect May 29, 2026.  
+Supersedes: QNFO-ULA v2.0, QNFO Content License Agreement v1.1, AI System License Agreement (ASLA), all CC license variants previously applied, and all project-specific licenses across the QNFO and QWAV portfolios.  
 Licensor: Rowan Brad Quni-Gudzinas (ORCID: 0009-0002-4317-5604, ISNI: 0000 0005 2645 6062)  
-SPDX Identifier: LicenseRef-QNFO-ULA-2.0  
+SPDX Identifier: LicenseRef-QNFO-ULA-2.1  
 Scope: All Content across the QNFO and QWAV ecosystems — all projects, repositories, files, documents, data, code, publications, websites, prompts, configurations, theories, diagrams, and intellectual property of every kind and in every medium, however distributed, now existing and hereafter created. This Agreement applies in perpetuity to all such Content unless and until superseded by a subsequent version of this Agreement issued by Licensor.
 
-Short reference: This Content is licensed under the QNFO Unified License Agreement v2.0 (CC BY-NC-SA 4.0 + QNFO Supplemental Terms).  
+Short reference: This Content is licensed under the QNFO Unified License Agreement v2.1 (CC BY-NC-SA 4.0 + QNFO Supplemental Terms; for Software, the QNFO Software Terms in Section 12 + QNFO Supplemental Terms).  
 Full text: https://qnfo.org/legal/license | https://qwav.tech/legal/license
+
+Changes in Version 2.1
+
+Version 2.1 adds Section 12 (Software Terms). Creative Commons licenses are not designed for software: they do not address source code, distribution of compiled code, network use or patents. From this version on, Software is licensed under Section 12 and the Supplemental Terms instead of CC BY-NC-SA 4.0. The core terms are unchanged for all Content, Software included: attribution; any use that generates money requires a separate written agreement under Section 10.7; derivatives stay under this Agreement; the restrictions in Section 2.2 apply; and patent applications must cite QNFO as prior art. Sections 1.1, 1.2, 3.1, 4, 7.5, 10.3, 10.5, 10.6 and 10.8 and Appendices B to E are updated to match. All other Content is governed as in version 2.0.
 
 Preamble — Values and Purpose
 
@@ -29,13 +33,15 @@ The QNFO and QWAV ecosystems — encompassing all projects, code, documentation,
 
 1.1 Base License — Creative Commons
 
-This Content is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
+This Content, other than Software, is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
+
+Software (as defined in Section 12.1) is licensed under the QNFO Software Terms in Section 12 instead of CC BY-NC-SA 4.0, because Creative Commons licenses are not designed for software. Section 12 carries the same principles (attribution, non-commercial use, share-alike) into terms written for software.
 
 Full text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
 1.2 Supplemental Terms — QNFO Supplemental Terms
 
-In addition to CC BY-NC-SA 4.0, this Content is subject to the supplemental terms in Sections 2–10 below (the "Supplemental Terms"). The CC BY-NC-SA 4.0 license and the Supplemental Terms together form the QNFO Unified License Agreement ("this Agreement"). They shall be read and enforced as a single, integrated agreement. In the event of any conflict between CC BY-NC-SA 4.0 and the Supplemental Terms, the Supplemental Terms shall prevail.
+In addition to CC BY-NC-SA 4.0 (or, for Software, the Software Terms in Section 12), this Content is subject to the supplemental terms in Sections 2–10 below (the "Supplemental Terms"). The CC BY-NC-SA 4.0 license, the Software Terms and the Supplemental Terms together form the QNFO Unified License Agreement ("this Agreement"). They shall be read and enforced as a single, integrated agreement. In the event of any conflict between CC BY-NC-SA 4.0 and the Supplemental Terms, the Supplemental Terms shall prevail.
 
 1.3 Scope — Universal Application
 
@@ -183,15 +189,16 @@ Where Licensor implements anti-scraping technical measures, any entity that bypa
 
 If You use, adapt, or refer to the Content in any published or publicly shared work (including but not limited to academic papers, articles, books, presentations, software, websites, patents, technical reports, AI model documentation, and dataset descriptions), You must clearly attribute it. Include a statement substantially similar to:
 
-"This work incorporates or builds upon material from the QNFO/QWAV ecosystem (Rowan Brad Quni-Gudzinas, ORCID: 0009-0002-4317-5604), available under the QNFO Unified License Agreement v2.0 at https://qnfo.org/legal/license."
+"This work incorporates or builds upon material from the QNFO/QWAV ecosystem (Rowan Brad Quni-Gudzinas, ORCID: 0009-0002-4317-5604), available under the QNFO Unified License Agreement v2.1 at https://qnfo.org/legal/license."
 
 For code and software, include the following header in each source file:
 
 `
-SPDX-License-Identifier: LicenseRef-QNFO-ULA-2.0
+SPDX-License-Identifier: LicenseRef-QNFO-ULA-2.1
 Copyright (c) [YEAR] Rowan Brad Quni-Gudzinas
-Licensed under the QNFO Unified License Agreement v2.0
-(CC BY-NC-SA 4.0 + QNFO Supplemental Terms)
+Licensed under the QNFO Unified License Agreement v2.1
+(QNFO Software Terms, Section 12 + QNFO Supplemental Terms)
+Non-commercial use only; commercial use requires a separate agreement.
 Full text: https://qnfo.org/legal/license
 `
 
@@ -207,7 +214,7 @@ If You use the Content in the training, development, or fine-tuning of any AI or
 
 4.1 ShareAlike Propagation
 
-The ShareAlike requirement of CC BY-NC-SA 4.0 applies to the Content and all derivative works. If You remix, transform, or build upon the Content, You must distribute Your contributions under the same license terms — specifically, CC BY-NC-SA 4.0, this Agreement (QNFO-ULA v2.0), or a Creative Commons Compatible License as defined by Creative Commons.
+The ShareAlike requirement of CC BY-NC-SA 4.0 applies to the Content and all derivative works. If You remix, transform, or build upon the Content, You must distribute Your contributions under the same license terms — specifically, CC BY-NC-SA 4.0, this Agreement (QNFO-ULA v2.1), or a Creative Commons Compatible License as defined by Creative Commons. For Software, Section 12.4 replaces this Section 4.1 and Section 4.2: derivatives of Software must be distributed under this Agreement only, with their Source Code.
 
 4.2 License Compatibility
 
@@ -215,7 +222,7 @@ For purposes of the ShareAlike requirement, CC BY-NC-SA 4.0 alone (without the Q
 
 The QNFO Supplemental Terms (including but not limited to the liquidated damages provisions of Section 6, the prior art citation requirement of Section 5, and the AI/behavioral restrictions of Section 2.2) apply only to the original Content and to derivative works that are explicitly licensed under this Agreement.
 Choosing to license a derivative work under CC BY-NC-SA 4.0 alone does not relieve You of any obligations under this Agreement with respect to Your use of the original Content.
-Licensor encourages, but does not require, that derivative works be licensed under this full Agreement (QNFO-ULA v2.0) to ensure consistent protection of the ecosystem.
+Licensor encourages, but does not require, that derivative works be licensed under this full Agreement (QNFO-ULA v2.1) to ensure consistent protection of the ecosystem.
 
 4.3 No Additional Restrictions
 
@@ -314,7 +321,7 @@ Licensor retains all ownership rights, title, and interest, including copyright,
 
 7.5 License Grant Only
 
-This Agreement grants You limited permission to use the Content as specified herein; it does not transfer any ownership rights to You. No license, immunity, or other right is granted under any patent, trademark, trade secret, or other intellectual property right of Licensor, except as expressly provided in this Agreement.
+This Agreement grants You limited permission to use the Content as specified herein; it does not transfer any ownership rights to You. No license, immunity, or other right is granted under any patent, trademark, trade secret, or other intellectual property right of Licensor, except as expressly provided in this Agreement (including the patent license for Software in Section 12.5).
 
 8. International Governance — Governing Law and Dispute Resolution
 
@@ -368,7 +375,7 @@ If any provision of this Agreement is held by a court or arbitrator of competent
 
 10.2 Entire Agreement — Supersession of Prior Licenses
 
-This Agreement (the QNFO Unified License Agreement v2.0) constitutes the entire agreement between You and Licensor regarding the subject matter herein and supersedes all prior or contemporaneous understandings, agreements, representations, and warranties, both written and oral, including but not limited to:
+This Agreement (the QNFO Unified License Agreement v2.1) constitutes the entire agreement between You and Licensor regarding the subject matter herein and supersedes all prior or contemporaneous understandings, agreements, representations, and warranties, both written and oral, including but not limited to:
 
 The QNFO Content License Agreement v1.1 (2025)
 The AI System License Agreement (ASLA)
@@ -380,7 +387,7 @@ All Content previously governed by any of the above licenses is hereby re-licens
 
 10.3 Changes to License
 
-Licensor reserves the right to modify this Agreement. Changes will be effective upon posting the revised version to https://qnfo.org/legal/license or https://qwav.tech/legal/license. Your continued use of the Content after such changes constitutes Your acceptance of the revised Agreement. Material changes will be accompanied by a version number update (e.g., v2.0 → v2.1 or v3.0). The version of this Agreement applicable to any particular use of the Content is the version in effect at the time of such use.
+Licensor reserves the right to modify this Agreement. Changes will be effective upon posting the revised version to https://qnfo.org/legal/license or https://qwav.tech/legal/license. Your continued use of the Content after such changes constitutes Your acceptance of the revised Agreement. Material changes will be accompanied by a version number update (e.g., v2.1 → v2.2 or v3.0). The version of this Agreement applicable to any particular use of the Content is the version in effect at the time of such use.
 
 10.4 Waiver
 
@@ -388,12 +395,12 @@ No waiver of any term of this Agreement shall be deemed a further or continuing 
 
 10.5 Machine-Readable Licensing — SPDX Identifier
 
-The SPDX License Identifier for this Agreement is LicenseRef-QNFO-ULA-2.0. This identifier enables automated license compliance checking by software package managers, development tools, and platform services.
+The SPDX License Identifier for this Agreement is LicenseRef-QNFO-ULA-2.1 (version 2.0: LicenseRef-QNFO-ULA-2.0). This identifier enables automated license compliance checking by software package managers, development tools, and platform services.
 
 All source code files governed by this Agreement should include a machine-readable SPDX header as specified in Section 3.1. Software packages governed by this Agreement should include the following in their package manifest (package.json, Cargo.toml, pyproject.toml, etc.):
 
 `json
-"license": "LicenseRef-QNFO-ULA-2.0"
+"license": "LicenseRef-QNFO-ULA-2.1"
 `
 
 10.6 License Compatibility
@@ -401,11 +408,13 @@ All source code files governed by this Agreement should include a machine-readab
 For purposes of the ShareAlike requirement (Section 4), the following licenses are considered compatible:
 
 CC BY-NC-SA 4.0 (without the QNFO Supplemental Terms)
-This Agreement (QNFO-ULA v2.0)
+This Agreement (QNFO-ULA v2.1)
 Any future version of this Agreement issued by Licensor
 Any Creative Commons Compatible License as defined by Creative Commons from time to time
 
 This list is not exhaustive and may be supplemented by Licensor. However, No license that permits commercial use is compatible with the ShareAlike requirement of this Agreement, as CC BY-NC-SA 4.0's NonCommercial restriction is a material term that must propagate to all derivative works.
+
+For Software, the only compatible license is this Agreement, version 2.1 or a later version issued by Licensor (Section 12.4). CC BY-NC-SA 4.0 alone is not compatible for Software.
 
 10.7 Separate Commercial License — Public Benefit Framework
 
@@ -455,7 +464,7 @@ Preclude Licensor from charging different royalty rates or imposing different te
 
 10.8 Survival
 
-The provisions of Sections 3 (Attribution), 5 (Patent Prior Art Citation), 6 (Breach and Consequences), 7 (Intellectual Property Ownership), 8 (International Governance), 9 (Disclaimers and Limitation of Liability), and 10 (General Provisions) shall survive any termination of this Agreement.
+The provisions of Sections 3 (Attribution), 5 (Patent Prior Art Citation), 6 (Breach and Consequences), 7 (Intellectual Property Ownership), 8 (International Governance), 9 (Disclaimers and Limitation of Liability), 10 (General Provisions), 12.7 (Contributions) and 12.9 (Research Software Disclaimer) shall survive any termination of this Agreement.
 
 11. Contact Information
 
@@ -473,6 +482,104 @@ ISNI: 0000 0005 2645 6062
 Mastodon: @QNFO@mstdn.science
 LinkedIn: https://www.linkedin.com/in/rowan-quni/
 
+12. Software Terms
+
+12.0 Why This Section Exists
+
+Creative Commons advises against using its licenses for software (https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software). CC BY-NC-SA 4.0 does not address source code, object code, network use or linking, and it grants no patent rights (CC BY-NC-SA 4.0, Section 2(b)(2)). This Section applies to Software the same principles that govern all other Content: attribution, non-commercial use, share-alike, the restrictions in Section 2.2, the prior art requirement in Section 5, and separate commercial licensing under Section 10.7. It states them in terms written for software. For Software, this Section and the Supplemental Terms (Sections 2–10) replace CC BY-NC-SA 4.0 as the base license (Section 1.1). In any conflict between this Section and another Section as applied to Software, this Section prevails.
+
+12.1 Definitions
+
+"Software" means all Content that is computer code in any form: source code, object code, executables, libraries, packages, scripts, notebooks, build and configuration files, infrastructure-as-code, machine-checkable proofs and formal specifications (for example Lean, Coq or Isabelle files), and the documentation, tests, examples and data files distributed with them.
+"Source Code" means the preferred form of the Software for making modifications, including the build scripts and configuration needed to build, install and run it.
+"Object Code" means any form of the Software other than Source Code, including compiled, bundled, minified, packaged or container forms.
+"Modification" means any change to a file of the Software, and any new file that contains a substantial portion of a file of the Software. A separate file that You write, and that does not copy code from the Software, is not a Modification merely because it calls, imports, links to or communicates with the Software.
+"Covered Files" means the files of the Software and all Modifications.
+"Larger Work" means a work that combines Covered Files with files that are not Covered Files.
+"Distribute" means to make a copy of the Software, a Modification or a Larger Work available to any person or entity other than You, by any means, including publishing a repository, a package, a container image or a download.
+"Network Use" means letting any person or entity other than You interact with the Software, a Modification or a Larger Work remotely through a computer network.
+"Contribution" means any code, documentation or other material that You submit to Licensor for inclusion in the Software, including through a pull request, patch or issue attachment.
+
+12.2 Copyright License Grant for Software
+
+Subject to this Agreement, Licensor grants You a worldwide, royalty-free, non-exclusive, non-sublicensable license to use, run, copy, study, modify and Distribute the Software and Modifications, in Source Code or Object Code form, solely for non-commercial purposes as defined in Sections 2.1, 2.4 and 12.3. Each person who receives the Software from You receives this license directly from Licensor.
+
+12.3 Commercial Use of Software Requires a Separate Agreement
+
+Any use of the Software that generates money is Commercial Use and requires a separate written agreement with Licensor under Section 10.7. This includes any use of the Software, a Modification or a Larger Work that earns revenue for, saves money for, or forms part of the operations of a for-profit person or organization. Without limitation, Commercial Use includes:
+
+(a) selling, renting, licensing or sublicensing the Software, or charging for access to it, for downloads, for installation, for hosting or for support;
+
+(b) offering the Software, or functionality substantially provided by it, as or within a paid product, a hosted service (software-as-a-service), an API, an application or a platform, including a free product or service that is monetized through advertising, data collection, subscriptions, upselling or investment;
+
+(c) using the Software to produce deliverables, results, analyses or services for which You or anyone else is paid, including consulting, contracting and freelance work;
+
+(d) any use by or for a for-profit entity, including internal operations, research and development, evaluation, testing and employee training (Section 2.4(g));
+
+(e) embedding the Software in, or bundling it with, hardware, devices or other products that are sold or leased;
+
+(f) using the Software, its Source Code or its outputs to train, fine-tune or evaluate a commercial artificial intelligence or code-generation model, system or service (Sections 2.1, 2.2(e) and 6.3 apply to Software in full); and
+
+(g) any other use in which the Software contributes to revenue, investment value, market position or cost savings for any person or organization.
+
+The following are non-commercial uses of the Software, consistent with Section 2.4: personal use by an individual that earns no money; teaching and study; academic and scientific research whose results are published or otherwise made publicly available; and use by a registered non-profit organization, an educational institution or a government body for its public mission. Grants, donations and tuition that fund these activities are not revenue from the Software, provided that the Software is not itself sold, licensed, hosted for a fee or made the paid component of any product, service or deliverable. Any of these users that later uses the Software in a way described in (a) to (g) needs a separate agreement for that use.
+
+Licensor claims no ownership of the data You put into the Software or of the results it produces for You. The restriction in this Section applies to how the Software is used, not to who owns its outputs.
+
+12.4 Reciprocity — ShareAlike for Software
+
+Section 12.4 replaces Sections 4.1 and 4.2 for Software. If You Distribute the Software, a Modification or a Larger Work:
+
+(a) Same license. You must Distribute the Covered Files only under this Agreement (QNFO-ULA v2.1 or a later version issued by Licensor). CC BY-NC-SA 4.0 alone is not a compatible license for Software.
+
+(b) Source Code. You must make the complete Source Code of the Covered Files You Distribute available to every recipient, free of charge, for as long as You Distribute them. You can include it with the distribution, or provide a written notice with a working link to it.
+
+(c) Notices. You must keep intact every copyright notice, SPDX header (Section 3.1 and Appendix C), the LICENSE file and any NOTICE file. You must also state in the changed files, with the date, that You modified them (Section 3.2).
+
+(d) Larger Works. Files in a Larger Work that are not Covered Files may be licensed under terms of Your choosing. Those terms may not purport to grant any right in the Covered Files, and the Covered Files in the Larger Work stay under this Agreement. The non-commercial restriction in Section 12.3 applies to every use of the Larger Work in which the Covered Files are used.
+
+(e) Network Use. If You modify the Software and make it available for Network Use, You must offer each user the Source Code of Your Modification under this Agreement. Do this through a prominent link in the user interface or in the API documentation.
+
+(f) No additional restrictions. You may not impose further restrictions on any recipient's exercise of the rights granted by this Agreement, and You may not use technical measures to prevent recipients from modifying or rebuilding the Covered Files (Section 4.3).
+
+12.5 Patent License for Software
+
+CC BY-NC-SA 4.0 licenses no patents. For Software, Licensor grants You a worldwide, royalty-free, non-exclusive license under every patent claim that Licensor owns or controls, now or later, and that is necessarily infringed by the Software as Licensor distributes it. The license covers making, using, running and Distributing the Software for the non-commercial purposes this Agreement permits. It does not extend to Commercial Use, which requires a separate agreement under Section 10.7. If You, or anyone acting on Your behalf, start a lawsuit, arbitration or other proceeding alleging that the Software infringes a patent, every license this Agreement grants You ends on the date the claim is filed. Section 5 (Patent Prior Art Citation) applies to Software in full. This Section is an express grant for the purposes of Section 7.5.
+
+12.6 Third-Party Components
+
+Software may include, or depend on, components that Licensor did not write, such as packages under the MIT, BSD, Apache-2.0 or other licenses. Those components remain under their own licenses. This Agreement does not change those licenses, and You must comply with them. Where they are distributed with the Software, Licensor lists such components in the package manifest or a NOTICE file. If a third-party license conflicts with this Agreement, the third-party license governs that component only. Because this Agreement restricts commercial use, Covered Files may not be combined with software under the GNU GPL, LGPL or AGPL in any way that would require the combination to be Distributed under those licenses.
+
+12.7 Contributions
+
+By submitting a Contribution, You:
+
+(a) certify that You have the right to submit it on these terms, substantially as set out in the Developer Certificate of Origin 1.1 (https://developercertificate.org/);
+
+(b) license the Contribution to everyone under this Agreement;
+
+(c) grant Licensor a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license, including under any patent claims You own or control that read on the Contribution, to use, modify, Distribute and sublicense the Contribution on any terms, including in separate commercial agreements under Section 10.7; and
+
+(d) keep the copyright in Your Contribution.
+
+Licensor is not obliged to accept any Contribution. This Section lets Licensor offer a single commercial license under Section 10.7 for Software that includes Contributions from others.
+
+12.8 Source-Available, Not Open Source
+
+This Agreement makes Software source-available. Because it restricts commercial use, it does not meet the Open Source Definition (https://opensource.org/osd, criterion 6, "No Discrimination Against Fields of Endeavor"), and it is not an OSI-approved license. Software under this Agreement is described as "source-available under QNFO-ULA v2.1 (non-commercial)", not as "open source" or "free software". The references to open source projects in Section 2.4(e) concern Your projects, not the license of the Software.
+
+12.9 Research Software Disclaimer
+
+Section 9 applies to Software in full. In addition, Software is research software: it may contain defects and may produce incorrect results. It is not designed, tested or certified for safety-critical, medical, legal, financial or other high-risk decisions. You are responsible for verifying any result before relying on it.
+
+12.10 Notices and Package Metadata
+
+Each Source Code file should carry the SPDX header in Appendix C. Each repository or package must include a LICENSE file containing this Agreement, or a NOTICE file that names it, gives its SPDX identifier and links to https://qnfo.org/legal/license. Package manifests use LicenseRef-QNFO-ULA-2.1. A CITATION.cff file that cites the related QNFO publication is encouraged (Section 3.1).
+
+12.11 Termination and Cure for Software
+
+Sections 6.1 to 6.6 apply to Software. However, if Your only breach is of Section 3 or Section 12.4 (notices, attribution, Source Code availability or Network Use), and not of Section 12.3, Your license is reinstated if You cure the breach within 30 days after You first become aware of it. This reinstatement is available once. Any Commercial Use without a separate agreement remains a breach under Sections 2.1 and 6.1, with no cure period.
+
 Appendix A — CC BY-NC-SA 4.0 Summary (For Reference)
 
 The CC BY-NC-SA 4.0 license permits:
@@ -487,7 +594,7 @@ NonCommercial — You may not use the material for commercial purposes
 ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original
 No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits
 
-These terms apply in addition to the QNFO Supplemental Terms (Sections 2–10 above).
+These terms apply in addition to the QNFO Supplemental Terms (Sections 2–10 above). They apply to Content other than Software; Software is licensed under Section 12.
 
 Appendix B — License Migration Notice
 
@@ -502,6 +609,9 @@ Effective May 29, 2026, the following prior licenses are terminated and supersed
 | MIT License | git-on-cloudflare-deployment (third-party) | QNFO-ULA v2.0 (for QNFO modifications only; upstream MIT components retain original MIT) |
 | Unlicense (Public Domain) | q08.org archive | QNFO-ULA v2.0 |
 | Any project-specific or custom licenses | Various projects | QNFO-ULA v2.0 |
+| QNFO-ULA v2.0 | All Content; Software under CC BY-NC-SA 4.0 | QNFO-ULA v2.1 (Software under Section 12) |
+
+Under Section 10.3, Software used after version 2.1 is posted is governed by Section 12, including Software first received under version 2.0. Version 2.0 remains published unchanged for reference.
 
 All references to prior licenses in existing project files, README documents, package manifests, and documentation shall be updated to reference this Agreement. This migration does not affect third-party dependencies (node_modules, vendor libraries, upstream components) governed by their own upstream licenses.
 
@@ -520,23 +630,26 @@ Appendix C — SPDX Header Templates
 For Source Code Files
 
 `
-SPDX-License-Identifier: LicenseRef-QNFO-ULA-2.0
+SPDX-License-Identifier: LicenseRef-QNFO-ULA-2.1
 Copyright (c) [YEAR] Rowan Brad Quni-Gudzinas
-Licensed under QNFO-ULA v2.0: https://qnfo.org/legal/license
+Licensed under QNFO-ULA v2.1 (Software Terms, Section 12): https://qnfo.org/legal/license
+Non-commercial use only; commercial use requires a separate agreement.
 `
+
+In Python, shell or YAML, prefix each line with # ; in JavaScript, C, Rust or Lean, with //  or --  as the language requires.
 
 For Documentation and Publications
 
 `yaml
-SPDX-License-Identifier: LicenseRef-QNFO-ULA-2.0
+SPDX-License-Identifier: LicenseRef-QNFO-ULA-2.1
 Copyright (c) [YEAR] Rowan Brad Quni-Gudzinas
-Licensed under QNFO-ULA v2.0: https://qnfo.org/legal/license
+Licensed under QNFO-ULA v2.1: https://qnfo.org/legal/license
 `
 
 For Package Manifests (package.json / Cargo.toml / pyproject.toml)
 
 `json
-"license": "LicenseRef-QNFO-ULA-2.0"
+"license": "LicenseRef-QNFO-ULA-2.1"
 `
 
 Appendix D — Quick Reference Card
@@ -550,7 +663,7 @@ Appendix D — Quick Reference Card
 | Can I sell this or use it commercially? | ❌ No — not without separate agreement |
 | Can a company use this internally? | ❌ No — internal business use is commercial |
 | Can I train my commercial AI on this? | ❌ No — explicitly prohibited |
-| Can I use this in an open-source project? | ✅ Only if the project uses compatible NC-SA license |
+| Can I use this in an open-source project? | ✅ Only if the project uses compatible NC-SA license (for Software: this Agreement, Section 12.4) |
 | Can I get a commercial license? | Maybe — contact Licensor (Section 11) |
 | What if I violate the license? | 85% liquidated damages + license termination |
 | Does SA apply to my derivatives? | ✅ Yes — derivatives must use compatible license |
@@ -561,15 +674,21 @@ Appendix D — Quick Reference Card
 | Can a startup use this? | ❌ No — startups are commercial entities |
 | Can my university use this? | ✅ Yes — educational use is permitted |
 | Can I cite QNFO in my patent? | ✅ Yes — and you MUST (see §5) |
+| Is QNFO software open source? | ❌ No — source-available, non-commercial (§12.8) |
+| Can I fork and modify QNFO software? | ✅ Yes — non-commercial, keep it under this Agreement, publish your source (§12.4) |
+| Can my own code import a QNFO library? | ✅ Yes — your own files can carry your license; the non-commercial limit applies while they use the library (§12.4(d)) |
+| Can I run QNFO software to deliver paid work? | ❌ No — any use that generates money needs a separate agreement (§12.3) |
+| Can I host QNFO software as a paid or ad-funded service? | ❌ No — separate agreement (§12.3(b)) |
+| Do I get a patent license for QNFO software? | ✅ Yes — for non-commercial use (§12.5) |
 
 Appendix E — Frequently Asked Questions (Plain Language)
 
-This FAQ provides plain-language guidance for common situations. The full license text (Sections 1–11) is the legally binding document. If there is any conflict between this FAQ and the license text, the license text controls.
+This FAQ provides plain-language guidance for common situations. The full license text (Sections 1–12) is the legally binding document. If there is any conflict between this FAQ and the license text, the license text controls.
 
 For Developers
 
 Q: I want to use QNFO code in my personal project. Can I?
-A: Yes, as long as your project is non-commercial, you give proper attribution, and you license any derivatives under CC BY-NC-SA 4.0 (or this Agreement). If you're just learning, experimenting, or building something for yourself, you're fine.
+A: Yes, as long as your project is non-commercial and earns no money, you give proper attribution, and any changes you make to QNFO code stay under this Agreement with their source published when you share them (Section 12.4). Your own separate files that only import or call QNFO code can carry your own license. If you're just learning, experimenting, or building something for yourself, you're fine.
 
 Q: I want to use QNFO code at my company. Can I?
 A: No. Using QNFO code for internal business operations, in a commercial product, or for any revenue-generating purpose is commercial use and requires a separate commercial license. Contact Licensor (Section 11) to discuss.
@@ -577,11 +696,17 @@ A: No. Using QNFO code for internal business operations, in a commercial product
 Q: What if my project is open source but I accept donations?
 A: Accepting donations or sponsorships to support an open source project is not commercial use. But if you sell licenses, offer paid support tiers, or have proprietary add-ons that incorporate QNFO code, that's commercial use.
 
+Q: Why doesn't QNFO code use Creative Commons any more?
+A: Creative Commons itself advises against CC licenses for software: they say nothing about source code, compiled code, hosting or patents. Since version 2.1, QNFO code is licensed under Section 12, which keeps the same rules (attribution, non-commercial, share-alike) in terms written for software, and adds a patent license for non-commercial users.
+
+Q: Is QNFO code open source?
+A: No. It is source-available: you can read, run, modify and share it for non-commercial purposes, but any use that generates money needs a separate agreement. That restriction means it does not meet the Open Source Definition (Section 12.8).
+
 Q: Do I really need to include the SPDX header in every file?
 A: Best practice, yes. For new projects, include it from the start. For existing projects, add it as you touch files. The Kaizen audit system will help track compliance.
 
 Q: What license should I use for my derivative work?
-A: CC BY-NC-SA 4.0 (or this Agreement). The ShareAlike requirement means your derivative must use a compatible non-commercial license.
+A: For documents, data and other non-software Content: CC BY-NC-SA 4.0 (or this Agreement). For Software: this Agreement only (Section 12.4). Either way, the ShareAlike requirement means your derivative must stay non-commercial.
 
 For Researchers
 
@@ -640,4 +765,4 @@ Q: How do I report a violation?
 A: Email rowan.quni@qnfo.org with details of the suspected violation. Include URLs, screenshots, model cards, or any evidence you have. Licensor will investigate and pursue enforcement as appropriate.
 
 QNFO — advancing scientific understanding for the collective benefit of all.  
-QNFO Unified License Agreement v2.0 — Effective May 29, 2026
+QNFO Unified License Agreement v2.1 — version 2.0 effective May 29, 2026; version 2.1 effective on posting
